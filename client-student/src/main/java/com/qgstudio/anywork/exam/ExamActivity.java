@@ -155,6 +155,11 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
         }
         mQuestionFragAdapter.addAll(fragments);
         mExamPagerView.setTitleCenterTextString((position != 0 ? 1 : 0) + "/" + questions.size());
+
+        //如若习题只有一道（即最后一道），则显示提交按钮
+        if (mQuestionFragAdapter.getCount() == 1) {
+            mSubmitFab.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override

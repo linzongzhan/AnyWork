@@ -1,4 +1,4 @@
-#Sat Sep 23 17:45:42 CST 2017
-base.0=C\:\\Users\\zydx\\Desktop\\git\\AnyWork\\client-student\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1
+#Wed Aug 08 21:53:06 CST 2018
+base.0=C\:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1
 renamed.0=classes.dex
-file.0=C\:\\Users\\zydx\\Desktop\\git\\AnyWork\\client-student\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1\\classes.dex
+file.0=C\:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1\\classes.dex

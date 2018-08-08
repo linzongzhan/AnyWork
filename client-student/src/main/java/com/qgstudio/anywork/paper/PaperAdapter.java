@@ -27,7 +27,10 @@ import com.qgstudio.anywork.utils.GlideUtil;
 import com.qgstudio.anywork.utils.GsonUtil;
 import com.qgstudio.anywork.utils.ToastUtil;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -83,9 +86,14 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.Holder> {
 
         //设置时间
         if (type == 1) {
+            String createTime = paper.getCreateTime();
+            String endTime = paper.getEndingTime();
+            Date createD = getDate(createTime);
+            Date endD = getDate(endTime);
+
             String pattern = "yyyy/MM/dd";
-            String create = DateUtil.longToString(paper.getCreateTime(), pattern);
-            String ending = DateUtil.longToString(paper.getEndingTime(), pattern);
+            String create = DateUtil.longToString(createD.getTime(), pattern);
+            String ending = DateUtil.longToString(endD.getTime(), pattern);
             holder.tv_date.setText(create + " ~ " + ending);
         } else {
             holder.tv_date.setText("——");
@@ -99,12 +107,17 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.Holder> {
             @Override
             public void onClick(View v) {
                 if (type == 1) {
+                    String createTime = paper.getCreateTime();
+                    String endTime = paper.getEndingTime();
+                    Date createD = getDate(createTime);
+                    Date endD = getDate(endTime);
+
                     long now = System.currentTimeMillis();
-                    if (now < paper.getCreateTime()) {
+                    if (now < createD.getTime()) {
                         ToastUtil.showToast("未到达考试时间");
                         return;
                     }
-                    if (now > paper.getEndingTime()) {
+                    if (now > endD.getTime()) {
                         ToastUtil.showToast("考试时间已截止");
                         return;
                     }
@@ -118,6 +131,25 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.Holder> {
             }
         });
 
+    }
+
+
+    /**
+     * 将后台传过来的时间数据转化为Date
+     * @param str 输入后台传来的时间数据
+     * @return Date
+     */
+    private Date getDate(String str) {
+        str = str.substring(0, 23) + "Z";
+        str = str.replace("Z", " UTC");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS Z");
+        Date date = null;
+        try {
+            date = format.parse(str);
+        } catch (ParseException p) {
+            p.printStackTrace();
+        }
+        return date;
     }
 
     @Override

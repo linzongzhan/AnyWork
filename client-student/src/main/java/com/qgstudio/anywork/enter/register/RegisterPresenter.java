@@ -34,6 +34,16 @@ public class RegisterPresenter extends BasePresenterImpl<RegisterContract.View> 
             }
 
             @Override
+            public void showLoad() {
+
+            }
+
+            @Override
+            public void stopLoad() {
+
+            }
+
+            @Override
             public Context getContext() {
                 return null;
             }
@@ -44,6 +54,7 @@ public class RegisterPresenter extends BasePresenterImpl<RegisterContract.View> 
 
     @Override
     public void register(String account, String password, String name, String phone) {
+        mView.showLoad();
         if (registerApi == null) {
             registerApi = RetrofitClient.RETROFIT_CLIENT.getRetrofit().create(RegisterApi.class);
         }
@@ -67,6 +78,7 @@ public class RegisterPresenter extends BasePresenterImpl<RegisterContract.View> 
                     @Override
                     public void onError(Throwable e) {
                         e.printStackTrace();
+                        mView.stopLoad();
                         mView.showError("网络连接错误");
                     }
 
@@ -74,8 +86,10 @@ public class RegisterPresenter extends BasePresenterImpl<RegisterContract.View> 
                     public void onNext(ResponseResult<Integer> result) {
 
                         if (result.getState() == 1) {
+                            mView.stopLoad();
                             mView.showSuccess();
                         } else {
+                            mView.stopLoad();
                             mView.showError(result.getStateInfo());
                         }
                     }
