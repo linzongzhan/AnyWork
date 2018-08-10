@@ -132,7 +132,6 @@ public class GradeAdapter extends Adapter<RecyclerView.ViewHolder> {
             text.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    System.out.println("***************************");
                     rListener.getTestResult(gInfo.getId());
                 }
             });

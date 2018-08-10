@@ -69,7 +69,7 @@ public enum RetrofitClient {
      */
     public Retrofit getRetrofit() {
         //读出ip地址
-        SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("IP地址", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("ip地址", Context.MODE_PRIVATE);
         String baseUrl = sharedPreferences.getString("ip", ApiStores.API_DEFAULT_URL);
 
         if (retrofit == null) {
@@ -90,7 +90,7 @@ public enum RetrofitClient {
      */
     public Retrofit setRetrofit() {
         //读出ip地址
-        SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("IP地址", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("ip地址", Context.MODE_PRIVATE);
         String baseUrl = sharedPreferences.getString("ip", ApiStores.API_DEFAULT_URL);
 
         retrofit = new Retrofit.Builder()

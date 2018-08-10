@@ -106,7 +106,7 @@ public class EnterActivity extends DialogManagerActivity {
                         String ip = editText.getText().toString();
                         if (HttpUrl.parse(ip) == null) {
                             //将默认ip存进SharedPreferences
-                            SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("IP地址", MODE_PRIVATE);
+                            SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("ip地址", MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
                             editor.putString("ip", ApiStores.API_DEFAULT_URL + "/");
                             editor.commit();
@@ -114,10 +114,10 @@ public class EnterActivity extends DialogManagerActivity {
                             //重新构造Retrofit
                             RetrofitClient.RETROFIT_CLIENT.setRetrofit();
 
-                            ToastUtil.showToast("ip地址不合法，已自动使用默认地址");
+                            ToastUtil.showToast("IP地址不合法，已自动使用默认地址");
                         } else {
                             //将输入的ip存进SharedPreferences
-                            SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("IP地址", MODE_PRIVATE);
+                            SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("ip地址", MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
                             editor.putString("ip", ip + "/");
                             editor.commit();
@@ -125,7 +125,7 @@ public class EnterActivity extends DialogManagerActivity {
                             //重新构造Retrofit
                             RetrofitClient.RETROFIT_CLIENT.setRetrofit();
 
-                            ToastUtil.showToast("设置ip地址成功");
+                            ToastUtil.showToast("设置IP地址成功");
                         }
                     }
                 }).create();
