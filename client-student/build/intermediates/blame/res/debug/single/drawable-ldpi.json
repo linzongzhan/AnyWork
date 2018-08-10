@@ -12,6 +12,10 @@
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\bg_load_blank.png"
     },
     {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\change_ip.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\change_ip.png"
+    },
+    {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_add.png",
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_add.png"
     }

@@ -1,20 +1,28 @@
 package com.qgstudio.anywork.enter;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.transition.ChangeBounds;
 import android.transition.Slide;
 import android.view.Gravity;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 
+import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.common.DialogManagerActivity;
+import com.qgstudio.anywork.data.ApiStores;
+import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.enter.login.LoginFragment;
 import com.qgstudio.anywork.enter.register.RegisterFragment;
 import com.qgstudio.anywork.utils.ActivityUtil;
@@ -23,6 +31,7 @@ import com.qgstudio.anywork.utils.ToastUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.HttpUrl;
 
 /**
  * 登录注册的 Activity ，切换登录注册的 Fragment ，并为其配置需要的 Presenter
@@ -77,8 +86,50 @@ public class EnterActivity extends DialogManagerActivity {
 //                .build();
 //        baseDialog.show();
 
-        ToastUtil.showToast("暂未开放游客模式。");
-        // TODO: 2017/7/10 通过游客模式进入
+//        ToastUtil.showToast("暂未开放游客模式。");
+//        // TODO: 2017/7/10 通过游客模式进入
+        final EditText editText = new EditText(this);
+        editText.setHint("例：http://10.21.56.107");
+        editText.setTextColor(Color.BLACK);
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("设置IP地址")
+                .setView(editText)
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String ip = editText.getText().toString();
+                        if (HttpUrl.parse(ip) == null) {
+                            //将默认ip存进SharedPreferences
+                            SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("IP地址", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("ip", ApiStores.API_DEFAULT_URL + "/");
+                            editor.commit();
+
+                            //重新构造Retrofit
+                            RetrofitClient.RETROFIT_CLIENT.setRetrofit();
+
+                            ToastUtil.showToast("ip地址不合法，已自动使用默认地址");
+                        } else {
+                            //将输入的ip存进SharedPreferences
+                            SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("IP地址", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("ip", ip + "/");
+                            editor.commit();
+
+                            //重新构造Retrofit
+                            RetrofitClient.RETROFIT_CLIENT.setRetrofit();
+
+                            ToastUtil.showToast("设置ip地址成功");
+                        }
+                    }
+                }).create();
+        dialog.show();
     }
 
     @Override

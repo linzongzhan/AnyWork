@@ -1,5 +1,12 @@
 package com.qgstudio.anywork.data;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.Log;
+
+import com.qgstudio.anywork.App;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,7 +15,11 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.Cookie;
 import okhttp3.CookieJar;
 import okhttp3.HttpUrl;
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Converter;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -45,19 +56,50 @@ public enum RetrofitClient {
             .writeTimeout(20, TimeUnit.SECONDS)
             //错误重连
             .retryOnConnectionFailure(true)
+            //添加拦截器
+            .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .build();
 
     private Retrofit retrofit;
 
+    /**
+     * 获得Retrofit
+     *
+     * @return
+     */
     public Retrofit getRetrofit() {
+        //读出ip地址
+        SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("IP地址", Context.MODE_PRIVATE);
+        String baseUrl = sharedPreferences.getString("ip", ApiStores.API_DEFAULT_URL);
+
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(ApiStores.API_DEFAULT_URL)
+                    .baseUrl(baseUrl)
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .client(client)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
+        return retrofit;
+    }
+
+    /**
+     * 更改IP地址后重新构造Retrofit
+     *
+     * @return
+     */
+    public Retrofit setRetrofit() {
+        //读出ip地址
+        SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("IP地址", Context.MODE_PRIVATE);
+        String baseUrl = sharedPreferences.getString("ip", ApiStores.API_DEFAULT_URL);
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .client(client)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
         return retrofit;
     }
 }
