@@ -42,9 +42,13 @@ public class RegisterFragment extends MVPBaseFragment<RegisterContract.View, Reg
         String pass1 = password.getText().toString();
         String pass2 = password2.getText().toString();
 
-        if (!n.matches("[a-z0-9A-Z\\u4e00-\\u9fa5]{1,15}")) {
-            name.setError("请输入1-15个字符的姓名");
-        } else if (!a.matches("\\w+@\\w+(\\.\\w{2,3})*\\.\\w{2,3}")) {
+        if (!n.matches("[0-9]{10}")) {
+            name.setError("请输入学号");
+        }
+//        if (!n.matches("[a-z0-9A-Z\\u4e00-\\u9fa5]{1,15}")) {
+//            name.setError("请输入1-15个字符的姓名");
+//        }
+        else if (!a.matches("\\w+@\\w+(\\.\\w{2,3})*\\.\\w{2,3}")) {
             account.setError("请输入正确的邮箱地址");
         } else if (!p.matches("^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\\d{8}$")) {
             phone.setError("请输入正确的电话号码");
