@@ -105,7 +105,7 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         User user = App.getInstance().getUser();
         GlideUtil.setPictureWithOutCache(headIv, user.getUserId(), R.drawable.ic_user_default);
         name.setText(user.getUserName());
-        mail.setText("邮箱：" + user.getEmail());
+        mail.setText("学号：" + user.getEmail());
     }
 
     @Override

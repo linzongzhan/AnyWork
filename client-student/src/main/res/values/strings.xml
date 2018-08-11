@@ -13,10 +13,10 @@
     <string name="name">请输入学号</string>
     <string name="phone">请输入常用手机电话</string>
     <string name="password">请输入密码</string>
-    <string name="account">请输入学号</string>
+    <string name="put_email">请输入邮箱</string>
     <string name="rePassword">请确认密码</string>
     <string name="sign_in">账号登陆</string>
-    <string name="email">邮箱</string>
+    <string name="student_id">学号</string>
     <string name="forget_password">忘记密码？</string>
     <string name="info">个人信息</string>
     <string name="paper">试卷</string>

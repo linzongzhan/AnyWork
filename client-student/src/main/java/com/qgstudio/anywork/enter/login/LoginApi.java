@@ -2,6 +2,7 @@ package com.qgstudio.anywork.enter.login;
 
 import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.model.User;
+import com.qgstudio.anywork.data.model.User1;
 
 import retrofit2.http.Body;
 import retrofit2.http.Headers;
@@ -17,5 +18,5 @@ interface LoginApi {
 
     @POST("user/login")
     @Headers("Content-Type:application/json")
-    Observable<ResponseResult<User>> login(@Body Object object);
+    Observable<ResponseResult<User1>> login(@Body Object object);
 }

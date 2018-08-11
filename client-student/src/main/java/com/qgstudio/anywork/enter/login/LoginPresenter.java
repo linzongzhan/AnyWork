@@ -7,6 +7,7 @@ import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.model.User;
+import com.qgstudio.anywork.data.model.User1;
 import com.qgstudio.anywork.mvp.BasePresenterImpl;
 import com.qgstudio.anywork.utils.DataBaseUtil;
 import com.qgstudio.anywork.utils.GsonUtil;
@@ -85,14 +86,16 @@ public class LoginPresenter extends BasePresenterImpl<LoginContract.View> implem
 
         Map<String, String> loginInfo = new HashMap<>();
         loginInfo.put("valcode", "0");
-        loginInfo.put("email", account);
+//        loginInfo.put("email", account);
+        loginInfo.put("studentId", account);
         loginInfo.put("password", password);
 
         LogUtil.d(TAG, "[login] " + "loginInfo -> " + GsonUtil.GsonString(loginInfo));
         loginApi.login(loginInfo)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<ResponseResult<User>>() {
+//                .subscribe(new Observer<ResponseResult<User>>() {
+                .subscribe(new Observer<ResponseResult<User1>>() {
                     @Override
                     public void onCompleted() {
                     }
@@ -106,10 +109,13 @@ public class LoginPresenter extends BasePresenterImpl<LoginContract.View> implem
                     }
 
                     @Override
-                    public void onNext(ResponseResult<User> result) {
+//                    public void onNext(ResponseResult<User> result) {
+                      public void onNext(ResponseResult<User1> result) {
 
                         if (result.getState() == 1) {
-                            User user = result.getData();
+                            User1 user1 = result.getData();
+                            User user = new User(user1.getUserId(),user1.getUserName(),user1.getEmail(),
+                                    user1.getPassword(), user1.getPhone(), user1.getMark());
                             App.getInstance().setUser(user);
                             LogUtil.d(TAG, "[login] " + "onNext：" + "user -> " + GsonUtil.GsonString(user));
                             mView.showSuccess();

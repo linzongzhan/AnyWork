@@ -23,7 +23,7 @@
     <android.support.v7.widget.AppCompatEditText
         android:id="@+id/account"
         style="@style/AnyWork.Theme.EditText1"
-        android:hint="@string/account"
+        android:hint="@string/put_email"
         android:inputType="textEmailAddress"/>
 
     <android.support.v7.widget.AppCompatEditText

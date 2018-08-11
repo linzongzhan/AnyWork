@@ -62,7 +62,8 @@ public class RegisterPresenter extends BasePresenterImpl<RegisterContract.View> 
         HashMap<String, String> user = new HashMap<>();
         user.put("email", account);
         user.put("password", password);
-        user.put("userName", name);
+//        user.put("userName", name);
+        user.put("studentId", name);
         user.put("phone", phone);
         user.put("mark", "0");
         user.put("valcode", "0");

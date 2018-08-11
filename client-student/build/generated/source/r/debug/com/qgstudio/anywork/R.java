@@ -3977,7 +3977,6 @@ containing a value of this type.
         public static final int AnyWork_Theme_EditText1=0x7f090047;
         public static final int AnyWork_Theme_EditText2=0x7f090048;
         /** <item name="android:layout_margin">10dp</item>
-<item name="android:layout_margin">10dp</item>
          */
         public static final int AnyWork_Theme_Icon=0x7f090049;
         public static final int AnyWork_Theme_Icon_Big=0x7f09004a;
