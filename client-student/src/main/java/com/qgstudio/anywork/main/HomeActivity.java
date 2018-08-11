@@ -22,6 +22,7 @@ import com.qgstudio.anywork.common.DialogManagerActivity;
 import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.dialog.BaseDialog;
 import com.qgstudio.anywork.enter.EnterActivity;
+import com.qgstudio.anywork.feedback.FeedbackActivity;
 import com.qgstudio.anywork.user.UserActivity;
 import com.qgstudio.anywork.utils.GlideUtil;
 import com.qgstudio.anywork.utils.SessionMaintainUtil;
@@ -138,8 +139,10 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
                 break;
             }
             case R.id.nav_feedback:{//意见反馈
-                // TODO: 2017/8/16 意见反馈
-                ToastUtil.showToast("此功能暂未开放！");
+//                // TODO: 2017/8/16 意见反馈
+//                ToastUtil.showToast("此功能暂未开放！");
+                Intent intent = new Intent(HomeActivity.this, FeedbackActivity.class);
+                startActivity(intent);
                 break;
             }
             case R.id.nav_exit: {//退出登入

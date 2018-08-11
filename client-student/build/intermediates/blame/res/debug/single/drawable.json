@@ -12,12 +12,16 @@
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_dialog_white.xml"
     },
     {
-        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_user_default.png",
-        "source": "E:\\AndroidProject1\\AnyWork\\client-student\\src\\main\\res\\drawable\\ic_user_default.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\background_hint.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\drawable\\background_hint.xml"
     },
     {
         "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_user_default.png",
+        "source": "E:\\AndroidProject1\\AnyWork\\client-student\\src\\main\\res\\drawable\\ic_user_default.png"
     },
     {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
@@ -28,20 +32,20 @@
         "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\drawable\\notification_tile_bg.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_paper_date.png",
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\drawable\\ic_paper_date.png"
     },
     {
-        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "C:\\Users\\KK\\.android\\build-cache\\d351bbee0a15b7c7db971b409df47525b82dfee1\\output\\res\\drawable\\design_snackbar_background.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
         "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\KK\\.android\\build-cache\\d351bbee0a15b7c7db971b409df47525b82dfee1\\output\\res\\drawable\\design_snackbar_background.xml"
     },
     {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
@@ -270,6 +274,10 @@
     {
         "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\drawable\\background.xml"
     },
     {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
@@ -602,6 +610,10 @@
     {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_load_error.png",
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_load_error.png"
+    },
+    {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\background_commit.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\drawable\\background_commit.xml"
     },
     {
         "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",

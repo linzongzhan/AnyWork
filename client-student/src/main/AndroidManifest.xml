@@ -38,6 +38,7 @@
         <activity android:name=".paper.PaperActivity" />
         <activity android:name=".user.UserActivity" />
         <activity android:name=".main.SearchingActivity"/>
+        <activity android:name=".feedback.FeedbackActivity"/>
         <receiver android:name=".common.NetworkStatusReceiver" >
             <intent-filter >
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />

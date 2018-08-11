@@ -1,533 +1,537 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:2:1-49:12
 	package
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
 	android:versionCode
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:7:5-67
-MERGED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:10:5-67
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:7:5-67
+MERGED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:10:5-67
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:7:22-64
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:7:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:9:5-79
-MERGED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:11:5-79
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:9:5-79
+MERGED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:9:22-76
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:9:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:11:5-81
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:11:22-78
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:11:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:13:5-80
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:13:5-80
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:13:22-77
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:13:22-77
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:15:5-84
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:15:5-84
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:15:22-81
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:15:22-81
 application
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:17:5-46:19
-MERGED from [com.android.support:design:25.3.1] C:\Users\KK\.android\build-cache\d351bbee0a15b7c7db971b409df47525b82dfee1\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\KK\.android\build-cache\15c1fdf6fc290249a81df5cf0fee1f450f35be98\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\KK\.android\build-cache\bfa3ec569b7c28bababc84d50f2b9a22f18ef5ac\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\KK\.android\build-cache\c543f3523ba47751e087c7a576e5e63098ead1c0\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\KK\.android\build-cache\8484cd6deb3cd82a9cff61bad1d084e36598b46c\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\KK\.android\build-cache\2f2acca3886a50c2f9748414f00015ae56e972c6\output\AndroidManifest.xml:26:5-20
-MERGED from [de.hdodenhof:circleimageview:2.0.0] C:\Users\KK\.android\build-cache\b0ec1863e9e5dc465398e348681c5867ca195cc9\output\AndroidManifest.xml:9:5-20
-MERGED from [com.victor:lib:1.0.4] C:\Users\KK\.android\build-cache\fcada0fd905903450b7d80036756878a3f444820\output\AndroidManifest.xml:11:5-14:19
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\KK\.android\build-cache\eef6f7b93c28453887e1764dd8e0f962dbfbbc5a\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\KK\.android\build-cache\cffb355ced1735af4aa95eb59c13ce24f1a302f9\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\KK\.android\build-cache\8f6ae5373a63ed77399145e75838ad718d514cc7\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\KK\.android\build-cache\fb9b43c02f47d06f1aee0a3b6f9535bbc6d070e2\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\KK\.android\build-cache\029ca9ee3d63ed264ea865ea890729a5470f0d6b\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\KK\.android\build-cache\87495d5ab0c093f27f8177241e382f746e6aa2a1\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\KK\.android\build-cache\7f95835bb3edaef20669426a809ca5319b89d27c\output\AndroidManifest.xml:9:5-20
-MERGED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:13:5-21:19
-MERGED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:9:5-37:19
-MERGED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:9:5-159:19
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:17:5-47:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\linzongzhan\.android\build-cache\5646ef765243135dd21bf0a44b3c2a06c5be4bf1\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\linzongzhan\.android\build-cache\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\linzongzhan\.android\build-cache\cf6ba5ca4fb7b9e0291603029f9ef549bedd3b96\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\linzongzhan\.android\build-cache\e39c41efea1c43adbb1a9e9eb555a2328147086c\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\linzongzhan\.android\build-cache\09a2544bc1ba0b69b008402fd84bcb5ee93a1e17\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\linzongzhan\.android\build-cache\fa580d764df45e58b4dbc2c73b79614da2449d06\output\AndroidManifest.xml:26:5-20
+MERGED from [de.hdodenhof:circleimageview:2.0.0] C:\Users\linzongzhan\.android\build-cache\15de2c6218f1feb3637fd46853b1ae0d5749ee25\output\AndroidManifest.xml:9:5-20
+MERGED from [com.victor:lib:1.0.4] C:\Users\linzongzhan\.android\build-cache\255b47a972b7d7959465c180d537975343a4968b\output\AndroidManifest.xml:11:5-14:19
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\linzongzhan\.android\build-cache\e239306b135cb576bd8c359029125f3680bb3a99\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\linzongzhan\.android\build-cache\394d411f41349fe05a2fb54363980148d2dd02c2\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\linzongzhan\.android\build-cache\e2d4dd6b7cd76d0d17e7865e061f0a6e9df015d0\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\linzongzhan\.android\build-cache\f9b9ce32b4fa568805e1e1670f8761f1755fc60d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\linzongzhan\.android\build-cache\9045b00ea1c9f83f7ea8a615069782da3cca0531\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\linzongzhan\.android\build-cache\e770a35d4d9ea4d803fd7b09108d99961ca93ffc\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\linzongzhan\.android\build-cache\0890cd17bb92f198d92eb287317bb313ad40235e\output\AndroidManifest.xml:9:5-20
+MERGED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:13:5-21:19
+MERGED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:9:5-37:19
+MERGED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:9:5-159:19
 	android:label
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:21:9-41
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:21:9-41
 	android:supportsRtl
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:22:9-35
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:22:9-35
 	android:allowBackup
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:19:9-35
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:19:9-35
 	android:icon
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:20:9-41
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:20:9-41
 	android:theme
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:23:9-45
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:23:9-45
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:18:9-28
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:18:9-28
 activity#com.qgstudio.anywork.enter.EnterActivity
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:24:9-25:50
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:24:9-25:50
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:25:13-48
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:25:13-48
 activity#com.qgstudio.anywork.StartActivity
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:26:9-34:20
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:26:9-34:20
 	android:theme
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:28:13-48
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:28:13-48
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:27:13-42
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:27:13-42
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:29:13-33:29
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:30:17-69
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:30:25-66
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:32:17-77
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:32:27-74
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:32:27-74
 activity#com.qgstudio.anywork.grade.GradeActivity
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:35:9-57
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:35:9-57
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:35:19-54
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:35:19-54
 activity#com.qgstudio.anywork.main.HomeActivity
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:36:9-55
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:36:9-55
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:36:19-52
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:36:19-52
 activity#com.qgstudio.anywork.exam.ExamActivity
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:37:9-55
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:37:9-55
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:37:19-52
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:37:19-52
 activity#com.qgstudio.anywork.paper.PaperActivity
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:38:9-57
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:38:9-57
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:38:19-54
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:38:19-54
 activity#com.qgstudio.anywork.user.UserActivity
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:39:9-55
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:39:9-55
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:39:19-52
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:39:19-52
 activity#com.qgstudio.anywork.main.SearchingActivity
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:40:9-59
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:40:9-59
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:40:19-57
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:40:19-57
+activity#com.qgstudio.anywork.feedback.FeedbackActivity
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:41:9-62
+	android:name
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:41:19-60
 receiver#com.qgstudio.anywork.common.NetworkStatusReceiver
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:41:9-45:20
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:42:9-46:20
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:41:19-63
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:42:19-63
 intent-filter#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:42:13-44:29
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:43:13-45:29
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:43:17-79
+ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:44:17-79
 	android:name
-		ADDED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml:43:25-76
+		ADDED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml:44:25-76
 uses-sdk
-INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:25.3.1] C:\Users\KK\.android\build-cache\d351bbee0a15b7c7db971b409df47525b82dfee1\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\KK\.android\build-cache\15c1fdf6fc290249a81df5cf0fee1f450f35be98\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\KK\.android\build-cache\bfa3ec569b7c28bababc84d50f2b9a22f18ef5ac\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\KK\.android\build-cache\c543f3523ba47751e087c7a576e5e63098ead1c0\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] C:\Users\KK\.android\build-cache\8484cd6deb3cd82a9cff61bad1d084e36598b46c\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\KK\.android\build-cache\08bcfa7c3ba98067ce04dadaf2e48f8dca139dcd\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\KK\.android\build-cache\2f2acca3886a50c2f9748414f00015ae56e972c6\output\AndroidManifest.xml:20:5-43
-MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\KK\.android\build-cache\90e457ded5cb28b4efe347d8984c1fe5bf61cb54\output\AndroidManifest.xml:5:5-43
-MERGED from [io.reactivex:rxandroid:1.0.1] C:\Users\KK\.android\build-cache\2428e8d4e5c6d0dc0d88eed324287a73f5ab0aea\output\AndroidManifest.xml:19:5-43
-MERGED from [de.hdodenhof:circleimageview:2.0.0] C:\Users\KK\.android\build-cache\b0ec1863e9e5dc465398e348681c5867ca195cc9\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.victor:lib:1.0.4] C:\Users\KK\.android\build-cache\fcada0fd905903450b7d80036756878a3f444820\output\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\KK\.android\build-cache\eef6f7b93c28453887e1764dd8e0f962dbfbbc5a\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\KK\.android\build-cache\cffb355ced1735af4aa95eb59c13ce24f1a302f9\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\KK\.android\build-cache\8f6ae5373a63ed77399145e75838ad718d514cc7\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\KK\.android\build-cache\fb9b43c02f47d06f1aee0a3b6f9535bbc6d070e2\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\KK\.android\build-cache\029ca9ee3d63ed264ea865ea890729a5470f0d6b\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\KK\.android\build-cache\87495d5ab0c093f27f8177241e382f746e6aa2a1\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\KK\.android\build-cache\7f95835bb3edaef20669426a809ca5319b89d27c\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:6:5-8:41
-MERGED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.3.1] C:\Users\linzongzhan\.android\build-cache\5646ef765243135dd21bf0a44b3c2a06c5be4bf1\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\linzongzhan\.android\build-cache\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\linzongzhan\.android\build-cache\cf6ba5ca4fb7b9e0291603029f9ef549bedd3b96\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\linzongzhan\.android\build-cache\e39c41efea1c43adbb1a9e9eb555a2328147086c\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\linzongzhan\.android\build-cache\09a2544bc1ba0b69b008402fd84bcb5ee93a1e17\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\linzongzhan\.android\build-cache\d9507c8c9e7c271c7addec53c5687ebf624d9bca\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\linzongzhan\.android\build-cache\fa580d764df45e58b4dbc2c73b79614da2449d06\output\AndroidManifest.xml:20:5-43
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\linzongzhan\.android\build-cache\ffc866b7ad7b4905b6bbd2a14d9cc80eb4a30597\output\AndroidManifest.xml:5:5-43
+MERGED from [io.reactivex:rxandroid:1.0.1] C:\Users\linzongzhan\.android\build-cache\2cf8226222b2ef5fcfeed561319c96b7719d585f\output\AndroidManifest.xml:19:5-43
+MERGED from [de.hdodenhof:circleimageview:2.0.0] C:\Users\linzongzhan\.android\build-cache\15de2c6218f1feb3637fd46853b1ae0d5749ee25\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.victor:lib:1.0.4] C:\Users\linzongzhan\.android\build-cache\255b47a972b7d7959465c180d537975343a4968b\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\linzongzhan\.android\build-cache\e239306b135cb576bd8c359029125f3680bb3a99\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\linzongzhan\.android\build-cache\394d411f41349fe05a2fb54363980148d2dd02c2\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\linzongzhan\.android\build-cache\e2d4dd6b7cd76d0d17e7865e061f0a6e9df015d0\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\linzongzhan\.android\build-cache\f9b9ce32b4fa568805e1e1670f8761f1755fc60d\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\linzongzhan\.android\build-cache\9045b00ea1c9f83f7ea8a615069782da3cca0531\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\linzongzhan\.android\build-cache\e770a35d4d9ea4d803fd7b09108d99961ca93ffc\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\linzongzhan\.android\build-cache\0890cd17bb92f198d92eb287317bb313ad40235e\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:6:5-8:41
+MERGED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\KK\.android\build-cache\d351bbee0a15b7c7db971b409df47525b82dfee1\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\linzongzhan\.android\build-cache\5646ef765243135dd21bf0a44b3c2a06c5be4bf1\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidProject1\AnyWork\client-student\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] C:\Users\KK\.android\build-cache\d351bbee0a15b7c7db971b409df47525b82dfee1\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\KK\.android\build-cache\15c1fdf6fc290249a81df5cf0fee1f450f35be98\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\KK\.android\build-cache\bfa3ec569b7c28bababc84d50f2b9a22f18ef5ac\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\KK\.android\build-cache\c543f3523ba47751e087c7a576e5e63098ead1c0\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\KK\.android\build-cache\8484cd6deb3cd82a9cff61bad1d084e36598b46c\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\KK\.android\build-cache\08bcfa7c3ba98067ce04dadaf2e48f8dca139dcd\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\KK\.android\build-cache\2f2acca3886a50c2f9748414f00015ae56e972c6\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\KK\.android\build-cache\eef6f7b93c28453887e1764dd8e0f962dbfbbc5a\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\KK\.android\build-cache\cffb355ced1735af4aa95eb59c13ce24f1a302f9\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\KK\.android\build-cache\8f6ae5373a63ed77399145e75838ad718d514cc7\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\KK\.android\build-cache\fb9b43c02f47d06f1aee0a3b6f9535bbc6d070e2\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\KK\.android\build-cache\029ca9ee3d63ed264ea865ea890729a5470f0d6b\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\KK\.android\build-cache\87495d5ab0c093f27f8177241e382f746e6aa2a1\output\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] C:\Users\linzongzhan\.android\build-cache\5646ef765243135dd21bf0a44b3c2a06c5be4bf1\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\linzongzhan\.android\build-cache\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\linzongzhan\.android\build-cache\cf6ba5ca4fb7b9e0291603029f9ef549bedd3b96\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\linzongzhan\.android\build-cache\e39c41efea1c43adbb1a9e9eb555a2328147086c\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\linzongzhan\.android\build-cache\09a2544bc1ba0b69b008402fd84bcb5ee93a1e17\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\linzongzhan\.android\build-cache\d9507c8c9e7c271c7addec53c5687ebf624d9bca\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\linzongzhan\.android\build-cache\fa580d764df45e58b4dbc2c73b79614da2449d06\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\linzongzhan\.android\build-cache\e239306b135cb576bd8c359029125f3680bb3a99\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\linzongzhan\.android\build-cache\394d411f41349fe05a2fb54363980148d2dd02c2\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\linzongzhan\.android\build-cache\e2d4dd6b7cd76d0d17e7865e061f0a6e9df015d0\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\linzongzhan\.android\build-cache\f9b9ce32b4fa568805e1e1670f8761f1755fc60d\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\linzongzhan\.android\build-cache\9045b00ea1c9f83f7ea8a615069782da3cca0531\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\linzongzhan\.android\build-cache\e770a35d4d9ea4d803fd7b09108d99961ca93ffc\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] C:\Users\KK\.android\build-cache\d351bbee0a15b7c7db971b409df47525b82dfee1\output\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] C:\Users\linzongzhan\.android\build-cache\5646ef765243135dd21bf0a44b3c2a06c5be4bf1\output\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] C:\Users\KK\.android\build-cache\d351bbee0a15b7c7db971b409df47525b82dfee1\output\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] C:\Users\linzongzhan\.android\build-cache\5646ef765243135dd21bf0a44b3c2a06c5be4bf1\output\AndroidManifest.xml:26:9-47
 service#com.tinkerpatch.sdk.tinker.service.TinkerServerResultService
-ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:14:9-16:40
+ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:14:9-16:40
 	android:exported
-		ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:16:13-37
+		ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:16:13-37
 	android:name
-		ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:15:13-88
+		ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:15:13-88
 receiver#com.tinkerpatch.sdk.server.utils.ReportBroadCast
-ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:18:9-20:40
+ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:18:9-20:40
 	android:exported
-		ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:20:13-37
+		ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\KK\.android\build-cache\89a57df805fcbe466d3e9fae6d4d1ea7eb579eb5\output\AndroidManifest.xml:19:13-76
+		ADDED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.android\build-cache\8fa424bb7c93a570923f4e3d44361cec6d78a717\output\AndroidManifest.xml:19:13-76
 service#com.tencent.tinker.lib.service.TinkerPatchService$IntentServiceRunner
-ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:19:9-22:40
+ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:19:9-22:40
 	android:process
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:22:13-37
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:22:13-37
 	android:exported
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:21:13-37
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:20:13-97
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:20:13-97
 service#com.tencent.tinker.lib.service.TinkerPatchService$IntentServiceRunner$InnerService
-ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:23:9-26:40
+ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:23:9-26:40
 	android:process
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:26:13-37
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:26:13-37
 	android:exported
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:25:13-37
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:24:13-110
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:24:13-110
 service#com.tencent.tinker.lib.service.TinkerPatchService$JobServiceRunner
-ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:27:9-31:40
+ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:27:9-31:40
 	android:process
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:31:13-37
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:31:13-37
 	android:exported
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:29:13-37
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:29:13-37
 	android:permission
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:30:13-69
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:30:13-69
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:28:13-94
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:28:13-94
 service#com.tencent.tinker.lib.service.DefaultTinkerResultService
-ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:34:9-36:40
+ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:34:9-36:40
 	android:exported
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:36:13-37
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\KK\.android\build-cache\bc66bef1163b510aa365686a8c0d2b4f4615dfb5\output\AndroidManifest.xml:35:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-lib:1.9.8] C:\Users\linzongzhan\.android\build-cache\7f0864d233672f9643fe38c76cd62a676ed14bfe\output\AndroidManifest.xml:35:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:10:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:10:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:10:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:10:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:11:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:11:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:11:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:11:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:12:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:12:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:12:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:12:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_03
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:13:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:13:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:13:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:13:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_04
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:14:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:14:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:14:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:14:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_05
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:15:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:15:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:15:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:15:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_06
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:16:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:16:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:16:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:16:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_07
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:17:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:17:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:17:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:17:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_08
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:18:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:18:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:18:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:18:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_09
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:19:9-95
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:19:9-95
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:19:19-92
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:19:19-92
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:20:9-22:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:20:9-22:64
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:22:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:22:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:21:13-88
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:21:13-88
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:23:9-25:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:23:9-25:64
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:25:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:25:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:24:13-88
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:24:13-88
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:26:9-28:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:26:9-28:64
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:28:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:28:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:27:13-88
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:27:13-88
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:29:9-31:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:29:9-31:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:31:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:31:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:30:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:30:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:32:9-34:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:32:9-34:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:34:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:33:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:33:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:35:9-37:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:35:9-37:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:37:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:37:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:36:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:36:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_03
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:38:9-40:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:38:9-40:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:40:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:40:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:39:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:39:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_04
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:41:9-43:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:41:9-43:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:43:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:43:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:42:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:42:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_05
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:44:9-46:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:44:9-46:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:46:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:46:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:45:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:45:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_06
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:47:9-49:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:47:9-49:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:49:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:49:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:48:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:48:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_07
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:50:9-52:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:50:9-52:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:52:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:52:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:51:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:51:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_08
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:53:9-55:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:53:9-55:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:55:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:55:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:54:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:54:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_09
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:56:9-58:46
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:56:9-58:46
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:58:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:58:13-43
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:57:13-86
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:57:13-86
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:59:9-62:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:59:9-62:64
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:61:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:61:13-43
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:62:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:62:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:60:13-88
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:60:13-88
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:63:9-66:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:63:9-66:64
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:65:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:65:13-43
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:66:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:66:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:64:13-88
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:64:13-88
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:67:9-70:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:67:9-70:64
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:69:13-43
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:69:13-43
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:70:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:70:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:68:13-88
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:68:13-88
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:71:9-73:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:71:9-73:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:73:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:73:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:72:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:72:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:74:9-76:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:74:9-76:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:76:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:76:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:75:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:75:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:77:9-79:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:77:9-79:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:79:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:79:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:78:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:78:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_03
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:80:9-82:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:80:9-82:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:82:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:82:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:81:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:81:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_04
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:83:9-85:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:83:9-85:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:85:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:85:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:84:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:84:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_05
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:86:9-88:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:86:9-88:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:88:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:88:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:87:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:87:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_06
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:89:9-91:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:89:9-91:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:91:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:91:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:90:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:90:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_07
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:92:9-94:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:92:9-94:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:94:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:94:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:93:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:93:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_08
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:95:9-97:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:95:9-97:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:97:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:97:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:96:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:96:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_09
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:98:9-100:47
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:98:9-100:47
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:100:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:100:13-44
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:99:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:99:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:101:9-104:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:101:9-104:64
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:103:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:103:13-44
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:104:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:104:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:102:13-89
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:102:13-89
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:105:9-108:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:105:9-108:64
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:107:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:107:13-44
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:108:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:108:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:106:13-89
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:106:13-89
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:109:9-112:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:109:9-112:64
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:111:13-44
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:111:13-44
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:112:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:112:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:110:13-89
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:110:13-89
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:113:9-115:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:113:9-115:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:115:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:115:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:114:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:114:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:116:9-118:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:116:9-118:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:118:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:118:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:117:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:117:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:119:9-121:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:119:9-121:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:121:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:121:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:120:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:120:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_03
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:122:9-124:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:122:9-124:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:124:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:124:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:123:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:123:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_04
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:125:9-127:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:125:9-127:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:127:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:127:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:126:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:126:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_05
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:128:9-130:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:128:9-130:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:130:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:130:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:129:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:129:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_06
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:131:9-133:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:131:9-133:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:133:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:133:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:132:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:132:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_07
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:134:9-136:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:134:9-136:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:136:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:136:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:135:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:135:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_08
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:137:9-139:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:137:9-139:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:139:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:139:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:138:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:138:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_09
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:140:9-142:51
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:140:9-142:51
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:142:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:142:13-48
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:141:13-85
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:141:13-85
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:143:9-146:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:143:9-146:64
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:145:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:145:13-48
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:146:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:146:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:144:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:144:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:147:9-150:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:147:9-150:64
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:149:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:149:13-48
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:150:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:150:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:148:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:148:13-87
 activity#com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02_T
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:151:9-154:64
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:151:9-154:64
 	android:launchMode
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:153:13-48
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:153:13-48
 	android:theme
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:154:13-61
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:154:13-61
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:152:13-87
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:152:13-87
 meta-data#tinker_version
-ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:156:9-158:37
+ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:156:9-158:37
 	android:value
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:158:13-34
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:158:13-34
 	android:name
-		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\KK\.android\build-cache\191837d3248c2573611af00de29d010549e313e1\output\AndroidManifest.xml:157:13-42
+		ADDED from [com.tinkerpatch.tinker:tinker-android-loader:1.9.8] C:\Users\linzongzhan\.android\build-cache\51bc77c123e2b0ae45cd19f2c6dc81341acf9502\output\AndroidManifest.xml:157:13-42

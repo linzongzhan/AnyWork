@@ -20,8 +20,16 @@
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_fiber_green.xml"
     },
     {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\feedback_select.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\feedback_select.xml"
+    },
+    {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
         "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\5646ef765243135dd21bf0a44b3c2a06c5be4bf1\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\feedback_cancel.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\feedback_cancel.xml"
     },
     {
         "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_fiber_red.xml",
@@ -50,6 +58,14 @@
     {
         "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
         "source": "C:\\Users\\KK\\.android\\build-cache\\d351bbee0a15b7c7db971b409df47525b82dfee1\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\feedback_add_picture.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\feedback_add_picture.xml"
+    },
+    {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\feedback_noselect.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\feedback_noselect.xml"
     },
     {
         "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_fiber_green.xml",

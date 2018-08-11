@@ -8,12 +8,12 @@
         "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in_center.xml",
-        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\anim\\fade_in_center.xml"
-    },
-    {
         "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
         "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in_center.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\anim\\fade_in_center.xml"
     },
     {
         "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",

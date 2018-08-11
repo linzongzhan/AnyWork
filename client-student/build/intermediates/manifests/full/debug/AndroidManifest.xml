@@ -46,6 +46,7 @@
         <activity android:name="com.qgstudio.anywork.paper.PaperActivity" />
         <activity android:name="com.qgstudio.anywork.user.UserActivity" />
         <activity android:name="com.qgstudio.anywork.main.SearchingActivity" />
+        <activity android:name="com.qgstudio.anywork.feedback.FeedbackActivity" />
 
         <receiver android:name="com.qgstudio.anywork.common.NetworkStatusReceiver" >
             <intent-filter>
