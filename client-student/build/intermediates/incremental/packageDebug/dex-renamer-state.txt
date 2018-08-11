@@ -1,4 +1,4 @@
-#Sat Aug 11 20:25:42 CST 2018
+#Sat Aug 11 21:07:24 CST 2018
 base.0=E\:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=E\:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

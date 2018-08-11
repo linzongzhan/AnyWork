@@ -772,7 +772,6 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="account">请输入学号</string>
     <string name="account2">请输入帐号</string>
     <string name="app_name">AnyWork</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
@@ -782,7 +781,6 @@
     <string name="confirm">确认</string>
     <string name="create_account">注册帐号</string>
     <string name="edit">编辑</string>
-    <string name="email">邮箱</string>
     <string name="forget_password">忘记密码？</string>
     <string name="info">个人信息</string>
     <string name="inform">公告</string>
@@ -804,12 +802,14 @@
     <string name="phone">请输入常用手机电话</string>
     <string name="phone2">请输入电话号码</string>
     <string name="point">提示</string>
+    <string name="put_email">请输入邮箱</string>
     <string name="rePassword">请确认密码</string>
     <string name="register">帐号注册</string>
     <string name="search_menu_title">Search</string>
     <string name="sign_in">账号登陆</string>
     <string name="sign_up">注册</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="student_id">学号</string>
     <string name="tip_load_blank">暂时木有内容呀～～</string>
     <string name="tip_load_error">轻触重新加载～～</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
