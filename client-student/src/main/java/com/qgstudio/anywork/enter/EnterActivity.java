@@ -89,7 +89,7 @@ public class EnterActivity extends DialogManagerActivity {
 //        ToastUtil.showToast("暂未开放游客模式。");
 //        // TODO: 2017/7/10 通过游客模式进入
         final EditText editText = new EditText(this);
-        editText.setHint("例：http://10.21.56.107");
+        editText.setHint("例如：http://10.21.56.107");
         editText.setTextColor(Color.BLACK);
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("设置IP地址")

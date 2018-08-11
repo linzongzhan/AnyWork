@@ -20,11 +20,11 @@
         "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\5646ef765243135dd21bf0a44b3c2a06c5be4bf1\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_add.xml",
-        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_add.xml"
-    },
-    {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\change_ip.xml",
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\change_ip.xml"
+    },
+    {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_add.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_add.xml"
     }
 ]
