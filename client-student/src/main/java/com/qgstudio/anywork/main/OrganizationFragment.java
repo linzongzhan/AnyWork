@@ -7,11 +7,13 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Filter;
 
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.common.DialogManagerActivity;
 import com.qgstudio.anywork.data.model.Organization;
+import com.qgstudio.anywork.grade.GradeContract;
 import com.qgstudio.anywork.main.data.OrganizationRepository;
 import com.qgstudio.anywork.paper.PaperActivity;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;
@@ -26,8 +28,12 @@ import butterknife.Unbinder;
 
 public class OrganizationFragment extends MVPBaseFragment<OrganizationFragView, OrganizationRepository> implements OrganizationFragView {
 
-    @BindView(R.id.recycler_all) RecyclerView mRecyclerView;
-    @BindView(R.id.refresh) SwipeRefreshLayout mSwipeRefreshLayout;
+    @BindView(R.id.recycler_all)
+    RecyclerView mRecyclerView;
+    @BindView(R.id.refresh)
+    SwipeRefreshLayout mSwipeRefreshLayout;
+    @BindView(R.id.empty_view)
+    View mEmptyView;
 
     private int mType;//fragment类型
 
@@ -106,7 +112,8 @@ public class OrganizationFragment extends MVPBaseFragment<OrganizationFragView, 
                 mPresenter.getJoinOrganization();
                 break;
             }
-            default: {}
+            default: {
+            }
         }
     }
 
@@ -133,6 +140,8 @@ public class OrganizationFragment extends MVPBaseFragment<OrganizationFragView, 
 
     @Override
     public void addOrganizations(List<Organization> organizations) {
+        //无组织提示
+        mEmptyView.setVisibility(organizations.isEmpty() ? View.VISIBLE : View.GONE);
         mOrganizationAdapter.addAll(organizations);
     }
 

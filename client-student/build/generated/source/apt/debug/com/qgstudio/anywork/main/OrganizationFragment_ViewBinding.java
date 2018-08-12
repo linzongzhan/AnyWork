@@ -21,6 +21,7 @@ public class OrganizationFragment_ViewBinding implements Unbinder {
 
     target.mRecyclerView = Utils.findRequiredViewAsType(source, R.id.recycler_all, "field 'mRecyclerView'", RecyclerView.class);
     target.mSwipeRefreshLayout = Utils.findRequiredViewAsType(source, R.id.refresh, "field 'mSwipeRefreshLayout'", SwipeRefreshLayout.class);
+    target.mEmptyView = Utils.findRequiredView(source, R.id.empty_view, "field 'mEmptyView'");
   }
 
   @Override
@@ -32,5 +33,6 @@ public class OrganizationFragment_ViewBinding implements Unbinder {
 
     target.mRecyclerView = null;
     target.mSwipeRefreshLayout = null;
+    target.mEmptyView = null;
   }
 }

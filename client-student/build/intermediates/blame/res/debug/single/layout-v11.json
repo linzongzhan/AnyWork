@@ -1,50 +1,26 @@
 [
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
-        "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\\output\\res\\layout-v11\\notification_media_action.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\87cfc4d6f63b4147ecf65c6b99bae8e8\\res\\layout-v11\\notification_template_big_media.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
-        "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\87cfc4d6f63b4147ecf65c6b99bae8e8\\res\\layout-v11\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
-        "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\87cfc4d6f63b4147ecf65c6b99bae8e8\\res\\layout-v11\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\87cfc4d6f63b4147ecf65c6b99bae8e8\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
-        "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\87cfc4d6f63b4147ecf65c6b99bae8e8\\res\\layout-v11\\notification_media_action.xml"
     },
     {
-        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
-        "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\layout-v11\\notification_media_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
-    },
-    {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
-        "source": "C:\\Users\\linzongzhan\\.android\\build-cache\\c9f1baf577bc873376ea9e4d81c0fa8cb80d2fbc\\output\\res\\layout-v11\\notification_template_big_media.xml"
-    },
-    {
-        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
-        "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
-    },
-    {
-        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
-        "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\layout-v11\\notification_template_big_media.xml"
-    },
-    {
-        "merged": "E:\\AndroidProject1\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\KK\\.android\\build-cache\\15c1fdf6fc290249a81df5cf0fee1f450f35be98\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\87cfc4d6f63b4147ecf65c6b99bae8e8\\res\\layout-v11\\notification_template_big_media_custom.xml"
     }
 ]
