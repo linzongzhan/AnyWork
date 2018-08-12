@@ -25,7 +25,7 @@ public class GlideUtil {
 
     public static void setPictureWithOutCache(ImageView img, int id, int def) {
         Glide.with(App.getInstance())
-                .load(ApiStores.API_DEFAULT_URL + "picture/" + id + ".jpg")
+                .load(ApiStores.API_DEFAULT_URL + "/picture/user/" + id + ".jpg")
                 .skipMemoryCache(true)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .error(def == -1 ? R.drawable.ic_icon : def)
