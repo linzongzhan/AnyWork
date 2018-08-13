@@ -1,13 +1,14 @@
 apply plugin: 'tinkerpatch-support'
 
 def bakPath = file("${buildDir}/bakApk/")
-def baseInfo = "client-student-1.0.0-0811-09-28-43"
+def baseInfo = "client-student-1.0.0-0812-10-44-14"
 def variantName = "release"
 
 tinkerpatchSupport {
 
-    tinkerEnable = false
+    tinkerEnable = true
     reflectApplication = true
+    supportComponent = true
 
     autoBackupApkPath = "${bakPath}"
 

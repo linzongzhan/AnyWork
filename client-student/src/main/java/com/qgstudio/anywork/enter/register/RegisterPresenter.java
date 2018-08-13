@@ -80,7 +80,7 @@ public class RegisterPresenter extends BasePresenterImpl<RegisterContract.View> 
                     public void onError(Throwable e) {
                         e.printStackTrace();
                         mView.stopLoad();
-                        mView.showError("网络连接错误");
+                        mView.showError("网络连接错误，请检查是否已连接校园网和IP地址是否正确");
                     }
 
                     @Override
