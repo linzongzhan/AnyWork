@@ -14,7 +14,7 @@ import rx.Observable;
  * Created by chenyi on 2017/3/31.
  */
 
-interface LoginApi {
+public interface LoginApi {
 
     @POST("user/login")
     @Headers("Content-Type:application/json")
