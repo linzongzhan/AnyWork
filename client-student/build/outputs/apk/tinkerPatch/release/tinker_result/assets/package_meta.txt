@@ -1,0 +1,4 @@
+#base package config field
+#Sun Aug 12 11:12:39 CST 2018
+NEW_TINKER_ID=tinker_id_1.0.0
+TINKER_ID=tinker_id_1.0.0

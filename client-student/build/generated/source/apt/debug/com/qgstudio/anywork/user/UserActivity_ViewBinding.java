@@ -43,7 +43,7 @@ public class UserActivity_ViewBinding implements Unbinder {
         target.changePic();
       }
     });
-    target.name = Utils.findRequiredViewAsType(source, R.id.name, "field 'name'", EditText.class);
+    target.name = Utils.findRequiredViewAsType(source, R.id.name, "field 'name'", TextView.class);
     target.email = Utils.findRequiredViewAsType(source, R.id.mail, "field 'email'", TextView.class);
     target.phone = Utils.findRequiredViewAsType(source, R.id.phone, "field 'phone'", EditText.class);
     view = Utils.findRequiredView(source, R.id.edit, "field 'edit' and method 'edit'");

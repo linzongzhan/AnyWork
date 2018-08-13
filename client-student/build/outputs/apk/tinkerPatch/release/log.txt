@@ -1,0 +1,70 @@
+-----------------------Tinker patch begin-----------------------
+configuration: 
+oldApk:C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\bakApk/client-student-1.0.0-0812-10-44-14/release//client-student-release.apk
+newApk:C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk\release\client-student-release.apk
+outputFolder:C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk/tinkerPatch/release
+isIgnoreWarning:false
+isProtectedApp:false
+7-ZipPath:C:\Users\linzongzhan\.gradle\caches\modules-2\files-2.1\com.tencent.mm\SevenZip\1.2.5\4786999cf29d8e3b0c39a80359b5127bda36132a\SevenZip-1.2.5-windows-x86_64.exe
+useSignAPk:true
+package meta fields: 
+dex configs: 
+dexMode: jar
+dexPattern:classes.*\.dex
+dex loader:com.tinkerpatch.sdk.loader.TinkerPatchReflectApplication
+dex loader:com.tencent.tinker.loader.*
+lib configs: 
+libPattern:lib/.*/.*\.so
+resource configs: 
+resPattern:res/.*
+resPattern:resources\.arsc
+resPattern:AndroidManifest\.xml
+resPattern:r/.*
+resPattern:assets/.*
+largeModSize:100kb
+useApplyResource:true
+
+Analyze old and new apk files:
+old apk: client-student-release.apk, size=3240138, md5=cd2b78c6c0d55d8a1a0daf2652f6336b
+new apk: client-student-release.apk, size=3249025, md5=452c6fea34fa89dc71df33b4c7ee1cb9
+
+Manifest has no changes, skip rest decode works.
+UnZipping apk to C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk\tinkerPatch\release\client-student-release-old
+UnZipping apk to C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk\tinkerPatch\release\client-student-release-new
+Check for loader classes in dex: classes.dex
+Found add resource: res/drawable-anydpi-v21/ic_search.xml
+Found add resource: res/drawable-hdpi-v4/ic_search.png
+Found add resource: res/drawable-ldpi-v4/ic_search.png
+Found add resource: res/drawable-mdpi-v4/ic_search.png
+Found modify resource: res/drawable-v21/avd_hide_password.xml
+Found modify resource: res/drawable-v21/avd_show_password.xml
+Found add resource: res/drawable-xhdpi-v4/ic_search.png
+Found add resource: res/drawable-xxhdpi-v4/ic_search.png
+Found add resource: res/drawable-xxxhdpi-v4/ic_search.png
+Found modify resource: res/layout/activity_feedback.xml
+Found modify resource: res/layout/fragment_inform.xml
+Found add resource: res/layout-v21/activity_feedback.xml
+Found modify resource: res/menu/setting.xml
+Found large modify resource: resources.arsc size:300368
+
+Gen classes.dex patch file:C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk\tinkerPatch\release\tinker_result\classes.dex, size:11346, md5:61e6d4a08a64adaffc2d2d25cdba538f
+Verifying if patched new dex is logically the same as original new dex: client-student-release-new/classes.dex ...
+
+Gen classes.dex for dalvik full dex file:C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk\tinkerPatch\release\tempPatchedDexes\classes.dex, size:5641888, md5:f1789b5e3bcabeb4015471fe157f0d1c
+DexDecoder:write meta file data: classes.dex,,f1789b5e3bcabeb4015471fe157f0d1c,f1789b5e3bcabeb4015471fe157f0d1c,61e6d4a08a64adaffc2d2d25cdba538f,345946706,1316522584,jar
+
+Add test install result dex: C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk\tinkerPatch\release\tinker_result\test.dex, size:584
+DexDecoder:write test dex meta file data: test.dex,,56900442eb5b7e1de45449d0685e6e00,56900442eb5b7e1de45449d0685e6e00,0,0,0,jar
+Add Test resource file: assets/only_use_to_test_tinker_resource.txt
+Final normal zip resource: resources_out.zip, size=868620, md5=1a40617b0640c024b9d0f689e4f916c5
+Generate unsigned apk: patch_unsigned.apk
+Signing apk: patch_signed.apk
+Signing key algorithm is SHA1withRSA
+Try use 7za to compress the patch file: patch_signed_7zip.apk, will cost much more time
+Current 7za path:C:\Users\linzongzhan\.gradle\caches\modules-2\files-2.1\com.tencent.mm\SevenZip\1.2.5\4786999cf29d8e3b0c39a80359b5127bda36132a\SevenZip-1.2.5-windows-x86_64.exe
+Result: final signed patch result: C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk\tinkerPatch\release\patch_signed.apk, size=38395
+Result: final signed with 7zip patch result: C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk\tinkerPatch\release\patch_signed_7zip.apk, size=40353
+Warning: patch_signed_7zip.apk is bigger than patch_signed.apk 1958 byte, you should choose patch_signed.apk at these time!
+Tinker patch done, total time cost: 12.704000s
+Tinker patch done, you can go to file to find the output C:\Users\linzongzhan\AndroidStudioProjects\AnyWork\client-student\build\outputs\apk/tinkerPatch/release
+-----------------------Tinker patch end-------------------------

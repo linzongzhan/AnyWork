@@ -787,7 +787,7 @@
     <string name="login">登录帐号</string>
     <string name="login_others">游客模式</string>
     <string name="my_account">帐号</string>
-    <string name="my_name">昵称</string>
+    <string name="my_name">姓名</string>
     <string name="my_phone">手机号码</string>
     <string name="name">请输入学号</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

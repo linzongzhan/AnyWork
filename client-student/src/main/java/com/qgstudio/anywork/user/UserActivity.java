@@ -55,7 +55,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
 
     @BindView(R.id.head_pic) CircleImageView pic;
 
-    @BindView(R.id.name) EditText name;
+    @BindView(R.id.name) TextView name;
 
     @BindView(mail) TextView email;
 
@@ -130,7 +130,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
 //        name.setEnabled(focusable);
         phone.setEnabled(focusable);
         if (focusable) {
-            name.requestFocus();
+//            name.requestFocus();
             phone.requestFocus();
         }
     }
