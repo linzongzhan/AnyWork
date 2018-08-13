@@ -65,6 +65,8 @@ public class FeedbackActivity extends MVPBaseActivity<FeedbackContract.View, Fee
         modules.add("考试");
         modules.add("登录");
         modules.add("注册");
+        modules.add("用户");
+        modules.add("组织");
 
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, modules);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
