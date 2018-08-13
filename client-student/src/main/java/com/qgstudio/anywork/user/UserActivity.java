@@ -87,7 +87,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
             }
 
             User nUser = user.clone();
-            nUser.setUserName(n);
+//            nUser.setUserName(n);
             nUser.setPhone(p);
             mPresenter.changeInfo(nUser);
             editFocusable(false);
@@ -127,7 +127,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
     }
 
     private void editFocusable(boolean focusable) {
-        name.setEnabled(focusable);
+//        name.setEnabled(focusable);
         phone.setEnabled(focusable);
         if (focusable) {
             name.requestFocus();
