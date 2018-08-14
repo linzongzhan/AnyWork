@@ -88,9 +88,15 @@ public class EnterActivity extends DialogManagerActivity {
 
 //        ToastUtil.showToast("暂未开放游客模式。");
 //        // TODO: 2017/7/10 通过游客模式进入
+        //读出当前IP地址
+        SharedPreferences sharedPreferences = App.getContext().getSharedPreferences("ip地址", Context.MODE_PRIVATE);
+        String baseUrl = sharedPreferences.getString("ip", ApiStores.API_DEFAULT_URL);
+        baseUrl = baseUrl.substring(0, baseUrl.lastIndexOf("/"));
+
         final EditText editText = new EditText(this);
-        editText.setHint("例如：http://10.21.56.107");
+        editText.setHint("当前IP:" + baseUrl);
         editText.setTextColor(Color.BLACK);
+        editText.setLines(1);
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("设置IP地址")
                 .setView(editText)

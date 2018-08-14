@@ -2,12 +2,21 @@ package com.qgstudio.anywork;
 
 import android.app.Application;
 import android.content.Context;
+import android.text.TextUtils;
 
 import com.qgstudio.anywork.data.model.User;
+import com.qgstudio.anywork.main.HomeActivity;
 import com.qgstudio.anywork.utils.FetchPatchHandler;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.beta.Beta;
+import com.tencent.bugly.crashreport.CrashReport;
 import com.tencent.tinker.loader.app.ApplicationLike;
 import com.tinkerpatch.sdk.TinkerPatch;
 import com.tinkerpatch.sdk.loader.TinkerPatchApplicationLike;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  * Created by Yason on 2017/4/14.
@@ -40,6 +49,15 @@ public class App extends Application {
         context = getApplicationContext();
         app = this;
 
+        String packageName = context.getPackageName();
+        String processName = getProcessName(android.os.Process.myPid());
+        CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(context);
+        strategy.setUploadProcess(processName == null || processName.equals(packageName));
+//        CrashReport.initCrashReport(getApplicationContext(), "a4ce5a4993", true);
+        Bugly.init(getApplicationContext(), "a4ce5a4993", true);
+        Beta.canShowUpgradeActs.add(HomeActivity.class);
+        Beta.checkUpgrade(false, false);
+
         if (BuildConfig.TINKER_ENABLE) {
 
             // 我们可以从这里获得Tinker加载过程的信息
@@ -67,5 +85,34 @@ public class App extends Application {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    /**
+     * 获得进程名
+     *
+     * @param pid
+     * @return
+     */
+    private static String getProcessName(int pid) {
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader("/proc" + pid + "/cmdline"));
+            String processName = reader.readLine();
+            if (!TextUtils.isEmpty(processName)) {
+                processName = processName.trim();
+            }
+            return processName;
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        } finally {
+            try {
+                if (reader != null) {
+                    reader.close();
+                }
+            } catch (IOException exception) {
+                exception.printStackTrace();
+            }
+        }
+        return null;
     }
 }

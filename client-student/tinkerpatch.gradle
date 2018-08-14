@@ -6,7 +6,7 @@ def variantName = "release"
 
 tinkerpatchSupport {
 
-    tinkerEnable = true
+    tinkerEnable = false
     reflectApplication = true
     supportComponent = true
 

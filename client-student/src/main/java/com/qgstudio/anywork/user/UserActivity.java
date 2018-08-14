@@ -103,6 +103,17 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
         Intent intent = new Intent(Intent.ACTION_PICK,
                 android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent, 0);
+
+        //设置不可点击，防止重复调用
+        pic.setClickable(false);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        //点击头像按钮后的操作结束后，设置头像可点击
+        pic.setClickable(true);
     }
 
     @Override

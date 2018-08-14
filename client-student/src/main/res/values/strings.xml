@@ -8,6 +8,8 @@
     <string name="create_account">注册帐号</string>
     <string name="login">登录帐号</string>
     <string name="login_others">游客模式</string>
+    <string name="change_ip">更改服务器IP</string>
+    <string name="use_info">请在校园网下使用本软件Ծ‸Ծ</string>
     <string name="sign_up">注册</string>
     <string name="register">帐号注册</string>
     <string name="name">请输入学号</string>
@@ -15,7 +17,7 @@
     <string name="password">请输入密码</string>
     <string name="put_email">请输入邮箱</string>
     <string name="rePassword">请确认密码</string>
-    <string name="sign_in">账号登陆</string>
+    <string name="sign_in">账号登录</string>
     <string name="student_id">学号</string>
     <string name="forget_password">忘记密码？</string>
     <string name="info">个人信息</string>

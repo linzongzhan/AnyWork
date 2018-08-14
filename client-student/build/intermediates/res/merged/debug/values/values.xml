@@ -777,6 +777,7 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="cancel">取消</string>
+    <string name="change_ip">更改服务器IP</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="confirm">确认</string>
     <string name="create_account">注册帐号</string>
@@ -806,12 +807,37 @@
     <string name="rePassword">请确认密码</string>
     <string name="register">帐号注册</string>
     <string name="search_menu_title">Search</string>
-    <string name="sign_in">账号登陆</string>
+    <string name="sign_in">账号登录</string>
     <string name="sign_up">注册</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="strNetworkTipsCancelBtn">取消</string>
+    <string name="strNetworkTipsConfirmBtn">继续下载</string>
+    <string name="strNetworkTipsMessage">你已切换到移动网络，是否继续当前下载？</string>
+    <string name="strNetworkTipsTitle">网络提示</string>
+    <string name="strNotificationClickToContinue">继续下载</string>
+    <string name="strNotificationClickToInstall">点击安装</string>
+    <string name="strNotificationClickToRetry">点击重试</string>
+    <string name="strNotificationClickToView">点击查看</string>
+    <string name="strNotificationDownloadError">下载失败</string>
+    <string name="strNotificationDownloadSucc">下载完成</string>
+    <string name="strNotificationDownloading">正在下载</string>
+    <string name="strNotificationHaveNewVersion">有新版本</string>
+    <string name="strToastCheckUpgradeError">检查新版本失败，请稍后重试</string>
+    <string name="strToastCheckingUpgrade">正在检查，请稍候...</string>
+    <string name="strToastYourAreTheLatestVersion">你已经是最新版了</string>
+    <string name="strUpgradeDialogCancelBtn">下次再说</string>
+    <string name="strUpgradeDialogContinueBtn">继续</string>
+    <string name="strUpgradeDialogFeatureLabel">更新说明</string>
+    <string name="strUpgradeDialogFileSizeLabel">包大小</string>
+    <string name="strUpgradeDialogInstallBtn">安装</string>
+    <string name="strUpgradeDialogRetryBtn">重试</string>
+    <string name="strUpgradeDialogUpdateTimeLabel">更新时间</string>
+    <string name="strUpgradeDialogUpgradeBtn">立即更新</string>
+    <string name="strUpgradeDialogVersionLabel">版本</string>
     <string name="student_id">学号</string>
     <string name="tip_load_blank">暂时木有内容呀～～</string>
     <string name="tip_load_error">轻触重新加载～～</string>
+    <string name="use_info">请在校园网下使用本软件Ծ‸Ծ</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

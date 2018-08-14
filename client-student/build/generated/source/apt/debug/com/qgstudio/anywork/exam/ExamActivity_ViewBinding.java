@@ -16,7 +16,7 @@ import java.lang.Override;
 public class ExamActivity_ViewBinding implements Unbinder {
   private ExamActivity target;
 
-  private View view2131558527;
+  private View view2131624063;
 
   @UiThread
   public ExamActivity_ViewBinding(ExamActivity target) {
@@ -31,7 +31,7 @@ public class ExamActivity_ViewBinding implements Unbinder {
     target.mExamPagerView = Utils.findRequiredViewAsType(source, R.id.epv, "field 'mExamPagerView'", ExamPagerView.class);
     view = Utils.findRequiredView(source, R.id.fab, "field 'mSubmitFab' and method 'submit'");
     target.mSubmitFab = Utils.castView(view, R.id.fab, "field 'mSubmitFab'", FloatingActionButton.class);
-    view2131558527 = view;
+    view2131624063 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class ExamActivity_ViewBinding implements Unbinder {
     target.mExamPagerView = null;
     target.mSubmitFab = null;
 
-    view2131558527.setOnClickListener(null);
-    view2131558527 = null;
+    view2131624063.setOnClickListener(null);
+    view2131624063 = null;
   }
 }

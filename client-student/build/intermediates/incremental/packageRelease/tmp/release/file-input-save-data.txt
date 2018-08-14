@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Sun Aug 12 11:12:28 CST 2018
-0.baseType=DIRECTORY
-0.base=C\:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\transforms\\dex\\release\\0
-0.path=classes.dex
-0.set=DEX
-count=1
