@@ -38,9 +38,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static android.os.Environment.getExternalStorageDirectory;
-import static com.qgstudio.anywork.R.id.mail;
-
 /**
  *  查看和修改用户信息的 activity
  *  Created by chenyi on 2017/7/12.
@@ -57,7 +54,9 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
 
     @BindView(R.id.name) TextView name;
 
-    @BindView(mail) TextView email;
+    @BindView(R.id.student_id) TextView studentId;
+
+    @BindView(R.id.email) EditText email;
 
     @BindView(R.id.phone) EditText phone;
 
@@ -75,11 +74,15 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
             edit.setText("完成");
             edit.setBackgroundResource(R.drawable.bg_btn_blue);
         } else {
-            String n = name.getText().toString();
+//            String n = name.getText().toString();
             String p = phone.getText().toString();
-            if (!n.matches("[a-z0-9A-Z\\u4e00-\\u9fa5]{1,15}")) {
-                ToastUtil.showToast("请输入1-15个字符的姓名");
-                return ;
+            String m = email.getText().toString();
+//            if (!n.matches("[a-z0-9A-Z\\u4e00-\\u9fa5]{1,15}")) {
+//                ToastUtil.showToast("请输入1-15个字符的姓名");
+//                return ;
+//            }
+            if (!m.matches("\\w+@\\w+(\\.\\w{2,3})*\\.\\w{2,3}")) {
+                ToastUtil.showToast("请输入正确的邮箱地址");
             }
             if (!p.matches("^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\\d{8}$")) {
                 ToastUtil.showToast("请输入正确的电话号码");
@@ -89,6 +92,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
             User nUser = user.clone();
 //            nUser.setUserName(n);
             nUser.setPhone(p);
+            nUser.setEmail(m);
             mPresenter.changeInfo(nUser);
             editFocusable(false);
             edit.setText("编辑");
@@ -131,6 +135,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
     }
 
     private void setInfo(User user1) {
+        studentId.setText(user1.getStudentId());
         name.setText(user1.getUserName());
         email.setText(user1.getEmail());
         phone.setText(user1.getPhone());
@@ -139,10 +144,14 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
 
     private void editFocusable(boolean focusable) {
 //        name.setEnabled(focusable);
+        email.setEnabled(focusable);
         phone.setEnabled(focusable);
+
         if (focusable) {
 //            name.requestFocus();
+            email.requestFocus();
             phone.requestFocus();
+
         }
     }
 

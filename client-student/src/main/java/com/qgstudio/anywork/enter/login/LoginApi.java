@@ -18,5 +18,5 @@ public interface LoginApi {
 
     @POST("user/login")
     @Headers("Content-Type:application/json")
-    Observable<ResponseResult<User1>> login(@Body Object object);
+    Observable<ResponseResult<User>> login(@Body Object object);
 }

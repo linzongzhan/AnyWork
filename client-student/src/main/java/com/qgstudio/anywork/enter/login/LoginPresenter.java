@@ -94,8 +94,8 @@ public class LoginPresenter extends BasePresenterImpl<LoginContract.View> implem
         loginApi.login(loginInfo)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new Observer<ResponseResult<User>>() {
-                .subscribe(new Observer<ResponseResult<User1>>() {
+                .subscribe(new Observer<ResponseResult<User>>() {
+//                .subscribe(new Observer<ResponseResult<User1>>() {
                     @Override
                     public void onCompleted() {
                     }
@@ -110,18 +110,20 @@ public class LoginPresenter extends BasePresenterImpl<LoginContract.View> implem
 
                     @Override
 //                    public void onNext(ResponseResult<User> result) {
-                      public void onNext(ResponseResult<User1> result) {
+                      public void onNext(ResponseResult<User> result) {
 
                         if (result.getState() == 1) {
-                            User1 user1 = result.getData();
-                            User user = new User(user1.getUserId(),user1.getUserName(),user1.getEmail(),
-                                    user1.getPassword(), user1.getPhone(), user1.getMark());
+                            User user = result.getData();
+//                            User1 user1 = result.getData();
+//                            User user = new User(user1.getUserId(),user1.getUserName(),user1.getEmail(),
+//                                    user1.getPassword(), user1.getPhone(), user1.getMark());
+                            user.setPassword(password);
                             App.getInstance().setUser(user);
                             LogUtil.d(TAG, "[login] " + "onNext：" + "user -> " + GsonUtil.GsonString(user));
                             mView.showSuccess();
 
-                            user.setEmail(account);
-                            user.setPassword(password);
+//                            user.setEmail(account);
+//                            user.setPassword(password);
                             MyOpenHelper myOpenHelper = DataBaseUtil.getHelper();
                             myOpenHelper.save(user);
                         } else {

@@ -44,11 +44,11 @@
 
         <TextView
             style="@style/AnyWork.Theme.TextView3"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="10dp"
             android:text="@string/my_account"/>
 
         <TextView
-            android:id="@+id/mail"
+            android:id="@+id/student_id"
             style="@style/AnyWork.Theme.EditText2"/>
 
         <TextView
@@ -61,7 +61,6 @@
 
         <TextView
             style="@style/AnyWork.Theme.TextView3"
-            android:layout_marginTop="18dp"
             android:text="@string/my_phone"/>
 
         <EditText
@@ -69,6 +68,16 @@
             style="@style/AnyWork.Theme.EditText2"
             android:hint="@string/phone2"
             android:inputType="phone" />
+
+        <TextView
+            style="@style/AnyWork.Theme.TextView3"
+            android:text="邮箱"/>
+
+        <EditText
+            android:id="@+id/email"
+            style="@style/AnyWork.Theme.EditText2"
+            android:hint="请输入邮箱"
+            android:inputType="textEmailAddress" />
 
         <ImageView
             android:id="@+id/exit"

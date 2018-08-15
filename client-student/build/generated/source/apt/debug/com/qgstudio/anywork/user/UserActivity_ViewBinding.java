@@ -22,7 +22,7 @@ public class UserActivity_ViewBinding implements Unbinder {
 
   private View view2131624084;
 
-  private View view2131624088;
+  private View view2131624089;
 
   @UiThread
   public UserActivity_ViewBinding(UserActivity target) {
@@ -44,7 +44,8 @@ public class UserActivity_ViewBinding implements Unbinder {
       }
     });
     target.name = Utils.findRequiredViewAsType(source, R.id.name, "field 'name'", TextView.class);
-    target.email = Utils.findRequiredViewAsType(source, R.id.mail, "field 'email'", TextView.class);
+    target.studentId = Utils.findRequiredViewAsType(source, R.id.student_id, "field 'studentId'", TextView.class);
+    target.email = Utils.findRequiredViewAsType(source, R.id.email, "field 'email'", EditText.class);
     target.phone = Utils.findRequiredViewAsType(source, R.id.phone, "field 'phone'", EditText.class);
     view = Utils.findRequiredView(source, R.id.edit, "field 'edit' and method 'edit'");
     target.edit = Utils.castView(view, R.id.edit, "field 'edit'", Button.class);
@@ -56,7 +57,7 @@ public class UserActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.exit, "method 'exit'");
-    view2131624088 = view;
+    view2131624089 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -74,6 +75,7 @@ public class UserActivity_ViewBinding implements Unbinder {
 
     target.pic = null;
     target.name = null;
+    target.studentId = null;
     target.email = null;
     target.phone = null;
     target.edit = null;
@@ -82,7 +84,7 @@ public class UserActivity_ViewBinding implements Unbinder {
     view2131624083 = null;
     view2131624084.setOnClickListener(null);
     view2131624084 = null;
-    view2131624088.setOnClickListener(null);
-    view2131624088 = null;
+    view2131624089.setOnClickListener(null);
+    view2131624089 = null;
   }
 }

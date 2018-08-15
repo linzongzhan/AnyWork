@@ -15,9 +15,9 @@ import java.lang.Override;
 public class LoginFragment_ViewBinding implements Unbinder {
   private LoginFragment target;
 
-  private View view2131624122;
+  private View view2131624123;
 
-  private View view2131624095;
+  private View view2131624096;
 
   @UiThread
   public LoginFragment_ViewBinding(final LoginFragment target, View source) {
@@ -27,7 +27,7 @@ public class LoginFragment_ViewBinding implements Unbinder {
     target.account = Utils.findRequiredViewAsType(source, R.id.account, "field 'account'", EditText.class);
     target.password = Utils.findRequiredViewAsType(source, R.id.password, "field 'password'", EditText.class);
     view = Utils.findRequiredView(source, R.id.sign_in, "method 'login'");
-    view2131624122 = view;
+    view2131624123 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -35,7 +35,7 @@ public class LoginFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.cancel, "method 'cancel'");
-    view2131624095 = view;
+    view2131624096 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,9 +54,9 @@ public class LoginFragment_ViewBinding implements Unbinder {
     target.account = null;
     target.password = null;
 
-    view2131624122.setOnClickListener(null);
-    view2131624122 = null;
-    view2131624095.setOnClickListener(null);
-    view2131624095 = null;
+    view2131624123.setOnClickListener(null);
+    view2131624123 = null;
+    view2131624096.setOnClickListener(null);
+    view2131624096 = null;
   }
 }

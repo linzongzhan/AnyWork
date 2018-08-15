@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\values-th\\values-th.xml",
+            "outputFile": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-th\\values-th.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\values-th\\values-th.xml",
+                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\values-th\\values-th.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-th\\values-th.xml",
+            "outputFile": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\values-th\\values-th.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\values-th\\values-th.xml",
+                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\values-th\\values-th.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

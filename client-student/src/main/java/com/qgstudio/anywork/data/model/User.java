@@ -15,23 +15,27 @@ public class User implements Parcelable, Cloneable {
     private String email;       //邮箱
     private String password;    //密码
     private String phone;       //手机
+    private String studentId;   //学号
+    private String imagePath;   //头像路径
     private int mark;           //标志，区分是学生还是教师, 0学生，1老师
 
-    public User(int id, String name, String email, String password, String phone, int mark) {
+    public User(int id, String name, String email, String password, String phone, String studentId, String imagePath, int mark) {
         this.userId = id;
         this.userName = (name == null ? "" : name);
         this.email = (email == null ? "" : email);
         this.password = (password == null ? "" : password);
         this.phone = (phone == null ? "" : phone);
+        this.studentId = (studentId == null ? "" : studentId);
+        this.imagePath = (imagePath == null ? "" : imagePath);
         this.mark = mark;
     }
 
-    public User(String name, String email, String password, String phone, int mark) {
-        new User(-1, name, email, password, phone, mark);
+    public User(String name, String email, String password, String phone, String studentId, String imagePath, int mark) {
+        new User(-1, name, email, password, phone, studentId, imagePath, mark);
     }
 
     public User() {
-        new User(-1, "", "", "", "", -1);
+        new User(-1, "", "", "", "", "", "",-1);
     }
 
     //get & set
@@ -42,6 +46,8 @@ public class User implements Parcelable, Cloneable {
         email = in.readString();
         password = in.readString();
         phone = in.readString();
+        studentId = in.readString();
+        imagePath = in.readString();
         mark = in.readInt();
     }
 
@@ -97,6 +103,22 @@ public class User implements Parcelable, Cloneable {
         this.phone = phone;
     }
 
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
     public int getMark() {
         return mark;
     }
@@ -115,6 +137,8 @@ public class User implements Parcelable, Cloneable {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
+                ", studentId='" + studentId + '\'' +
+                ", imagePath='" + imagePath + '\'' +
                 ", mark=" + mark +
                 '}';
     }
@@ -142,6 +166,8 @@ public class User implements Parcelable, Cloneable {
         dest.writeString(email);
         dest.writeString(password);
         dest.writeString(phone);
+        dest.writeString(studentId);
+        dest.writeString(imagePath);
         dest.writeInt(mark);
     }
 }

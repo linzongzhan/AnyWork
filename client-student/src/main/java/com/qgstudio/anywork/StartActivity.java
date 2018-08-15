@@ -82,7 +82,7 @@ public class StartActivity extends AppCompatActivity {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
 //                .subscribe(new Observer<ResponseResult<User>>() {
-                .subscribe(new Observer<ResponseResult<User1>>() {
+                .subscribe(new Observer<ResponseResult<User>>() {
                     @Override
                     public void onCompleted() {
                     }
@@ -97,13 +97,11 @@ public class StartActivity extends AppCompatActivity {
 
                     @Override
 //                    public void onNext(ResponseResult<User> result) {
-                    public void onNext(ResponseResult<User1> result) {
+                    public void onNext(ResponseResult<User> result) {
                         loadingDialog.dismiss();  //停止动画
 
                         if (result.getState() == 1) {
-                            User1 user1 = result.getData();
-                            User user = new User(user1.getUserId(),user1.getUserName(),user1.getEmail(),
-                                    user1.getPassword(), user1.getPhone(), user1.getMark());
+                            User user = result.getData();
                             App.getInstance().setUser(user);
                             user.setEmail(account);
                             user.setPassword(password);
