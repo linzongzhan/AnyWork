@@ -10,6 +10,7 @@ import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.transition.Fade;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.EditText;
@@ -130,6 +131,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
             setupWindowAnimations();
         }
         user = App.getInstance().getUser();
+        Log.d("linzongzhan", "onCreate: " + user.getEmail());
         setInfo(user);
         editFocusable(false);
     }

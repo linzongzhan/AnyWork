@@ -1,74 +1,74 @@
 [
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\6558173c580d1cb205df34a88f8799a2\\res\\anim\\design_snackbar_in.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in_center.xml",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\anim\\fade_in_center.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in_center.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\anim\\fade_in_center.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\6558173c580d1cb205df34a88f8799a2\\res\\anim\\design_snackbar_out.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\ea5214405c5c0ab81c3e1df7caa391de\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\6558173c580d1cb205df34a88f8799a2\\res\\anim\\design_bottom_sheet_slide_in.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\ea5214405c5c0ab81c3e1df7caa391de\\res\\anim\\design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_left.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\anim\\slide_out_left.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_left.xml",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\anim\\slide_out_left.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\6558173c580d1cb205df34a88f8799a2\\res\\anim\\design_fab_in.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\ea5214405c5c0ab81c3e1df7caa391de\\res\\anim\\design_fab_out.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_fade_in.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\6558173c580d1cb205df34a88f8799a2\\res\\anim\\design_fab_out.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_fade_out.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\ea5214405c5c0ab81c3e1df7caa391de\\res\\anim\\design_fab_in.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\ea5214405c5c0ab81c3e1df7caa391de\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_popup_enter.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\ea5214405c5c0ab81c3e1df7caa391de\\res\\anim\\design_snackbar_out.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\6558173c580d1cb205df34a88f8799a2\\res\\anim\\design_bottom_sheet_slide_out.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\3add55c9f09514e481d924e04b3eff11\\res\\anim\\abc_popup_exit.xml"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\da93dd703908ec7a8e0ed3e78badb13c\\res\\anim\\abc_fade_out.xml"
     }
 ]

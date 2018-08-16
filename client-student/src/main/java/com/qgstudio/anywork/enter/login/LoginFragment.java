@@ -61,7 +61,7 @@ public class LoginFragment extends MVPBaseFragment<LoginContract.View, LoginPres
         ButterKnife.bind(this, mRoot);
         User user = mPresenter.getUser();
         if (user != null) {
-            account.setText(user.getEmail());
+            account.setText(user.getStudentId());
             password.setText(user.getPassword());
         }
     }

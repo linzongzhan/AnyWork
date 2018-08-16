@@ -45,7 +45,7 @@ public class StartActivity extends AppCompatActivity {
         //获得账号信息
         User user = getUser();
         //自动登录
-        login(user.getEmail(), user.getPassword());
+        login(user.getStudentId(), user.getPassword());
     }
 
     @Override
@@ -103,7 +103,7 @@ public class StartActivity extends AppCompatActivity {
                         if (result.getState() == 1) {
                             User user = result.getData();
                             App.getInstance().setUser(user);
-                            user.setEmail(account);
+                            user.setStudentId(account);
                             user.setPassword(password);
                             MyOpenHelper myOpenHelper = DataBaseUtil.getHelper();
                             myOpenHelper.save(user);
