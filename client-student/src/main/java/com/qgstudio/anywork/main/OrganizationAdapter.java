@@ -110,6 +110,8 @@ public class OrganizationAdapter extends RecyclerView.Adapter<OrganizationAdapte
                     ContextCompat.getColor(mContext, R.color.status_join_true_bg) : ContextCompat.getColor(mContext, R.color.status_join_false_bg));
         }else {
             holder.tv_status.setVisibility(View.GONE);
+            holder.tv_teacher.setVisibility(View.GONE);
+            holder.tv_description.setVisibility(View.GONE);
         }
 
         //设置item点击事件监听

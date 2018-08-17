@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qgstudio.anywork.App;
@@ -30,6 +31,7 @@ import com.qgstudio.anywork.utils.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HomeActivity extends DialogManagerActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,9 +39,18 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
     public static final String TAG = "HomeActivity";
     public static final String ACTION = TAG + "$Receiver";//广播action
 
-    @BindView(R.id.toolbar) Toolbar mToolbar;
-    @BindView(R.id.drawer) DrawerLayout mDrawerLayout;
-    @BindView(R.id.navigation) NavigationView mNavigationView;
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
+    @BindView(R.id.drawer)
+    DrawerLayout mDrawerLayout;
+    @BindView(R.id.navigation)
+    NavigationView mNavigationView;
+    @BindView(R.id.button_notice_hint_cancel)
+    ImageView mBtnNoticeCancle;
+    @BindView(R.id.textView_notice_home)
+    TextView mTvNoticeHint;
+    @BindView(R.id.notice_hint)
+    View mNoticeHint;
 
     CircleImageView headIv;
     TextView name;
@@ -106,7 +117,18 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         User user = App.getInstance().getUser();
         GlideUtil.setPictureWithOutCache(headIv, user.getUserId(), R.drawable.ic_user_default);
         name.setText(user.getUserName());
-        mail.setText("学号：" + user.getEmail());
+        mail.setText("学号：" + user.getStudentId());
+    }
+
+    @OnClick(R.id.button_notice_hint_cancel)
+    void hideNoticeHint() {
+        mNoticeHint.setVisibility(View.GONE);
+    }
+
+    @OnClick(R.id.notice_hint)
+    void toNoticeActivity() {
+        ToastUtil.showToast("暂未开放");
+        mNoticeHint.setVisibility(View.GONE);
     }
 
     @Override
@@ -118,11 +140,12 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_searching:{
+            case R.id.nav_searching: {
                 SearchingActivity.start(this);
                 return true;
             }
-            default:{}
+            default: {
+            }
         }
         return super.onOptionsItemSelected(item);
     }
@@ -130,15 +153,15 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_join:{//我的班级
+            case R.id.nav_join: {//我的班级
                 break;
             }
-            case R.id.nav_inform:{//个人信息
+            case R.id.nav_inform: {//个人信息
                 Intent intent = new Intent(this, UserActivity.class);
                 startActivityForResult(intent, 0);
                 break;
             }
-            case R.id.nav_feedback:{//意见反馈
+            case R.id.nav_feedback: {//意见反馈
 //                // TODO: 2017/8/16 意见反馈
 //                ToastUtil.showToast("此功能暂未开放！");
                 Intent intent = new Intent(HomeActivity.this, FeedbackActivity.class);
@@ -200,7 +223,8 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
                 }
                 break;
             }
-            default:{}
+            default: {
+            }
         }
     }
 

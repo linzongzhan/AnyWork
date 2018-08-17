@@ -68,6 +68,8 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name="com.qgstudio.anywork.notice.NoticeActivity" />
+
         <service
             android:name="com.tinkerpatch.sdk.tinker.service.TinkerServerResultService"
             android:exported="false" />

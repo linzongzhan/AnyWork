@@ -17,7 +17,6 @@ public class FeedBack implements Serializable {
     @SerializedName("description")
     private String  output;//合成信息
     public void buildOutput(){
-        //TODO 拼
         output = "反馈类型：" + type + "\n"
                 + "详细内容：" + content + "\n"
                 + "模块：" + module + "\n"
