@@ -40,7 +40,8 @@ public class WebSocketHolder extends WebSocketListener {
     }
 
     public void register(Object subscriber) {
-        if (subscriptions.get(subscriber) != null) {
+
+        if (subscriptions != null && subscriptions.get(subscriber) != null) {
             //已经注册过了
             return;
         }
@@ -65,7 +66,11 @@ public class WebSocketHolder extends WebSocketListener {
     public void unregister(Object subscriber) {
         subscriptions.remove(subscriber);
     }
-    public void post(Object object){
+
+    public void post(Object object) {
+        if (subscriptions == null) {
+            return;
+        }
         Iterator iterator = subscriptions.keySet().iterator();
         if (iterator.hasNext()) {
             Subscription subscription = subscriptions.get(iterator.next());
@@ -84,11 +89,11 @@ public class WebSocketHolder extends WebSocketListener {
         }
     }
 
-    public void sendTextToServer(String text){
+    public void sendTextToServer(String text) {
         if (webSocket != null) {
             webSocket.send(text);
         } else {
-            Log.e("WebSocketError","webSocket is null,can't send "+text);
+            Log.e("WebSocketError", "webSocket is null,can't send " + text);
         }
     }
 

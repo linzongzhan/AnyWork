@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,12 +27,15 @@ import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.dialog.BaseDialog;
 import com.qgstudio.anywork.enter.EnterActivity;
 import com.qgstudio.anywork.feedback.FeedbackActivity;
+import com.qgstudio.anywork.notice.NoticeActivity;
+import com.qgstudio.anywork.notice.data.Notice;
 import com.qgstudio.anywork.notice.data.OnlineCount;
 import com.qgstudio.anywork.user.UserActivity;
 import com.qgstudio.anywork.user.UserApi;
 import com.qgstudio.anywork.utils.GlideUtil;
 import com.qgstudio.anywork.utils.SessionMaintainUtil;
 import com.qgstudio.anywork.utils.ToastUtil;
+import com.qgstudio.anywork.websocket.ThreadMode;
 import com.qgstudio.anywork.websocket.WS;
 import com.qgstudio.anywork.websocket.WebSocketHolder;
 
@@ -76,6 +80,8 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         initView();
         registerBroadcast();
         WebSocketHolder.getDefault().register(this);
+        String baseUrl = RetrofitClient.RETROFIT_CLIENT.getRetrofit().baseUrl().toString();
+        WebSocketHolder.getDefault().connect(baseUrl+"websocket/"+App.getInstance().getUser().getUserId());
     }
 
     @Override
@@ -106,7 +112,8 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         mail = (TextView) navHeaderView.findViewById(R.id.tv_mail);
 
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        setTitle("在线人数：" + 0);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, mDrawerLayout, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -138,8 +145,9 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
 
     @OnClick(R.id.notice_hint)
     void toNoticeActivity() {
-        ToastUtil.showToast("暂未开放");
+        //ToastUtil.showToast("暂未开放");
         mNoticeHint.setVisibility(View.GONE);
+        startActivity(new Intent(this, NoticeActivity.class));
     }
 
     @Override
@@ -263,10 +271,18 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
                 });
     }
 
-    @WS
-    void onlineCount(OnlineCount onlineCount) {
+    @WS(threadMode = ThreadMode.MAIN)
+    public void onlineCount(OnlineCount onlineCount) {
+        setTitle("在线人数：" + onlineCount.onlineCount);
         ToastUtil.showToast("在线人数：" + onlineCount.onlineCount);
     }
+    @WS(threadMode = ThreadMode.MAIN)
+    public void onNoticeGet(Notice notice){
+        //收到公告推送，显示提醒
+        Log.e("HomeActivity","收到notice");
+        mNoticeHint.setVisibility(View.VISIBLE);
+    }
+
 
     /**
      * 监听SearchingActivity页面的加入或退出通知

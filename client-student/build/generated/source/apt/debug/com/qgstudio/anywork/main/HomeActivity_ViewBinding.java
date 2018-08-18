@@ -19,9 +19,9 @@ import java.lang.Override;
 public class HomeActivity_ViewBinding implements Unbinder {
   private HomeActivity target;
 
-  private View view2131624080;
+  private View view2131624085;
 
-  private View view2131624078;
+  private View view2131624083;
 
   @UiThread
   public HomeActivity_ViewBinding(HomeActivity target) {
@@ -38,7 +38,7 @@ public class HomeActivity_ViewBinding implements Unbinder {
     target.mNavigationView = Utils.findRequiredViewAsType(source, R.id.navigation, "field 'mNavigationView'", NavigationView.class);
     view = Utils.findRequiredView(source, R.id.button_notice_hint_cancel, "field 'mBtnNoticeCancle' and method 'hideNoticeHint'");
     target.mBtnNoticeCancle = Utils.castView(view, R.id.button_notice_hint_cancel, "field 'mBtnNoticeCancle'", ImageView.class);
-    view2131624080 = view;
+    view2131624085 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,7 +48,7 @@ public class HomeActivity_ViewBinding implements Unbinder {
     target.mTvNoticeHint = Utils.findRequiredViewAsType(source, R.id.textView_notice_home, "field 'mTvNoticeHint'", TextView.class);
     view = Utils.findRequiredView(source, R.id.notice_hint, "field 'mNoticeHint' and method 'toNoticeActivity'");
     target.mNoticeHint = view;
-    view2131624078 = view;
+    view2131624083 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -71,9 +71,9 @@ public class HomeActivity_ViewBinding implements Unbinder {
     target.mTvNoticeHint = null;
     target.mNoticeHint = null;
 
-    view2131624080.setOnClickListener(null);
-    view2131624080 = null;
-    view2131624078.setOnClickListener(null);
-    view2131624078 = null;
+    view2131624085.setOnClickListener(null);
+    view2131624085 = null;
+    view2131624083.setOnClickListener(null);
+    view2131624083 = null;
   }
 }

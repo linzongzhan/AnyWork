@@ -7,5 +7,18 @@ public class Notice extends Message {
     public String title;
     public String content;
     public String publisher;
+    public String createTime;
     public int status;// 0为未读，1为已读
+
+    @Override
+    public String toString() {
+        return "Notice{" +
+                "messageId=" + messageId +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", createTime='" + createTime + '\'' +
+                ", status=" + status +
+                '}';
+    }
 }

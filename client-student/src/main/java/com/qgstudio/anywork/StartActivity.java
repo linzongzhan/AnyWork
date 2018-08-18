@@ -108,8 +108,7 @@ public class StartActivity extends AppCompatActivity {
                             user.setPassword(password);
                             MyOpenHelper myOpenHelper = DataBaseUtil.getHelper();
                             myOpenHelper.save(user);
-                            String baseUrl = RetrofitClient.RETROFIT_CLIENT.getRetrofit().baseUrl().toString();
-                            WebSocketHolder.getDefault().connect(baseUrl+"websocket/"+user.getUserId());
+
                             ToastUtil.showToast("自动登录成功");
                             Intent intent = new Intent(StartActivity.this, HomeActivity.class);
                             startActivity(intent);
