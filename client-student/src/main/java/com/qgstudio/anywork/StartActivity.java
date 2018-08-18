@@ -21,6 +21,7 @@ import com.qgstudio.anywork.utils.LogUtil;
 import com.qgstudio.anywork.utils.MyOpenHelper;
 import com.qgstudio.anywork.utils.SessionMaintainUtil;
 import com.qgstudio.anywork.utils.ToastUtil;
+import com.qgstudio.anywork.websocket.WebSocketHolder;
 
 import java.util.HashMap;
 import java.util.List;
@@ -107,7 +108,8 @@ public class StartActivity extends AppCompatActivity {
                             user.setPassword(password);
                             MyOpenHelper myOpenHelper = DataBaseUtil.getHelper();
                             myOpenHelper.save(user);
-
+                            String baseUrl = RetrofitClient.RETROFIT_CLIENT.getRetrofit().baseUrl().toString();
+                            WebSocketHolder.getDefault().connect(baseUrl+"websocket/"+user.getUserId());
                             ToastUtil.showToast("自动登录成功");
                             Intent intent = new Intent(StartActivity.this, HomeActivity.class);
                             startActivity(intent);
