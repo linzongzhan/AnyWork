@@ -6,10 +6,13 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+import com.qgstudio.anywork.notice.data.Message;
+import com.qgstudio.anywork.notice.data.MessageFactory;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -62,6 +65,13 @@ public class WebSocketHolder extends WebSocketListener {
     public void unregister(Object subscriber) {
         subscriptions.remove(subscriber);
     }
+    public void post(Object object){
+        Iterator iterator = subscriptions.keySet().iterator();
+        if (iterator.hasNext()) {
+            Subscription subscription = subscriptions.get(iterator.next());
+            subscription.invokeMethods(object);
+        }
+    }
 
     public void connect(String url) {
         Log.e("webSocketUrl", url);
@@ -74,20 +84,31 @@ public class WebSocketHolder extends WebSocketListener {
         }
     }
 
+    public void sendTextToServer(String text){
+        if (webSocket != null) {
+            webSocket.send(text);
+        } else {
+            Log.e("WebSocketError","webSocket is null,can't send "+text);
+        }
+    }
+
     @Override
     public void onOpen(WebSocket webSocket, Response response) {
         super.onOpen(webSocket, response);
         this.webSocket = webSocket;
-        Log.e("WebSocketOpen", "opened");
+        Log.e("WebSocketOpen", "长连接建立成功");
     }
 
     @Override
     public void onMessage(WebSocket webSocket, String text) {
         super.onMessage(webSocket, text);
         Log.d("WebSocketMessage", text);
+        //转换信息
         Gson gson = new Gson();
         JsonObject jsonObject = gson.fromJson(text, JsonObject.class);
-
+        Message message = MessageFactory.fromJsonObject(jsonObject);
+        //下发信息
+        post(message);
     }
 
     @Override

@@ -20,19 +20,29 @@ import android.widget.TextView;
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.common.DialogManagerActivity;
+import com.qgstudio.anywork.data.ResponseResult;
+import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.dialog.BaseDialog;
 import com.qgstudio.anywork.enter.EnterActivity;
 import com.qgstudio.anywork.feedback.FeedbackActivity;
+import com.qgstudio.anywork.notice.data.OnlineCount;
 import com.qgstudio.anywork.user.UserActivity;
+import com.qgstudio.anywork.user.UserApi;
 import com.qgstudio.anywork.utils.GlideUtil;
 import com.qgstudio.anywork.utils.SessionMaintainUtil;
 import com.qgstudio.anywork.utils.ToastUtil;
+import com.qgstudio.anywork.websocket.WS;
+import com.qgstudio.anywork.websocket.WebSocketHolder;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
+import rx.Observer;
+import rx.Scheduler;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 public class HomeActivity extends DialogManagerActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -65,6 +75,7 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         setContentView(R.layout.activity_home);
         initView();
         registerBroadcast();
+        WebSocketHolder.getDefault().register(this);
     }
 
     @Override
@@ -179,6 +190,7 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
                                 //暂停定时任务
                                 SessionMaintainUtil.stop();
                                 //跳转切换帐号
+                                logout();
                                 EnterActivity.start(HomeActivity.this, EnterActivity.FLAG_SWITCH_USER);
                                 finish();
                             }
@@ -205,6 +217,7 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
                 .setNegativeListener("确认", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        logout();
                         HomeActivity.super.onBackPressed();
                     }
                 })
@@ -226,6 +239,33 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
             default: {
             }
         }
+    }
+
+    private void logout() {
+        UserApi userApi = RetrofitClient.RETROFIT_CLIENT.getRetrofit().create(UserApi.class);
+        userApi.logout().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<ResponseResult>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(ResponseResult responseResult) {
+
+                    }
+                });
+    }
+
+    @WS
+    void onlineCount(OnlineCount onlineCount) {
+        ToastUtil.showToast("在线人数：" + onlineCount.onlineCount);
     }
 
     /**

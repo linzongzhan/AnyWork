@@ -27,4 +27,7 @@ public interface UserApi {
     @Multipart
     @POST("user/upload")
     Observable<ResponseResult> changePic(@Part("file") RequestBody pictureName, @Part MultipartBody.Part picture);
+
+    @POST("user/exit")
+    Observable<ResponseResult> logout();
 }
