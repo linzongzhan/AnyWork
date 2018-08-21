@@ -27,6 +27,7 @@ import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.dialog.BaseDialog;
 import com.qgstudio.anywork.enter.EnterActivity;
 import com.qgstudio.anywork.feedback.FeedbackActivity;
+import com.qgstudio.anywork.networkcenter.WorkBuilder;
 import com.qgstudio.anywork.notice.NoticeActivity;
 import com.qgstudio.anywork.notice.data.Notice;
 import com.qgstudio.anywork.notice.data.OnlineCount;
@@ -81,7 +82,8 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         registerBroadcast();
         WebSocketHolder.getDefault().register(this);
         String baseUrl = RetrofitClient.RETROFIT_CLIENT.getRetrofit().baseUrl().toString();
-        WebSocketHolder.getDefault().connect(baseUrl+"websocket/"+App.getInstance().getUser().getUserId());
+       // WebSocketHolder.getDefault().connect(baseUrl+"websocket/"+App.getInstance().getUser().getUserId());
+        WebSocketHolder.getDefault().connect("ws://121.40.165.18:8800");
     }
 
     @Override
@@ -281,6 +283,7 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         //收到公告推送，显示提醒
         Log.e("HomeActivity","收到notice");
         mNoticeHint.setVisibility(View.VISIBLE);
+
     }
 
 

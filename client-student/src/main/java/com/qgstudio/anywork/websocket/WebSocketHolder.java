@@ -23,6 +23,9 @@ import okhttp3.WebSocket;
 import okhttp3.WebSocketListener;
 
 public class WebSocketHolder extends WebSocketListener {
+    /**
+     * 默认的WebSocketHolder，也是唯一的
+     */
     private static WebSocketHolder defaultHolder;
     private WebSocket webSocket;
     private OkHttpClient client;
@@ -32,13 +35,21 @@ public class WebSocketHolder extends WebSocketListener {
 
     }
 
+    /**
+     * @return 获取WebSocketHolder单例
+     */
     public static WebSocketHolder getDefault() {
         if (defaultHolder == null) {
             defaultHolder = new WebSocketHolder();
         }
+
         return defaultHolder;
     }
 
+    /**
+     * 注册为WebSocket消息订阅者
+     * @param subscriber 消息订阅者
+     */
     public void register(Object subscriber) {
 
         if (subscriptions != null && subscriptions.get(subscriber) != null) {
@@ -63,6 +74,10 @@ public class WebSocketHolder extends WebSocketListener {
         subscriptions.put(subscriber, subscription);
     }
 
+    /**
+     * 取消注册
+     * @param subscriber 消息订阅者
+     */
     public void unregister(Object subscriber) {
         subscriptions.remove(subscriber);
     }
@@ -78,6 +93,10 @@ public class WebSocketHolder extends WebSocketListener {
         }
     }
 
+    /**
+     * 连接WebSocket服务器
+     * @param url WebSocketServer的地址
+     */
     public void connect(String url) {
         Log.e("webSocketUrl", url);
         if (webSocket == null) {
@@ -89,11 +108,25 @@ public class WebSocketHolder extends WebSocketListener {
         }
     }
 
+    /**
+     * 向WebSocket服务器发送字符串
+     * @param text 要发送的字符串
+     */
     public void sendTextToServer(String text) {
         if (webSocket != null) {
             webSocket.send(text);
         } else {
             Log.e("WebSocketError", "webSocket is null,can't send " + text);
+        }
+    }
+
+    /**
+     * 断开连接
+     */
+    public void disconnect(){
+        //强行关闭连接
+        if (webSocket != null) {
+            webSocket.cancel();
         }
     }
 
@@ -114,6 +147,12 @@ public class WebSocketHolder extends WebSocketListener {
         Message message = MessageFactory.fromJsonObject(jsonObject);
         //下发信息
         post(message);
+    }
+
+    @Override
+    public void onClosed(WebSocket webSocket, int code, String reason) {
+        super.onClosed(webSocket, code, reason);
+        Log.e("WebSocketClosed",reason);
     }
 
     @Override

@@ -20,11 +20,17 @@ public class Subscription {
         this.methods = methods;
     }
 
+    /**
+     * 根据param的类型执行相应的方法
+     *
+     * @param param 执行方法所需的参数
+     */
     public void invokeMethods(final Object param) {
         Class<?> paramType = param.getClass();
+        //查找声明参数和param类型
         for (final SubscriberMethod subscriberMethod : methods) {
             if (subscriberMethod.type == paramType) {
-
+                //使用RXJava做线程调度
                 Observable observable = Observable.create(new Observable.OnSubscribe<SubscriberMethod>() {
                     @Override
                     public void call(Subscriber<? super SubscriberMethod> subscriber) {
@@ -52,6 +58,7 @@ public class Subscription {
                     @Override
                     public void onNext(SubscriberMethod subscriberMethod) {
                         try {
+                            //切换到指定线程真正执行方法
                             subscriberMethod.method.invoke(subscriber, param);
                         } catch (Exception e) {
 

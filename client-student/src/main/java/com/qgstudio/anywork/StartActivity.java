@@ -42,11 +42,11 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         //获得账号信息
         User user = getUser();
         //自动登录
         login(user.getStudentId(), user.getPassword());
+
     }
 
     @Override

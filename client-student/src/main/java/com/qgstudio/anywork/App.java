@@ -2,10 +2,15 @@ package com.qgstudio.anywork;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 
+import com.google.gson.JsonObject;
+import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.main.HomeActivity;
+import com.qgstudio.anywork.notice.NoticeApi;
+import com.qgstudio.anywork.user.AppService;
 import com.qgstudio.anywork.utils.FetchPatchHandler;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
@@ -17,6 +22,8 @@ import com.tinkerpatch.sdk.loader.TinkerPatchApplicationLike;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+
+import rx.Observable;
 
 /**
  * Created by Yason on 2017/4/14.
@@ -73,6 +80,7 @@ public class App extends Application {
             // 每隔3个小时去访问后台时候有更新,通过handler实现轮训的效果
             new FetchPatchHandler().fetchPatchWithInterval(3);
         }
+        //startService(new Intent(this, AppService.class));
     }
 
     private User user;
@@ -116,4 +124,5 @@ public class App extends Application {
         }
         return null;
     }
+
 }
