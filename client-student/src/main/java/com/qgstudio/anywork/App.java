@@ -54,9 +54,10 @@ public class App extends Application {
         CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(context);
         strategy.setUploadProcess(processName == null || processName.equals(packageName));
 //        CrashReport.initCrashReport(getApplicationContext(), "a4ce5a4993", true);
-        Bugly.init(getApplicationContext(), "a4ce5a4993", true);
         Beta.canShowUpgradeActs.add(HomeActivity.class);
-        Beta.checkUpgrade(false, false);
+        Beta.autoInit = true;
+        Beta.autoCheckUpgrade = true;
+        Bugly.init(getApplicationContext(), "9cc1e08f57", true);
 
         if (BuildConfig.TINKER_ENABLE) {
 

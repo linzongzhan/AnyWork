@@ -1,34 +1,34 @@
 [
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\back.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\back.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_send.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\ic_send.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_send.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\ic_send.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\cancel.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\cancel.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_searching.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\ic_searching.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\dialog_cancel.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\dialog_cancel.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\cancel.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\cancel.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\back.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\back.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\logo.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\logo.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\logo.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\logo.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\dialog_cancel.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\dialog_cancel.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_quit.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\ic_quit.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_quit.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\ic_quit.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_searching.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xhdpi\\ic_searching.png"
     }
 ]

@@ -18,12 +18,12 @@ android {
 //        }
     }
     signingConfigs {//签名配置
-//        release {
-//            storeFile file('C:/Users/linzongzhan/key.store.jks')
-//            storePassword '666666'
-//            keyAlias 'key1'
-//            keyPassword '666666'
-//        }
+        release {
+            storeFile file('C:/Users/linzongzhan/key.store.jks')
+            storePassword '666666'
+            keyAlias 'key1'
+            keyPassword '666666'
+        }
     }
     buildTypes {//构建配置
         release {
@@ -31,7 +31,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
             //签名
-            // signingConfig signingConfigs.release
+             signingConfig signingConfigs.release
         }
     }
 }
