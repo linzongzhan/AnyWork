@@ -10,14 +10,14 @@
     <string name="login_others">游客模式</string>
     <string name="change_ip">更改服务器IP</string>
     <string name="use_info">请在校园网下使用本软件Ծ‸Ծ</string>
-    <string name="sign_up">注册</string>
-    <string name="register">帐号注册</string>
-    <string name="name">请输入学号</string>
-    <string name="phone">请输入常用手机电话</string>
-    <string name="password">请输入密码</string>
-    <string name="put_email">请输入邮箱</string>
-    <string name="rePassword">请确认密码</string>
-    <string name="sign_in">账号登录</string>
+    <string name="sign_up">注 册</string>
+    <string name="register">立即注册</string>
+    <string name="name">请输入您的学号</string>
+    <string name="phone">请输入您的手机号码</string>
+    <string name="password">请输入您的密码</string>
+    <string name="put_email">请输入您的邮箱</string>
+    <string name="rePassword">请再次输入您的密码</string>
+    <string name="sign_in">登 录</string>
     <string name="student_id">学号</string>
     <string name="forget_password">忘记密码？</string>
     <string name="info">个人信息</string>
@@ -35,5 +35,6 @@
 
     <string name="tip_load_blank">暂时木有内容呀～～</string>
     <string name="tip_load_error">轻触重新加载～～</string>
+    <string name="meed_question">遇到问题</string>
 
 </resources>

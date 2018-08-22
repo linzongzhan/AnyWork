@@ -4,6 +4,7 @@ package com.qgstudio.anywork.enter.login;
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
@@ -15,9 +16,9 @@ import java.lang.Override;
 public class LoginFragment_ViewBinding implements Unbinder {
   private LoginFragment target;
 
-  private View view2131624133;
+  private View view2131624136;
 
-  private View view2131624106;
+  private View view2131624129;
 
   @UiThread
   public LoginFragment_ViewBinding(final LoginFragment target, View source) {
@@ -26,20 +27,21 @@ public class LoginFragment_ViewBinding implements Unbinder {
     View view;
     target.account = Utils.findRequiredViewAsType(source, R.id.account, "field 'account'", EditText.class);
     target.password = Utils.findRequiredViewAsType(source, R.id.password, "field 'password'", EditText.class);
-    view = Utils.findRequiredView(source, R.id.sign_in, "method 'login'");
-    view2131624133 = view;
+    view = Utils.findRequiredView(source, R.id.sign_in, "field 'btnLogin' and method 'login'");
+    target.btnLogin = Utils.castView(view, R.id.sign_in, "field 'btnLogin'", Button.class);
+    view2131624136 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.login();
       }
     });
-    view = Utils.findRequiredView(source, R.id.cancel, "method 'cancel'");
-    view2131624106 = view;
+    view = Utils.findRequiredView(source, R.id.btn_to_register, "method 'toRegister'");
+    view2131624129 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
-        target.cancel();
+        target.toRegister();
       }
     });
   }
@@ -53,10 +55,11 @@ public class LoginFragment_ViewBinding implements Unbinder {
 
     target.account = null;
     target.password = null;
+    target.btnLogin = null;
 
-    view2131624133.setOnClickListener(null);
-    view2131624133 = null;
-    view2131624106.setOnClickListener(null);
-    view2131624106 = null;
+    view2131624136.setOnClickListener(null);
+    view2131624136 = null;
+    view2131624129.setOnClickListener(null);
+    view2131624129 = null;
   }
 }

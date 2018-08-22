@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.RetrofitClient;
@@ -46,6 +47,7 @@ public class StartActivity extends AppCompatActivity {
         User user = getUser();
         //自动登录
         login(user.getStudentId(), user.getPassword());
+        Log.d("linzongzhan", "onCreate: " + user.getStudentId());
 
     }
 

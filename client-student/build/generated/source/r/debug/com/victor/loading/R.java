@@ -25,11 +25,11 @@ public final class R {
         public static final int page_border = 0x7f090097;
     }
     public static final class id {
-        public static final int ball_five = 0x7f0e00e7;
-        public static final int ball_four = 0x7f0e00e6;
-        public static final int ball_one = 0x7f0e00e3;
-        public static final int ball_three = 0x7f0e00e5;
-        public static final int ball_two = 0x7f0e00e4;
+        public static final int ball_five = 0x7f0e00ee;
+        public static final int ball_four = 0x7f0e00ed;
+        public static final int ball_one = 0x7f0e00ea;
+        public static final int ball_three = 0x7f0e00ec;
+        public static final int ball_two = 0x7f0e00eb;
     }
     public static final class layout {
         public static final int book_loading = 0x7f040027;

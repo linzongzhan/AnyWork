@@ -4,6 +4,7 @@ package com.qgstudio.anywork.enter.register;
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
@@ -24,12 +25,13 @@ public class RegisterFragment_ViewBinding implements Unbinder {
     this.target = target;
 
     View view;
-    target.name = Utils.findRequiredViewAsType(source, R.id.name, "field 'name'", EditText.class);
-    target.account = Utils.findRequiredViewAsType(source, R.id.account, "field 'account'", EditText.class);
+    target.studentID = Utils.findRequiredViewAsType(source, R.id.student_id, "field 'studentID'", EditText.class);
+    target.email = Utils.findRequiredViewAsType(source, R.id.email, "field 'email'", EditText.class);
     target.phone = Utils.findRequiredViewAsType(source, R.id.phone, "field 'phone'", EditText.class);
     target.password = Utils.findRequiredViewAsType(source, R.id.password, "field 'password'", EditText.class);
     target.password2 = Utils.findRequiredViewAsType(source, R.id.password2, "field 'password2'", EditText.class);
-    view = Utils.findRequiredView(source, R.id.register, "method 'register'");
+    view = Utils.findRequiredView(source, R.id.register, "field 'btnRegister' and method 'register'");
+    target.btnRegister = Utils.castView(view, R.id.register, "field 'btnRegister'", Button.class);
     view2131624063 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -54,11 +56,12 @@ public class RegisterFragment_ViewBinding implements Unbinder {
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
-    target.name = null;
-    target.account = null;
+    target.studentID = null;
+    target.email = null;
     target.phone = null;
     target.password = null;
     target.password2 = null;
+    target.btnRegister = null;
 
     view2131624063.setOnClickListener(null);
     view2131624063 = null;

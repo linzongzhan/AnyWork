@@ -1,13 +1,20 @@
 package com.qgstudio.anywork.enter.login;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.dialog.LoadingDialog;
+import com.qgstudio.anywork.enter.EnterActivity;
+import com.qgstudio.anywork.enter.register.RegisterFragment;
 import com.qgstudio.anywork.main.HomeActivity;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;
+import com.qgstudio.anywork.utils.ActivityUtil;
+import com.qgstudio.anywork.utils.TextWatcherV2;
 import com.qgstudio.anywork.utils.ToastUtil;
 
 import butterknife.BindView;
@@ -15,17 +22,21 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- *  登录界面的 fragment
- *  Created by chenyi on 2017/3/28.
+ * 登录界面的 fragment
+ * Created by chenyi on 2017/3/28.
  */
 
 public class LoginFragment extends MVPBaseFragment<LoginContract.View, LoginPresenter> implements LoginContract.View {
 
     public static final String ARGUMENT_LOGIN_ID = "LOGIN_ID";
 
-    @BindView(R.id.account) EditText account;
+    @BindView(R.id.account)
+    EditText account;
 
-    @BindView(R.id.password) EditText password;
+    @BindView(R.id.password)
+    EditText password;
+    @BindView(R.id.sign_in)
+    Button btnLogin;
 
     LoadingDialog loadingDialog;
 
@@ -41,9 +52,9 @@ public class LoginFragment extends MVPBaseFragment<LoginContract.View, LoginPres
         }
     }
 
-    @OnClick(R.id.cancel)
-    public void cancel() {
-        mActivity.onBackPressed();
+    @OnClick(R.id.btn_to_register)
+    public void toRegister() {
+        ((EnterActivity) getActivity()).intoRegister();
     }
 
     public static LoginFragment newInstance() {
@@ -64,6 +75,21 @@ public class LoginFragment extends MVPBaseFragment<LoginContract.View, LoginPres
             account.setText(user.getStudentId());
             password.setText(user.getPassword());
         }
+        //设置按键的点击状态
+        setBtnLoginState();
+        //设置editText监听
+        account.addTextChangedListener(new TextWatcherV2() {
+            @Override
+            public void onTextChanged(CharSequence s) {
+                setBtnLoginState();
+            }
+        });
+        password.addTextChangedListener(new TextWatcherV2() {
+            @Override
+            public void onTextChanged(CharSequence s) {
+                setBtnLoginState();
+            }
+        });
     }
 
     @Override
@@ -95,5 +121,24 @@ public class LoginFragment extends MVPBaseFragment<LoginContract.View, LoginPres
     @Override
     public void stopLoad() {
         loadingDialog.dismiss();
+    }
+
+    /**
+     * @return 判断登陆按键是否可以点击
+     */
+    private boolean isNeedLoginBtnEnable() {
+        String acc = account.getText().toString();
+        String pass = password.getText().toString();
+        return !acc.isEmpty() && !pass.isEmpty();
+    }
+
+    private void setBtnLoginState() {
+        if (isNeedLoginBtnEnable()) {
+            btnLogin.setEnabled(true);
+            btnLogin.setTextColor(Color.WHITE);
+        } else {
+            btnLogin.setEnabled(false);
+            btnLogin.setTextColor(getResources().getColor(R.color.text_hint));
+        }
     }
 }

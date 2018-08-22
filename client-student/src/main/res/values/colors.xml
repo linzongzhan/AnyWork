@@ -32,11 +32,13 @@
 
     <color name="text_light">@android:color/white</color>
     <color name="text_dark">#616161</color>
+    <color name="text_hint">#66ffffff</color>
 
     <color name="sample_red">#ff4444</color>
-    <color name="sample_blue">#23affe</color>
-    <color name="sample_green">#7bca85</color>
+    <color name="sample_blue">#3C7EFF</color>
+    <color name="sample_green">#1DC44B</color>
     <color name="sample_yellow">#fd8f01</color>
+    <color name="sample_disable">#88454545</color>
 
     <color name="background_dark">#353535</color>
 

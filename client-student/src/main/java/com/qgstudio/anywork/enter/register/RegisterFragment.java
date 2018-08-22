@@ -1,11 +1,14 @@
 package com.qgstudio.anywork.enter.register;
 
 
+import android.graphics.Color;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.dialog.LoadingDialog;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;
+import com.qgstudio.anywork.utils.TextWatcherV2;
 import com.qgstudio.anywork.utils.ToastUtil;
 
 import butterknife.BindView;
@@ -22,34 +25,41 @@ public class RegisterFragment extends MVPBaseFragment<RegisterContract.View, Reg
 
     public static final String ARGUMENT_REGISTER_ID = "REGISTER_ID";
 
-    @BindView(R.id.name) EditText name;
+    @BindView(R.id.student_id)
+    EditText studentID;
 
-    @BindView(R.id.account) EditText account;
+    @BindView(R.id.email)
+    EditText email;
 
-    @BindView(R.id.phone) EditText phone;
+    @BindView(R.id.phone)
+    EditText phone;
 
-    @BindView(R.id.password) EditText password;
+    @BindView(R.id.password)
+    EditText password;
 
-    @BindView(R.id.password2) EditText password2;
+    @BindView(R.id.password2)
+    EditText password2;
+    @BindView(R.id.register)
+    Button btnRegister;
 
     LoadingDialog loadingDialog;
 
     @OnClick(R.id.register)
     public void register() {
-        String a = account.getText().toString();
-        String n = name.getText().toString();
+        String a = email.getText().toString();
+        String n = studentID.getText().toString();
         String p = phone.getText().toString();
         String pass1 = password.getText().toString();
         String pass2 = password2.getText().toString();
 
         if (!n.matches("[0-9]{10}")) {
-            name.setError("请输入学号");
+            studentID.setError("请输入学号");
         }
 //        if (!n.matches("[a-z0-9A-Z\\u4e00-\\u9fa5]{1,15}")) {
-//            name.setError("请输入1-15个字符的姓名");
+//            studentID.setError("请输入1-15个字符的姓名");
 //        }
         else if (!a.matches("\\w+@\\w+(\\.\\w{2,3})*\\.\\w{2,3}")) {
-            account.setError("请输入正确的邮箱地址");
+            email.setError("请输入正确的邮箱地址");
         } else if (!p.matches("^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\\d{8}$")) {
             phone.setError("请输入正确的电话号码");
         } else if (!pass1.matches("[a-z0-9A-Z]{6,15}")) {
@@ -80,6 +90,38 @@ public class RegisterFragment extends MVPBaseFragment<RegisterContract.View, Reg
     @Override
     public void initView() {
         ButterKnife.bind(this, mRoot);
+        setBtnRegisterState();
+        //设置editText监听
+        email.addTextChangedListener(new TextWatcherV2() {
+            @Override
+            public void onTextChanged(CharSequence s) {
+                setBtnRegisterState();
+            }
+        });
+        studentID.addTextChangedListener(new TextWatcherV2() {
+            @Override
+            public void onTextChanged(CharSequence s) {
+                setBtnRegisterState();
+            }
+        });
+        phone.addTextChangedListener(new TextWatcherV2() {
+            @Override
+            public void onTextChanged(CharSequence s) {
+                setBtnRegisterState();
+            }
+        });
+        password.addTextChangedListener(new TextWatcherV2() {
+            @Override
+            public void onTextChanged(CharSequence s) {
+                setBtnRegisterState();
+            }
+        });
+        password2.addTextChangedListener(new TextWatcherV2() {
+            @Override
+            public void onTextChanged(CharSequence s) {
+                setBtnRegisterState();
+            }
+        });
     }
 
     @Override
@@ -112,5 +154,27 @@ public class RegisterFragment extends MVPBaseFragment<RegisterContract.View, Reg
     @Override
     public void stopLoad() {
         loadingDialog.dismiss();
+    }
+
+    /**
+     * @return 判断登陆按键是否可以点击
+     */
+    private boolean isNeedRegisterBtnEnable() {
+        String em = email.getText().toString();
+        String pass = password.getText().toString();
+        String pass2 = password2.getText().toString();
+        String sid = studentID.getText().toString();
+        String pho = phone.getText().toString();
+        return !em.isEmpty() && !pass.isEmpty() && !pass2.isEmpty() && !sid.isEmpty() && !pho.isEmpty();
+    }
+
+    private void setBtnRegisterState() {
+        if (isNeedRegisterBtnEnable()) {
+            btnRegister.setEnabled(true);
+            btnRegister.setTextColor(Color.WHITE);
+        } else {
+            btnRegister.setEnabled(false);
+            btnRegister.setTextColor(getResources().getColor(R.color.text_hint));
+        }
     }
 }

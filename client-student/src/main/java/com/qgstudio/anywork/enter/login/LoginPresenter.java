@@ -117,6 +117,7 @@ public class LoginPresenter extends BasePresenterImpl<LoginContract.View> implem
 //                            User1 user1 = result.getData();
 //                            User user = new User(user1.getUserId(),user1.getUserName(),user1.getEmail(),
 //                                    user1.getPassword(), user1.getPhone(), user1.getMark());
+
                             user.setPassword(password);
                             App.getInstance().setUser(user);
                             LogUtil.d(TAG, "[login] " + "onNext：" + "user -> " + GsonUtil.GsonString(user));

@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.transition.ChangeBounds;
 import android.transition.Slide;
@@ -40,7 +41,8 @@ import okhttp3.HttpUrl;
 
 public class EnterActivity extends DialogManagerActivity {
 
-    @BindView(R.id.container) FrameLayout container;
+    @BindView(R.id.container)
+    FrameLayout container;
 
     //切换帐号标志
     public static final int FLAG_SWITCH_USER = 0;
@@ -53,11 +55,12 @@ public class EnterActivity extends DialogManagerActivity {
         if (registerFragment == null) {
             // 如果当前没有该 fragment ，创建该 fragment 并通过 FragmentManager 进行管理
             registerFragment = RegisterFragment.newInstance();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                setTransition(registerFragment);
-            }
+            //v2.0去掉动画
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                setTransition(registerFragment);
+//            }
             ActivityUtil.addFragmentToActivity(getSupportFragmentManager(), registerFragment,
-                                            R.id.container, RegisterFragment.ARGUMENT_REGISTER_ID);
+                    R.id.container, RegisterFragment.ARGUMENT_REGISTER_ID);
         }
     }
 
@@ -68,11 +71,16 @@ public class EnterActivity extends DialogManagerActivity {
                 (LoginFragment) getSupportFragmentManager().findFragmentByTag(LoginFragment.ARGUMENT_LOGIN_ID);
         if (loginFragment == null) {
             loginFragment = LoginFragment.newInstance();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                setTransition(loginFragment);
-            }
-            ActivityUtil.addFragmentToActivity(getSupportFragmentManager(), loginFragment,
-                                            R.id.container, LoginFragment.ARGUMENT_LOGIN_ID);
+            //v2.0去掉frag动画
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                setTransition(loginFragment);
+//            }
+            //v2.0不用吧登陆碎片加入返回栈
+//            ActivityUtil.addFragmentToActivity(getSupportFragmentManager(), loginFragment,
+//                                            R.id.container, LoginFragment.ARGUMENT_LOGIN_ID);
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.container, loginFragment, LoginFragment.ARGUMENT_LOGIN_ID)
+                    .commit();
         }
     }
 
@@ -143,11 +151,12 @@ public class EnterActivity extends DialogManagerActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter);
         ButterKnife.bind(this);
-
-        int flag = getIntent().getIntExtra("FLAG", -1);
-        if (FLAG_SWITCH_USER == flag) {
-            intoLogin();
-        }
+        intoLogin();
+        //v2.0不需要判断flag来确定是否进去登陆页面，默认就在登陆页面
+//        int flag = getIntent().getIntExtra("FLAG", -1);
+//        if (FLAG_SWITCH_USER == flag) {
+//            intoLogin();
+//        }
 
     }
 
