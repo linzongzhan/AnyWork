@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -53,23 +54,8 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
 
     public static final String TAG = "HomeActivity";
     public static final String ACTION = TAG + "$Receiver";//广播action
-
-    @BindView(R.id.toolbar)
-    Toolbar mToolbar;
-    @BindView(R.id.drawer)
-    DrawerLayout mDrawerLayout;
-    @BindView(R.id.navigation)
-    NavigationView mNavigationView;
-    @BindView(R.id.button_notice_hint_cancel)
-    ImageView mBtnNoticeCancle;
-    @BindView(R.id.textView_notice_home)
-    TextView mTvNoticeHint;
-    @BindView(R.id.notice_hint)
-    View mNoticeHint;
-
-    CircleImageView headIv;
-    TextView name;
-    TextView mail;
+    @BindView(R.id.bottomNavigationView)
+    BottomNavigationView bottomNavigationView;
 
     private FragmentManager mFragmentManager;
     private BroadcastReceiver mReceiver;
@@ -77,12 +63,12 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
         initView();
         registerBroadcast();
         WebSocketHolder.getDefault().register(this);
         String baseUrl = RetrofitClient.RETROFIT_CLIENT.getRetrofit().baseUrl().toString();
-       // WebSocketHolder.getDefault().connect(baseUrl+"websocket/"+App.getInstance().getUser().getUserId());
+        // WebSocketHolder.getDefault().connect(baseUrl+"websocket/"+App.getInstance().getUser().getUserId());
         WebSocketHolder.getDefault().connect("ws://121.40.165.18:8800");
     }
 
@@ -107,50 +93,16 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
 
     private void initView() {
         ButterKnife.bind(this);
-
-        View navHeaderView = mNavigationView.getHeaderView(0);
-        headIv = (CircleImageView) navHeaderView.findViewById(R.id.civ_headIv);
-        name = (TextView) navHeaderView.findViewById(R.id.tv_name);
-        mail = (TextView) navHeaderView.findViewById(R.id.tv_mail);
-
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        setTitle("在线人数：" + 0);
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, mDrawerLayout, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        mDrawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-        mNavigationView.setNavigationItemSelectedListener(this);
-
-        setDrawerInfo();
+        //设置底部导航栏的颜色
+        bottomNavigationView.setItemIconTintList(null);
 
         mFragmentManager = getSupportFragmentManager();
         mFragmentManager.beginTransaction()
-                .add(R.id.frame, OrganizationFragment.newInstance(OrganizationFragment.TYPE_JOIN))
+                .add(R.id.frame, HomeFragment.newInstance())
                 .commit();
 
     }
 
-    private void setDrawerInfo() {
-        User user = App.getInstance().getUser();
-        GlideUtil.setPictureWithOutCache(headIv, user.getUserId(), R.drawable.ic_user_default);
-        name.setText(user.getUserName());
-        mail.setText("学号：" + user.getStudentId());
-    }
-
-    @OnClick(R.id.button_notice_hint_cancel)
-    void hideNoticeHint() {
-        mNoticeHint.setVisibility(View.GONE);
-    }
-
-    @OnClick(R.id.notice_hint)
-    void toNoticeActivity() {
-        //ToastUtil.showToast("暂未开放");
-        mNoticeHint.setVisibility(View.GONE);
-        startActivity(new Intent(this, NoticeActivity.class));
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -214,7 +166,6 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
                 return false;
             }
         }
-        mDrawerLayout.closeDrawers();
         return true;
     }
 
@@ -242,7 +193,7 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         switch (requestCode) {
             case 0: {
                 if (resultCode == RESULT_OK) {
-                    setDrawerInfo();
+
                 }
                 break;
             }
@@ -275,14 +226,13 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
 
     @WS(threadMode = ThreadMode.MAIN)
     public void onlineCount(OnlineCount onlineCount) {
-        setTitle("在线人数：" + onlineCount.onlineCount);
         ToastUtil.showToast("在线人数：" + onlineCount.onlineCount);
     }
+
     @WS(threadMode = ThreadMode.MAIN)
-    public void onNoticeGet(Notice notice){
+    public void onNoticeGet(Notice notice) {
         //收到公告推送，显示提醒
-        Log.e("HomeActivity","收到notice");
-        mNoticeHint.setVisibility(View.VISIBLE);
+        Log.e("HomeActivity", "收到notice");
 
     }
 

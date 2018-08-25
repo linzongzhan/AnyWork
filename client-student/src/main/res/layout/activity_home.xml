@@ -7,17 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/activity_main" />
+<include layout="@layout/activity_main" />
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:background="@color/dark_grey_status"
-        app:headerLayout="@layout/drawer_header"
-        app:menu="@menu/drawer_content"
-        app:itemTextColor="#ffffff"/>
 
-</android.support.v4.widget.DrawerLayout>
+    </android.support.v4.widget.DrawerLayout>

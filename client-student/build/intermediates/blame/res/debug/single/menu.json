@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\menu\\home_bottom.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\menu\\home_bottom.xml"
+    },
+    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\menu\\setting.xml",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\menu\\setting.xml"
     },

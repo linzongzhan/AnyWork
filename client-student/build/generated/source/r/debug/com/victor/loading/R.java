@@ -33,7 +33,7 @@ public final class R {
     }
     public static final class layout {
         public static final int book_loading = 0x7f040027;
-        public static final int newton_cradle_loading = 0x7f040045;
+        public static final int newton_cradle_loading = 0x7f040046;
     }
     public static final class string {
         public static final int app_name = 0x7f08004b;
