@@ -3,10 +3,10 @@
     <item android:title="首页"
         android:id="@+id/tab_home"
         android:icon="@drawable/bottom_home_list"/>
-    <item android:title="班级"
-        android:id="@+id/tab_class"
+    <item android:title="排行榜"
+        android:id="@+id/tab_rank"
         android:icon="@drawable/bottom_class_list"/>
     <item android:title="我的"
         android:id="@+id/tab_mine"
-        android:icon="@drawable/bottom_mine_list"/>
+        android:icon="@drawable/bottom_mine_list" />
 </menu>

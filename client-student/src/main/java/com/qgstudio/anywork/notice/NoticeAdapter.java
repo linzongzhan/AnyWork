@@ -32,7 +32,7 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(NoticeAdapter.ViewHolder holder, int position) {
-        holder.textView.setText(list.get(position).toString());
+       // holder.textView.setText(list.get(position).toString());
     }
 
     @Override
@@ -41,8 +41,8 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.textview_notice)
-        TextView textView;
+//        @BindView(R.id.textview_notice)
+//        TextView textView;
 
         public ViewHolder(View view) {
             super(view);

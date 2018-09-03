@@ -1,17 +1,17 @@
 package com.qgstudio.anywork.main;
 
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
-import com.hitomi.cslibrary.CrazyShadow;
-import com.hitomi.cslibrary.base.CrazyShadowDirection;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.model.Organization;
 import com.qgstudio.anywork.grade.GradeContract;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;
+import com.qgstudio.anywork.notice.NoticeActivity;
 import com.qgstudio.anywork.paper.PaperActivity;
 import com.qgstudio.anywork.utils.DesityUtil;
 
@@ -50,6 +50,9 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
         ButterKnife.bind(this, mRoot);
         btnMyClass.setTag(null);
         mPresenter.getJoinOrganization();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getActivity().getWindow().setStatusBarColor(getActivity().getResources().getColor(R.color.sample_blue));
+        }
     }
 
     @Override
@@ -73,6 +76,10 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
         } else {
 
         }
+    }
+    @OnClick(R.id.btn_notice_all)
+    public void clickNoticeAll(){
+        startActivity(new Intent(getActivity(), NoticeActivity.class));
     }
 
     @Override

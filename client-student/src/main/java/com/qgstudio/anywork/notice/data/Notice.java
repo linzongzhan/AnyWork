@@ -9,6 +9,8 @@ public class Notice extends Message {
     public String publisher;
     public String createTime;
     public int status;// 0为未读，1为已读
+    public final static int STATUS_READED = 1;
+    public final static int STATUS_UNREADED = 0;
 
     @Override
     public String toString() {

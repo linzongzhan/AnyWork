@@ -95,11 +95,11 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         ButterKnife.bind(this);
         //设置底部导航栏的颜色
         bottomNavigationView.setItemIconTintList(null);
-
         mFragmentManager = getSupportFragmentManager();
         mFragmentManager.beginTransaction()
                 .add(R.id.frame, HomeFragment.newInstance())
                 .commit();
+
 
     }
 

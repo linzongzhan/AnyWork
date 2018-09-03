@@ -16,7 +16,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/home_bottom"
-        android:background="@color/white"/>
+        android:background="@color/white"
+        app:itemTextColor="@color/bottom_tab_text_color"
+        />
+
 
     <FrameLayout
         android:id="@+id/frame"
