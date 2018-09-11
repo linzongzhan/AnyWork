@@ -28,10 +28,12 @@ import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.dialog.BaseDialog;
 import com.qgstudio.anywork.enter.EnterActivity;
 import com.qgstudio.anywork.feedback.FeedbackActivity;
+import com.qgstudio.anywork.my.MyFragment;
 import com.qgstudio.anywork.networkcenter.WorkBuilder;
 import com.qgstudio.anywork.notice.NoticeActivity;
 import com.qgstudio.anywork.notice.data.Notice;
 import com.qgstudio.anywork.notice.data.OnlineCount;
+import com.qgstudio.anywork.ranking.RankingFragment;
 import com.qgstudio.anywork.user.UserActivity;
 import com.qgstudio.anywork.user.UserApi;
 import com.qgstudio.anywork.utils.GlideUtil;
@@ -97,7 +99,7 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         bottomNavigationView.setItemIconTintList(null);
         mFragmentManager = getSupportFragmentManager();
         mFragmentManager.beginTransaction()
-                .add(R.id.frame, HomeFragment.newInstance())
+                .add(R.id.frame, new MyFragment())
                 .commit();
 
 

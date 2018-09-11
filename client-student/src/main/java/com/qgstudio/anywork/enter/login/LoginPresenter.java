@@ -2,6 +2,7 @@ package com.qgstudio.anywork.enter.login;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.data.ResponseResult;
@@ -14,6 +15,7 @@ import com.qgstudio.anywork.utils.GsonUtil;
 import com.qgstudio.anywork.utils.LogUtil;
 import com.qgstudio.anywork.utils.MyOpenHelper;
 import com.qgstudio.anywork.utils.SessionMaintainUtil;
+import com.qgstudio.anywork.utils.ToastUtil;
 
 import java.util.HashMap;
 import java.util.List;
@@ -127,6 +129,7 @@ public class LoginPresenter extends BasePresenterImpl<LoginContract.View> implem
 //                            user.setPassword(password);
                             MyOpenHelper myOpenHelper = DataBaseUtil.getHelper();
                             myOpenHelper.save(user);
+                            ToastUtil.showToast(result.getStateInfo());
                         } else {
                             mView.showError(result.getStateInfo());
                         }

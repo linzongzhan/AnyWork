@@ -16,4 +16,9 @@
         <attr name="sRightBottomAlpha" format="float"/>
     </declare-styleable>
 
+    <declare-styleable name="ArrowsView">
+        <attr name="android:layout_width"/>
+        <attr name="android:layout_height"/>
+    </declare-styleable>
+
 </resources>
