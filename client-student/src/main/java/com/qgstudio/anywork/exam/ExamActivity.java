@@ -33,17 +33,21 @@ import butterknife.OnClick;
 
 /**
  * 整套试卷的容器
+ *
  * @author Yason 2017/4/2.
  */
 
 public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> implements ExamView,
         ViewPager.OnPageChangeListener {
 
-    @BindView(R.id.epv) ExamPagerView mExamPagerView;
-    @BindView(R.id.fab) FloatingActionButton mSubmitFab;
+    @BindView(R.id.epv)
+    ExamPagerView mExamPagerView;
+    @BindView(R.id.fab)
+    FloatingActionButton mSubmitFab;
 
     private int mTestPaperId;
     private int mTestPaperType;//1为考试，0为练习
+    private String mTestPaperTittle;
     private QuestionFragAdapter mQuestionFragAdapter;//数据适配器
 
     private BaseDialog mBaseDialog;
@@ -54,6 +58,7 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
         setContentView(R.layout.activity_exam);
         mTestPaperId = getIntent().getIntExtra("TESTPAPER_ID", -1);
         mTestPaperType = getIntent().getIntExtra("TESTPAPER_TYPE", -1);
+        mTestPaperTittle = getIntent().getStringExtra("TESTPAPER_TITTLE");
         initView();
         loadData();
     }
@@ -137,10 +142,11 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
 
     }
 
-    public static void start(Context context, int testpaperId, int testpaperType) {
+    public static void start(Context context, int testpaperId, int testpaperType, String paperTittle) {
         Intent intent = new Intent(context, ExamActivity.class);
         intent.putExtra("TESTPAPER_ID", testpaperId);
         intent.putExtra("TESTPAPER_TYPE", testpaperType);
+        intent.putExtra("TESTPAPER_TITTLE", paperTittle);
         context.startActivity(intent);
     }
 
@@ -164,7 +170,7 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
 
     @Override
     public void startGradeAty(double socre, List<StudentAnswerResult> results) {
-        GradeActivity.start(this, socre, GsonUtil.GsonString(results));
+        GradeActivity.start(this, socre, GsonUtil.GsonString(results),mTestPaperTittle);
         finishAty();
     }
 

@@ -60,6 +60,10 @@
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_btn_disable.xml"
     },
     {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_cancel.png",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_cancel.png"
+    },
+    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_option_selected.xml",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_option_selected.xml"
     },
@@ -72,12 +76,12 @@
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_class_normal.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\buttom_menu_exam.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\buttom_menu_exam.png"
-    },
-    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_header_divide.xml",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_header_divide.xml"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\buttom_menu_exam.png",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\buttom_menu_exam.png"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
@@ -92,16 +96,16 @@
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_dialog_white.xml",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_dialog_white.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\background.xml"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_dialog_white.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_dialog_white.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_welcome.png",
@@ -190,6 +194,10 @@
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_menu_unread.png",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_menu_unread.png"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\background_my_ranking_fragment.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\background_my_ranking_fragment.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
@@ -418,6 +426,10 @@
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_wrong_normal.png",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\ic_wrong_normal.png"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_result_rocket.png",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_result_rocket.png"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_login_phone.png",

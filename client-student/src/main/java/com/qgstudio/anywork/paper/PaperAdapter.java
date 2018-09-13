@@ -123,7 +123,7 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.Holder> {
 
                     intoTestActivity(v.getContext(), mPapers.get(position).getTestpaperId(), type, dialog);
                 } else {
-                    ExamActivity.start(v.getContext(), mPapers.get(position).getTestpaperId(), type);
+                    //ExamActivity.start(v.getContext(), mPapers.get(position).getTestpaperId(), type);
                 }
             }
         });
@@ -222,10 +222,10 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.Holder> {
                             for (StudentAnswerAnalysis analysi : analysis) {
                                 results.add(new StudentAnswerResult(analysi));
                             }
-                            GradeActivity.start(context, socre, GsonUtil.GsonString(results));
+                            //GradeActivity.start(context, socre, GsonUtil.GsonString(results));
 
                         } else {
-                            ExamActivity.start(context, testpaperId, type);
+                            //ExamActivity.start(context, testpaperId, type);
                         }
                     }
                 });

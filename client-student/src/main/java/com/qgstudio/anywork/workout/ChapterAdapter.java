@@ -103,10 +103,8 @@ public class ChapterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             final Testpaper testpaper = (Testpaper) datas.get(position);
             catalogViewHolder.tvCatalogTittle.setText(testpaper.getTestpaperTitle());
             catalogViewHolder.tvCatalogTime.setText(testpaper.getCreateTime() + "-" + testpaper.getEndingTime());
-            int state = Testpaper.STATUS_UNDO;
-            if (testpaper.getTotalQuestions() != 0) state = Testpaper.STATUS_UNFINISHED;//做了一部分
-            if (testpaper.getScore() != -1) state = Testpaper.STATUS_DONE;//做完了
-            switch (state) {
+
+            switch (testpaper.getStatus()) {
                 case Testpaper.STATUS_UNDO:
                     catalogViewHolder.stateTab.setText("未完成");
                     catalogViewHolder.stateTab.setBackgroundColor(Color.parseColor("#F54864"));
@@ -123,28 +121,24 @@ public class ChapterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             ((CatalogViewHolder) holder).card.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (isTest) {
-                        String createTime = testpaper.getCreateTime();
-                        String endTime = testpaper.getEndingTime();
-                        Date createD = getDate(createTime);
-                        Date endD = getDate(endTime);
 
-                        long now = System.currentTimeMillis();
-                        if (now < createD.getTime()) {
-                            ToastUtil.showToast("未到达考试时间");
-                            return;
-                        }
-                        if (now > endD.getTime()) {
-                            ToastUtil.showToast("考试时间已截止");
-                            return;
-                        }
-                        LoadingDialog dialog = new LoadingDialog();
-                        dialog.show(((AppCompatActivity) context).getSupportFragmentManager(), "");
+                    String createTime = testpaper.getCreateTime();
+                    String endTime = testpaper.getEndingTime();
+                    Date createD = getDate(createTime);
+                    Date endD = getDate(endTime);
 
-                        intoTestActivity(v.getContext(), testpaper.getTestpaperId(), 1, dialog);
-                    } else {
-                        ExamActivity.start(v.getContext(), testpaper.getTestpaperId(), 0);
+                    long now = System.currentTimeMillis();
+                    if (now < createD.getTime()) {
+                        ToastUtil.showToast("未到达考试时间");
+                        return;
                     }
+                    if (now > endD.getTime()) {
+                        ToastUtil.showToast("考试时间已截止");
+                        return;
+                    }
+                    LoadingDialog dialog = new LoadingDialog();
+                    dialog.show(((AppCompatActivity) context).getSupportFragmentManager(), "");
+                    intoTestActivity(v.getContext(), testpaper.getTestpaperId(), testpaper.getTestpaperTitle(), 1, dialog);
                 }
             });
 
@@ -192,7 +186,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         void onChapterClick(int chapterID);
     }
 
-    private void intoTestActivity(final Context context, final int testpaperId, final int type, final LoadingDialog dialog) {
+    private void intoTestActivity(final Context context, final int testpaperId, final String paperTittle, final int type, final LoadingDialog dialog) {
 
 
         Map<String, Integer> info = new HashMap<>();
@@ -227,10 +221,9 @@ public class ChapterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                             for (StudentAnswerAnalysis analysi : analysis) {
                                 results.add(new StudentAnswerResult(analysi));
                             }
-                            GradeActivity.start(context, socre, GsonUtil.GsonString(results));
-
+                            GradeActivity.start(context, socre, GsonUtil.GsonString(results), paperTittle);
                         } else {
-                            ExamActivity.start(context, testpaperId, type);
+                            ExamActivity.start(context, testpaperId, type,paperTittle);
                         }
                     }
                 });
@@ -243,9 +236,8 @@ public class ChapterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
      * @return Date
      */
     private Date getDate(String str) {
-        str = str.substring(0, 23) + "Z";
-        str = str.replace("Z", " UTC");
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS Z");
+        System.out.println("=============" + str);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = null;
         try {
             date = format.parse(str);
