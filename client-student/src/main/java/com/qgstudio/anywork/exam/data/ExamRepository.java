@@ -40,8 +40,9 @@ public class ExamRepository extends BasePresenterImpl<ExamView> implements ExamP
     }
 
     public void getTestpaper(int textpaperId) {
-        Map<String, String> map = new HashMap<>();
+        Map map = new HashMap<>();
         map.put("testpaperId", textpaperId + "");
+        map.put("choice", 0);
         mExamApi.getTestpaper(map)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -114,7 +115,7 @@ public class ExamRepository extends BasePresenterImpl<ExamView> implements ExamP
                 });
     }
 
-    private void handleGetPaperContentFailure(){
+    private void handleGetPaperContentFailure() {
         mView.showToast("获取试卷内容失败");
         mView.destroySelf();
     }

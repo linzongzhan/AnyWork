@@ -49,7 +49,9 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                         LogUtil.d2(TAG, "getJoinOrganization", "onSuccess -> " + data);
 
                         afterLoading();
-                        mView.onMyClassGot(data.isEmpty() ? null : data.get(0));
+                        if (mView != null) {
+                            mView.onMyClassGot(data.isEmpty() ? null : data.get(0));
+                        }
                     }
 
                     @Override
@@ -57,7 +59,9 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                         LogUtil.d2(TAG, "getJoinOrganization", "onFailure -> " + info);
 
                         afterLoading();
-                        mView.showToast("获取信息失败");
+                        if (mView != null) {
+                            mView.showToast("获取信息失败");
+                        }
                     }
 
                     @Override
@@ -65,7 +69,10 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                         LogUtil.d2(TAG, "getJoinOrganization", "onMistake -> " + t.getMessage());
 
                         afterLoading();
-                        mView.showToast("获取信息失败");
+                        if (mView != null) {
+                            mView.showToast("获取信息失败");
+                        }
+
                     }
                 });
     }
@@ -92,6 +99,7 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                     }
                 });
     }
+
     private Object buildRequestParam() {
         HashMap info = new HashMap();
         info.put("status", 0);
@@ -101,7 +109,9 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
     }
 
     private void afterLoading() {
-        mView.hideLoading();
+        if (mView != null) {
+            mView.hideLoading();
+        }
     }
 
     private void prepareLoading() {

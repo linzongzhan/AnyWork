@@ -1,6 +1,7 @@
 package com.qgstudio.anywork.notice.data;
 
 import com.google.gson.JsonObject;
+import com.qgstudio.anywork.websocket.WebSocketHolder;
 
 public class MessageFactory {
     public static Message fromJsonObject(JsonObject jsonObject) {
@@ -12,6 +13,8 @@ public class MessageFactory {
                 onlineCount.type = Message.TYPE_ONLINE_COUNT;
                 onlineCount.onlineCount = jsonObject.get("onlineCount").getAsInt();
                 message = onlineCount;
+                //插入一个新的计数下发方式，livedata
+                WebSocketHolder.getDefault().onlineCount.postValue(onlineCount.onlineCount);
                 break;
             case Message.TYPE_NOTICE:
                 Notice notice = new Notice();

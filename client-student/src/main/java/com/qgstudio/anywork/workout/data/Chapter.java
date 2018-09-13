@@ -1,9 +1,11 @@
-package com.qgstudio.anywork.data.model;
+package com.qgstudio.anywork.workout.data;
+
+import com.qgstudio.anywork.workout.data.WorkoutInfo;
 
 /**
  * Created by logan on 2017/7/11.
  */
-public class Chapter {
+public class Chapter extends WorkoutInfo{
 
     private int chapterId;
     private int organizationId;

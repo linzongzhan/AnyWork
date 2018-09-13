@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.RetrofitSubscriber;
-import com.qgstudio.anywork.data.model.Testpaper;
+import com.qgstudio.anywork.workout.data.Testpaper;
 import com.qgstudio.anywork.paper.PaperFragView;
 import com.qgstudio.anywork.mvp.BasePresenterImpl;
 import com.qgstudio.anywork.utils.LogUtil;

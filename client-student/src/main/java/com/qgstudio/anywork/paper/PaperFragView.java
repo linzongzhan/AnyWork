@@ -2,7 +2,7 @@ package com.qgstudio.anywork.paper;
 
 
 import com.qgstudio.anywork.common.PreLoading;
-import com.qgstudio.anywork.data.model.Testpaper;
+import com.qgstudio.anywork.workout.data.Testpaper;
 import com.qgstudio.anywork.mvp.BaseView;
 
 import java.util.List;

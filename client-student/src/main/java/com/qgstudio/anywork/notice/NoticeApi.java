@@ -10,7 +10,6 @@ import retrofit2.http.POST;
 import rx.Observable;
 
 public interface NoticeApi {
-    int a = 0;
     /**
      * 获取一页公告
      * {

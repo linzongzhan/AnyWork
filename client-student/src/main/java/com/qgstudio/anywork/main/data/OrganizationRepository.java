@@ -140,9 +140,7 @@ public class OrganizationRepository extends BasePresenterImpl<OrganizationFragVi
 
                             mView.updateItemJoinStatus(position, true);
                             mView.destroySelf();
-                            mView.startPaperAty(organizationId);
                             mView.showToast("加入班级成功");
-
                             mView.sendUpdateBroadCast();
                         } else {
                             LogUtil.d2(TAG, "joinOrganization", "onNext -> joinFailure，" + responseResult.getStateInfo());

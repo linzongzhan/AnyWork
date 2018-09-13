@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.ResponseResult;
@@ -17,13 +16,12 @@ import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.model.StudentAnswerAnalysis;
 import com.qgstudio.anywork.data.model.StudentAnswerResult;
 import com.qgstudio.anywork.data.model.StudentTestResult;
-import com.qgstudio.anywork.data.model.Testpaper;
+import com.qgstudio.anywork.workout.data.Testpaper;
 
 import com.qgstudio.anywork.dialog.LoadingDialog;
 import com.qgstudio.anywork.exam.ExamActivity;
 import com.qgstudio.anywork.grade.GradeActivity;
 import com.qgstudio.anywork.utils.DateUtil;
-import com.qgstudio.anywork.utils.GlideUtil;
 import com.qgstudio.anywork.utils.GsonUtil;
 import com.qgstudio.anywork.utils.ToastUtil;
 
@@ -47,7 +45,6 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
-import static com.qgstudio.anywork.data.ApiStores.API_DEFAULT_URL;
 
 
 /**

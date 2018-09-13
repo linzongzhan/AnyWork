@@ -13,7 +13,6 @@ import android.widget.Filter;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.common.DialogManagerActivity;
 import com.qgstudio.anywork.data.model.Organization;
-import com.qgstudio.anywork.grade.GradeContract;
 import com.qgstudio.anywork.main.data.OrganizationRepository;
 import com.qgstudio.anywork.paper.PaperActivity;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;

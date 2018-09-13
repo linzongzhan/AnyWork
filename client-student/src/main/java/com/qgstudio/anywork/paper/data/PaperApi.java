@@ -1,7 +1,7 @@
 package com.qgstudio.anywork.paper.data;
 
 import com.qgstudio.anywork.data.ResponseResult;
-import com.qgstudio.anywork.data.model.Testpaper;
+import com.qgstudio.anywork.workout.data.Testpaper;
 
 import java.util.List;
 import java.util.Map;
