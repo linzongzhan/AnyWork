@@ -1,6 +1,7 @@
 package com.qgstudio.anywork.ranking;
 
 import android.animation.ValueAnimator;
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.widget.ListPopupWindow;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qgstudio.anywork.R;
@@ -28,20 +30,20 @@ import java.util.ArrayList;
 
 public class RankingFragment extends Fragment {
 
-    //控制Spinner右旁的箭头
-    private boolean downScore = true;
-    private boolean downTask = true;
+    private TextView ranking1;
+    private TextView ranking2;
+    private ArrowsView arrows1;
+    private ArrowsView arrows2;
+    private ListView listView1;
+    private ListView listView2;
+    private PopupWindow popupWindow1;
+    private PopupWindow popupWindow2;
 
-    private Spinner rankingScore;
-    private Spinner rankingTask;
-    private ArrowsView arrowsView1;
-    private ArrowsView arrowsView2;
-
-    //界面中的两个Spinner的适配器
-    private ArrayList<String> datasScore = new ArrayList<>();
-    private ArrayAdapter<String> arrayAdapterScore;
-    private ArrayList<String> dataTask = new ArrayList<>();
-    private ArrayAdapter<String> arrayAdapterTask;
+    //界面中的两个下拉框的适配器
+    private ArrayList<String> data1 = new ArrayList<>();
+    private ArrayAdapter<String> arrayAdapter1;
+    private ArrayList<String> data2 = new ArrayList<>();
+    private ArrayAdapter<String> arrayAdapter2;
 
     public RankingFragment() {
     }
@@ -68,72 +70,81 @@ public class RankingFragment extends Fragment {
      * @param rootView
      */
     private void initSpinner(View rootView) throws NoSuchFieldException, IllegalAccessException {
-        rankingScore = (Spinner) rootView.findViewById(R.id.ranking_score);
-        rankingTask = (Spinner) rootView.findViewById(R.id.ranking_task);
-        arrowsView1 = (ArrowsView) rootView.findViewById(R.id.arrows1);
-        arrowsView2 = (ArrowsView) rootView.findViewById(R.id.arrows2);
+        ranking1 = (TextView) rootView.findViewById(R.id.ranking1);
+        ranking2 = (TextView) rootView.findViewById(R.id.ranking2);
+        arrows1 = (ArrowsView) rootView.findViewById(R.id.arrows1);
+        arrows2 = (ArrowsView) rootView.findViewById(R.id.arrows2);
 
-        //为rankingScore设置适配器
-        datasScore.add("得分最高");
-        datasScore.add("用时最短");
-        arrayAdapterScore = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, datasScore);
-        arrayAdapterScore.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        rankingScore.setAdapter(arrayAdapterScore);
-        //为rankingScore设置控制右旁的箭头的监听器
-        rankingScore.setOnTouchListener(new View.OnTouchListener() {
+        //设置点击ranking1和ranking2时让其显示下拉列表窗口
+        ranking1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (downScore) {
-                    arrowsView1.mUp();
-                    downScore = false;
+            public void onClick(View v) {
+                if (popupWindow2.isShowing()) {
+                    popupWindow2.dismiss();
                 }
-                return false;
+                popupWindow1.showAsDropDown(ranking1, 0, 0);
+                arrows1.mUp();
             }
         });
-        rankingScore.setOnHierarchyChangeListener(new ViewGroup.OnHierarchyChangeListener() {
+        ranking2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChildViewAdded(View parent, View child) {
-
-            }
-
-            @Override
-            public void onChildViewRemoved(View parent, View child) {
-                if (!downScore) {
-                    arrowsView1.mDown();
-                    downScore = true;
+            public void onClick(View v) {
+                if (popupWindow1.isShowing()) {
+                    popupWindow1.dismiss();
                 }
+                popupWindow2.showAsDropDown(ranking2, 0, 0);
+                arrows2.mUp();
             }
         });
 
-        //为rankingTask设置适配器
-        dataTask.add("本次任务");
-        dataTask.add("上次任务");
-        arrayAdapterTask = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, dataTask);
-        arrayAdapterTask.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        rankingTask.setAdapter(arrayAdapterTask);
-        //为rankingTask设置控制右旁的箭头的监听器
-        rankingTask.setOnTouchListener(new View.OnTouchListener() {
+        initSelectPopup();
+    }
+
+    /**
+     * 设置下拉列表窗口
+     */
+    private void initSelectPopup() {
+        listView1 = new ListView(getActivity());
+        listView2 = new ListView(getActivity());
+
+        data1.add("学生所在班级");
+        data1.add("教师所教班级");
+
+        arrayAdapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, data1);
+        arrayAdapter2 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, data2);
+        listView1.setAdapter(arrayAdapter1);
+        listView2.setAdapter(arrayAdapter2);
+        listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (downTask) {
-                    arrowsView2.mUp();
-                    downTask = false;
-                }
-                return false;
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String kind = data1.get(position);
+                ranking1.setText(kind);
+                popupWindow1.dismiss();
             }
         });
-        rankingTask.setOnHierarchyChangeListener(new ViewGroup.OnHierarchyChangeListener() {
+        listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onChildViewAdded(View parent, View child) {
-
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String kind = data2.get(position);
+                ranking2.setText(kind);
+                popupWindow2.dismiss();
             }
+        });
 
+        popupWindow1 = new PopupWindow(ranking1, ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
+        popupWindow2 = new PopupWindow(ranking2, ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
+
+        //下拉列表窗口消失时的监听器
+        popupWindow1.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
-            public void onChildViewRemoved(View parent, View child) {
-                if (!downTask) {
-                    arrowsView2.mDown();
-                    downTask = true;
-                }
+            public void onDismiss() {
+                arrows1.mDown();
+            }
+        });
+        popupWindow2.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                arrows2.mDown();
             }
         });
     }

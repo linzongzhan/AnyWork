@@ -26,12 +26,12 @@
                 android:background="@drawable/background"
                 android:layout_width="wrap_content"
                 android:layout_height="32dp">
-                <Spinner
-                    android:id="@+id/ranking_score"
+                <TextView
+                    android:id="@+id/ranking1"
                     android:layout_width="100dp"
                     android:layout_height="32dp"
                     android:background="@drawable/background">
-                </Spinner>
+                </TextView>
                 <com.qgstudio.anywork.ranking.ArrowsView
                     android:id="@+id/arrows1"
                     android:layout_width="32dp"
@@ -42,12 +42,12 @@
                 android:background="@drawable/background"
                 android:layout_width="wrap_content"
                 android:layout_height="32dp">
-                <Spinner
-                    android:id="@+id/ranking_task"
+                <TextView
+                    android:id="@+id/ranking2"
                     android:layout_width="100dp"
                     android:layout_height="32dp"
                     android:background="@drawable/background">
-                </Spinner>
+                </TextView>
                 <com.qgstudio.anywork.ranking.ArrowsView
                     android:id="@+id/arrows2"
                     android:layout_width="32dp"

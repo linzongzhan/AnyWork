@@ -1,5 +1,6 @@
 package com.qgstudio.anywork.ranking.adapters;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,12 +10,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qgstudio.anywork.R;
+import com.qgstudio.anywork.data.model.RankingMessage;
+import com.qgstudio.anywork.utils.GlideUtil;
+
+import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHolder> {
 
-    public RankingAdapter() {
+    private Context context;
+    private ArrayList<RankingMessage> rankingMessages;
+
+    public RankingAdapter(Context context, ArrayList<RankingMessage> rankingMessages) {
+        this.context = context;
+        this.rankingMessages = rankingMessages;
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{
@@ -26,11 +36,11 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHold
 
         public ViewHolder(View itemView) {
             super(itemView);
-            numberImage = (ImageView) itemView.findViewById(R.id.ranking_number_image);
-            numberText = (TextView) itemView.findViewById(R.id.ranking_number_text);
-            headPic = (CircleImageView) itemView.findViewById(R.id.ranking_head_pic);
-            name = (TextView) itemView.findViewById(R.id.ranking_name);
-            studentId = (TextView) itemView.findViewById(R.id.ranking_student_id);
+            numberImage = (ImageView) itemView.findViewById(R.id.number_image);
+            numberText = (TextView) itemView.findViewById(R.id.number_text);
+            headPic = (CircleImageView) itemView.findViewById(R.id.head_pic);
+            name = (TextView) itemView.findViewById(R.id.name);
+            studentId = (TextView) itemView.findViewById(R.id.student_id);
         }
     }
 
@@ -44,11 +54,23 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        RankingMessage rankingMessage = rankingMessages.get(position);
+        if (position == 0) {
+            holder.numberImage.setImageResource(R.drawable.icon_ranking_first);
+        } else if (position == 1) {
+            holder.numberImage.setImageResource(R.drawable.icon_ranking_second);
+        } else if (position == 2) {
+            holder.numberImage.setImageResource(R.drawable.icon_ranking_third);
+        } else {
+            holder.numberText.setText("NO." + (position + 1));
+        }
+        GlideUtil.setPictureWithOutCache(holder.headPic, rankingMessage.getImagePath(), R.drawable.ic_user_default);
+        holder.name.setText(rankingMessage.getUsername());
+        holder.studentId.setText(rankingMessage.getStudentId());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return rankingMessages.size();
     }
 }

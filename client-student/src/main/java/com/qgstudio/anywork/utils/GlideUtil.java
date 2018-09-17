@@ -33,4 +33,15 @@ public class GlideUtil {
                 .crossFade(500)
                 .into(img);
     }
+
+    public static void setPictureWithOutCache(ImageView img, String url, int def) {
+        Glide.with(App.getInstance())
+                .load(url)
+                .skipMemoryCache(true)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .error(def == -1 ? R.drawable.ic_icon : def)
+                .fitCenter()
+                .crossFade(500)
+                .into(img);
+    }
 }
