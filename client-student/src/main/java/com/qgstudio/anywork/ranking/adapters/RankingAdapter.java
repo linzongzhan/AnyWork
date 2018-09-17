@@ -36,6 +36,7 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHold
 
         public ViewHolder(View itemView) {
             super(itemView);
+
             numberImage = (ImageView) itemView.findViewById(R.id.number_image);
             numberText = (TextView) itemView.findViewById(R.id.number_text);
             headPic = (CircleImageView) itemView.findViewById(R.id.head_pic);
