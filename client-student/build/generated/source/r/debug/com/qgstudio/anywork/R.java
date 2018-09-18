@@ -3895,6 +3895,7 @@ containing a value of this type.
         public static final int dim_foreground_material_dark=0x7f0d0038;
         public static final int dim_foreground_material_light=0x7f0d0039;
         public static final int error_color_material=0x7f0d003a;
+        public static final int feedback_commit=0x7f0d00a6;
         public static final int foreground_material_dark=0x7f0d003b;
         public static final int foreground_material_light=0x7f0d003c;
         public static final int green=0x7f0d003d;
@@ -3945,8 +3946,8 @@ containing a value of this type.
         public static final int status_join_true_text=0x7f0d0069;
         public static final int switch_thumb_disabled_material_dark=0x7f0d006a;
         public static final int switch_thumb_disabled_material_light=0x7f0d006b;
-        public static final int switch_thumb_material_dark=0x7f0d00a6;
-        public static final int switch_thumb_material_light=0x7f0d00a7;
+        public static final int switch_thumb_material_dark=0x7f0d00a7;
+        public static final int switch_thumb_material_light=0x7f0d00a8;
         public static final int switch_thumb_normal_material_dark=0x7f0d006c;
         public static final int switch_thumb_normal_material_light=0x7f0d006d;
         public static final int text_dark=0x7f0d006e;
@@ -4252,13 +4253,13 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f020051;
         public static final int abc_vector_test=0x7f020052;
         public static final int avd_hide_password=0x7f020053;
-        public static final int avd_hide_password_1=0x7f0200cd;
-        public static final int avd_hide_password_2=0x7f0200ce;
-        public static final int avd_hide_password_3=0x7f0200cf;
+        public static final int avd_hide_password_1=0x7f0200ce;
+        public static final int avd_hide_password_2=0x7f0200cf;
+        public static final int avd_hide_password_3=0x7f0200d0;
         public static final int avd_show_password=0x7f020054;
-        public static final int avd_show_password_1=0x7f0200d0;
-        public static final int avd_show_password_2=0x7f0200d1;
-        public static final int avd_show_password_3=0x7f0200d2;
+        public static final int avd_show_password_1=0x7f0200d1;
+        public static final int avd_show_password_2=0x7f0200d2;
+        public static final int avd_show_password_3=0x7f0200d3;
         public static final int background=0x7f020055;
         public static final int background_commit=0x7f020056;
         public static final int background_feedback_noselect=0x7f020057;
@@ -4372,13 +4373,14 @@ containing a value of this type.
         public static final int notification_bg_normal=0x7f0200c3;
         public static final int notification_bg_normal_pressed=0x7f0200c4;
         public static final int notification_icon_background=0x7f0200c5;
-        public static final int notification_template_icon_bg=0x7f0200cb;
-        public static final int notification_template_icon_low_bg=0x7f0200cc;
+        public static final int notification_template_icon_bg=0x7f0200cc;
+        public static final int notification_template_icon_low_bg=0x7f0200cd;
         public static final int notification_tile_bg=0x7f0200c6;
         public static final int notify_panel_notification_icon_bg=0x7f0200c7;
         public static final int pic_login_bg=0x7f0200c8;
         public static final int tooltip_frame_dark=0x7f0200c9;
         public static final int tooltip_frame_light=0x7f0200ca;
+        public static final int vector_drawable_feedback=0x7f0200cb;
     }
     public static final class id {
         public static final int ALT=0x7f0e0059;

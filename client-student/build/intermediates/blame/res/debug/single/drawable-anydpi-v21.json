@@ -44,6 +44,10 @@
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\feedback_add_picture.xml"
     },
     {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\vector_drawable_feedback.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\vector_drawable_feedback.xml"
+    },
+    {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\feedback_noselect.xml",
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\feedback_noselect.xml"
     }

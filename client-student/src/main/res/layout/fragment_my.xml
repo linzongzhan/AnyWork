@@ -62,7 +62,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#e8e8e8"
+        android:background="#ffffff"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -77,7 +77,7 @@
 
             <FrameLayout
                 android:layout_width="60dp"
-                android:layout_height="38dp">
+                android:layout_height="42dp">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -88,7 +88,7 @@
 
             <FrameLayout
                 android:layout_width="60dp"
-                android:layout_height="38dp">
+                android:layout_height="42dp">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -101,11 +101,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="#e8e8e8">
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="37dp"
+                android:layout_height="42dp"
                 android:background="#ffffff"
                 android:gravity="center_vertical|left"
                 android:text="做题记录"
@@ -113,8 +114,8 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="37dp"
-                android:layout_marginTop="2dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="1px"
                 android:background="#ffffff"
                 android:gravity="center_vertical|left"
                 android:text="修改密码"
@@ -127,7 +128,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#e8e8e8"
+        android:background="#ffffff"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +142,7 @@
 
             <FrameLayout
                 android:layout_width="60dp"
-                android:layout_height="38dp">
+                android:layout_height="42dp">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -152,7 +153,7 @@
 
             <FrameLayout
                 android:layout_width="60dp"
-                android:layout_height="38dp">
+                android:layout_height="42dp">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -165,11 +166,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="#e8e8e8">
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="37dp"
+                android:layout_height="42dp"
                 android:background="#ffffff"
                 android:gravity="center_vertical|left"
                 android:text="做题记录"
@@ -177,8 +179,8 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="37dp"
-                android:layout_marginTop="2dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="1px"
                 android:background="#ffffff"
                 android:gravity="center_vertical|left"
                 android:text="修改密码"
@@ -186,13 +188,14 @@
         </LinearLayout>
     </LinearLayout>
 
-    <Button
+    <TextView
         android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="36dp"
         android:layout_marginTop="20dp"
         android:background="#ffffff"
         android:text="退出登录"
+        android:gravity="center"
         android:textColor="#e83a3a"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -202,7 +205,7 @@
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="0dp"
-        android:layout_height="38dp"
+        android:layout_height="42dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -211,20 +214,20 @@
         android:background="#ffffff">
         <FrameLayout
             android:layout_width="60dp"
-            android:layout_height="38dp">
+            android:layout_height="42dp">
 
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                android:background="@drawable/icon_account_download" />
+                android:background="@drawable/vector_drawable_feedback" />
         </FrameLayout>
-        <Button
+        <TextView
             android:id="@+id/feedback"
             android:background="#ffffff"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="38dp"
+            android:layout_height="42dp"
             android:gravity="center_vertical|left"
             android:textColor="#626262"
             android:text="意见反馈"/>

@@ -476,8 +476,8 @@ public final class R {
         public static final int secondary_text_disabled_material_light = 0x7f0d0065;
         public static final int switch_thumb_disabled_material_dark = 0x7f0d006a;
         public static final int switch_thumb_disabled_material_light = 0x7f0d006b;
-        public static final int switch_thumb_material_dark = 0x7f0d00a6;
-        public static final int switch_thumb_material_light = 0x7f0d00a7;
+        public static final int switch_thumb_material_dark = 0x7f0d00a7;
+        public static final int switch_thumb_material_light = 0x7f0d00a8;
         public static final int switch_thumb_normal_material_dark = 0x7f0d006c;
         public static final int switch_thumb_normal_material_light = 0x7f0d006d;
         public static final int tooltip_background_dark = 0x7f0d008b;
@@ -742,8 +742,8 @@ public final class R {
         public static final int notification_bg_normal = 0x7f0200c3;
         public static final int notification_bg_normal_pressed = 0x7f0200c4;
         public static final int notification_icon_background = 0x7f0200c5;
-        public static final int notification_template_icon_bg = 0x7f0200cb;
-        public static final int notification_template_icon_low_bg = 0x7f0200cc;
+        public static final int notification_template_icon_bg = 0x7f0200cc;
+        public static final int notification_template_icon_low_bg = 0x7f0200cd;
         public static final int notification_tile_bg = 0x7f0200c6;
         public static final int notify_panel_notification_icon_bg = 0x7f0200c7;
         public static final int tooltip_frame_dark = 0x7f0200c9;
