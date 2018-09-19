@@ -13,6 +13,7 @@ MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\linzongzhan\.gradle\cac
 MERGED from [io.reactivex:rxandroid:1.0.1] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\rxandroid-1.0.1.aar\422c1247bf7d36eed5570ed5a448f57a\AndroidManifest.xml:15:1-21:12
 MERGED from [de.hdodenhof:circleimageview:2.0.0] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\circleimageview-2.0.0.aar\0e5e4fb005e7427c9fca0fb5467bd359\AndroidManifest.xml:2:1-11:12
 MERGED from [com.victor:lib:1.0.4] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\lib-1.0.4.aar\831c631aa7f9699324a8c0e507b8af13\AndroidManifest.xml:2:1-16:12
+MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\391a5fc2e6d4e82abc6f2eb185095097\AndroidManifest.xml:2:1-12:12
 MERGED from [com.android.support:support-v4:27.1.0] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\0fca9175731b97a477c1ba19538b9acd\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\00a8965781858632867d3f86459fa9d0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\tinkerpatch-android-sdk-1.2.8.aar\d08737ead699b76445feb95c74d2c828\AndroidManifest.xml:2:1-23:12
@@ -258,6 +259,8 @@ MERGED from [de.hdodenhof:circleimageview:2.0.0] C:\Users\linzongzhan\.gradle\ca
 MERGED from [de.hdodenhof:circleimageview:2.0.0] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\circleimageview-2.0.0.aar\0e5e4fb005e7427c9fca0fb5467bd359\AndroidManifest.xml:5:5-7:41
 MERGED from [com.victor:lib:1.0.4] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\lib-1.0.4.aar\831c631aa7f9699324a8c0e507b8af13\AndroidManifest.xml:7:5-9:41
 MERGED from [com.victor:lib:1.0.4] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\lib-1.0.4.aar\831c631aa7f9699324a8c0e507b8af13\AndroidManifest.xml:7:5-9:41
+MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\391a5fc2e6d4e82abc6f2eb185095097\AndroidManifest.xml:8:5-10:41
+MERGED from [jp.wasabeef:glide-transformations:2.0.1] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\glide-transformations-2.0.1.aar\391a5fc2e6d4e82abc6f2eb185095097\AndroidManifest.xml:8:5-10:41
 MERGED from [com.android.support:support-v4:27.1.0] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\0fca9175731b97a477c1ba19538b9acd\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.1.0] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\0fca9175731b97a477c1ba19538b9acd\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\linzongzhan\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\00a8965781858632867d3f86459fa9d0\AndroidManifest.xml:5:5-7:41

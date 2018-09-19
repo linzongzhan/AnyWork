@@ -30,29 +30,33 @@
                     android:id="@+id/ranking1"
                     android:layout_width="100dp"
                     android:layout_height="32dp"
-                    android:background="@drawable/background">
+                    android:gravity="center"
+                    android:text="学生所在班级"
+                    android:textColor="#2E85EA"
+                    android:background="@drawable/background_no_stroke">
                 </TextView>
                 <com.qgstudio.anywork.ranking.ArrowsView
                     android:id="@+id/arrows1"
                     android:layout_width="32dp"
                     android:layout_height="32dp"/>
             </LinearLayout>
-            <LinearLayout
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/background"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp">
-                <TextView
-                    android:id="@+id/ranking2"
-                    android:layout_width="100dp"
-                    android:layout_height="32dp"
-                    android:background="@drawable/background">
-                </TextView>
-                <com.qgstudio.anywork.ranking.ArrowsView
-                    android:id="@+id/arrows2"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp" />
-            </LinearLayout>
+            <!--<LinearLayout-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:background="@drawable/background"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="32dp">-->
+                <!--<TextView-->
+                    <!--android:id="@+id/ranking2"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="32dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:background="@drawable/background">-->
+                <!--</TextView>-->
+                <!--<com.qgstudio.anywork.ranking.ArrowsView-->
+                    <!--android:id="@+id/arrows2"-->
+                    <!--android:layout_width="32dp"-->
+                    <!--android:layout_height="32dp" />-->
+            <!--</LinearLayout>-->
         </LinearLayout>
 
         <LinearLayout

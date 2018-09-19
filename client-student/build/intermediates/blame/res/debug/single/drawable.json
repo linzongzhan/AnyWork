@@ -428,6 +428,10 @@
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\drawable\\ic_right_selected.png"
     },
     {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\background_no_stroke.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\drawable\\background_no_stroke.xml"
+    },
+    {
         "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_account_normal.png",
         "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_account_normal.png"
     },

@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qgstudio.anywork.App;
@@ -29,6 +31,7 @@ public class MyFragment extends Fragment {
     private TextView feedback;
     private TextView name;
     private TextView studentId;
+    private ImageView viewBackground;
 
     public MyFragment() {
     }
@@ -38,7 +41,11 @@ public class MyFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my, container, false);
 
+        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+
         initView(view);
+        setDetails(view);
 
         return view;
     }
@@ -56,9 +63,19 @@ public class MyFragment extends Fragment {
             result = getContext().getResources().getDimensionPixelOffset(resourceId);
         }
         //将整个布局向下平移状态栏的高度
-        View view = viewGroup.findViewById(R.id.view);
-        view.setLayoutParams(new ViewGroup.LayoutParams(view.getWidth(), view.getHeight() + result));
-        TextView name = (TextView) viewGroup.findViewById(R.id.my_name);
+        ViewGroup.LayoutParams viewP = viewBackground.getLayoutParams();
+        viewP.height = viewP.height + result;
+        viewBackground.setLayoutParams(viewP);
+        FrameLayout frameLayout = (FrameLayout) viewGroup.findViewById(R.id.my_frame_layout);
+        ViewGroup.MarginLayoutParams frameLayoutP = (ViewGroup.MarginLayoutParams) frameLayout.getLayoutParams();
+        frameLayoutP.topMargin = frameLayoutP.topMargin + result;
+        frameLayout.setLayoutParams(frameLayoutP);
+        ViewGroup.MarginLayoutParams nameP = (ViewGroup.MarginLayoutParams) name.getLayoutParams();
+        nameP.topMargin = nameP.topMargin + result;
+        name.setLayoutParams(nameP);
+        ViewGroup.MarginLayoutParams headP = (ViewGroup.MarginLayoutParams) head.getLayoutParams();
+        headP.topMargin = headP.topMargin + result;
+        head.setLayoutParams(headP);
     }
 
     /**
@@ -72,9 +89,9 @@ public class MyFragment extends Fragment {
         edit = (Button) view.findViewById(R.id.edit_message);
         name = (TextView) view.findViewById(R.id.my_name);
         studentId = (TextView) view.findViewById(R.id.my_student_id);
+        viewBackground = (ImageView) view.findViewById(R.id.view);
 
         GlideUtil.setPictureWithOutCache(head, App.getInstance().getUser().getUserId(), R.drawable.ic_user_default);
-        Log.d("linzongzhan", "initView: " + App.getInstance().getUser().toString());
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +108,8 @@ public class MyFragment extends Fragment {
         });
         name.setText(App.getInstance().getUser().getUserName());
         studentId.setText(App.getInstance().getUser().getStudentId());
+
+        GlideUtil.setPictureWithOutCacheWithBlur(viewBackground, App.getInstance().getUser().getUserId(), R.drawable.ic_user_default, getActivity());
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.qgstudio.anywork.ranking.adapters;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -57,12 +58,23 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RankingMessage rankingMessage = rankingMessages.get(position);
         if (position == 0) {
+            holder.numberText.setVisibility(View.GONE);
+            holder.numberImage.setVisibility(View.VISIBLE);
             holder.numberImage.setImageResource(R.drawable.icon_ranking_first);
         } else if (position == 1) {
+            holder.numberText.setVisibility(View.GONE);
+            holder.numberImage.setVisibility(View.VISIBLE);
             holder.numberImage.setImageResource(R.drawable.icon_ranking_second);
         } else if (position == 2) {
+            holder.numberText.setVisibility(View.GONE);
+            holder.numberImage.setVisibility(View.VISIBLE);
             holder.numberImage.setImageResource(R.drawable.icon_ranking_third);
         } else {
+            //设置字体
+            holder.numberText.setTypeface(Typeface.createFromAsset(context.getAssets(), "zhankukuaileti.ttf"));
+
+            holder.numberImage.setVisibility(View.GONE);
+            holder.numberText.setVisibility(View.VISIBLE);
             holder.numberText.setText("NO." + (position + 1));
         }
         GlideUtil.setPictureWithOutCache(holder.headPic, rankingMessage.getImagePath(), R.drawable.ic_user_default);

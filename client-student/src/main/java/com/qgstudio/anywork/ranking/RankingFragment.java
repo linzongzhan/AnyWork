@@ -1,51 +1,64 @@
 package com.qgstudio.anywork.ranking;
 
-import android.animation.ValueAnimator;
 import android.app.ActionBar;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
-import android.widget.ListPopupWindow;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.qgstudio.anywork.R;
+import com.qgstudio.anywork.data.ResponseResult;
+import com.qgstudio.anywork.data.RetrofitClient;
+import com.qgstudio.anywork.data.model.RankingMessage;
+import com.qgstudio.anywork.ranking.adapters.RankingAdapter;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import rx.Observer;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 public class RankingFragment extends Fragment {
 
+    private int testpaperId = -1;
+
     private TextView ranking1;
-    private TextView ranking2;
     private ArrowsView arrows1;
-    private ArrowsView arrows2;
     private ListView listView1;
-    private ListView listView2;
     private PopupWindow popupWindow1;
-    private PopupWindow popupWindow2;
+    private RecyclerView rankingList;
+
+    //排行榜适配器
+    private RankingAdapter rankingAdapter;
 
     //界面中的两个下拉框的适配器
     private ArrayList<String> data1 = new ArrayList<>();
     private ArrayAdapter<String> arrayAdapter1;
-    private ArrayList<String> data2 = new ArrayList<>();
-    private ArrayAdapter<String> arrayAdapter2;
+
+    private RankingApi rankingApi;
 
     public RankingFragment() {
+    }
+
+    /**
+     * 设置要获取对应id的试卷的排行榜
+     *
+     * @param testpaperId 试卷id
+     */
+    public void setTestpaperId(int testpaperId) {
+        this.testpaperId = testpaperId;
     }
 
     @Nullable
@@ -54,6 +67,7 @@ public class RankingFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_ranking, container, false);
 
         try {
+            initRankingList(rootView);
             initSpinner(rootView);
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
@@ -61,7 +75,20 @@ public class RankingFragment extends Fragment {
             e.printStackTrace();
         }
 
+        //初始化填充时的数据是按学生所在班级进行排名
+        getRankingMessage(testpaperId, 1);
+
         return rootView;
+    }
+
+    /**
+     * 初始化RecycleView
+     *
+     * @param rootView
+     */
+    private void initRankingList(View rootView) {
+        rankingList = (RecyclerView) rootView.findViewById(R.id.recycler_view_ranking);
+        rankingList.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
     /**
@@ -71,68 +98,52 @@ public class RankingFragment extends Fragment {
      */
     private void initSpinner(View rootView) throws NoSuchFieldException, IllegalAccessException {
         ranking1 = (TextView) rootView.findViewById(R.id.ranking1);
-        ranking2 = (TextView) rootView.findViewById(R.id.ranking2);
         arrows1 = (ArrowsView) rootView.findViewById(R.id.arrows1);
-        arrows2 = (ArrowsView) rootView.findViewById(R.id.arrows2);
+
+        initSelectPopup();
 
         //设置点击ranking1和ranking2时让其显示下拉列表窗口
         ranking1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (popupWindow2.isShowing()) {
-                    popupWindow2.dismiss();
-                }
-                popupWindow1.showAsDropDown(ranking1, 0, 0);
+                popupWindow1.showAsDropDown(ranking1, 8, 4);
                 arrows1.mUp();
             }
         });
-        ranking2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (popupWindow1.isShowing()) {
-                    popupWindow1.dismiss();
-                }
-                popupWindow2.showAsDropDown(ranking2, 0, 0);
-                arrows2.mUp();
-            }
-        });
-
-        initSelectPopup();
     }
 
     /**
      * 设置下拉列表窗口
      */
     private void initSelectPopup() {
+
         listView1 = new ListView(getActivity());
-        listView2 = new ListView(getActivity());
+        listView1.setBackground(getActivity().getResources().getDrawable(R.drawable.background));
 
-        data1.add("学生所在班级");
-        data1.add("教师所教班级");
+        if (data1.size() == 0) {
+            data1.add("学生所在班级");
+            data1.add("教师所教班级");
+        }
 
-        arrayAdapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, data1);
-        arrayAdapter2 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, data2);
+        arrayAdapter1 = new ArrayAdapter<String>(getActivity(), R.layout.layout_listview, data1);
         listView1.setAdapter(arrayAdapter1);
-        listView2.setAdapter(arrayAdapter2);
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String kind = data1.get(position);
                 ranking1.setText(kind);
+
+                if (kind.equals("学生所在班级")) {
+                    getRankingMessage(testpaperId, 1);
+                } else if (kind.equals("教师所教班级")) {
+                    getRankingMessage(testpaperId, 2);
+                }
+
                 popupWindow1.dismiss();
             }
         });
-        listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String kind = data2.get(position);
-                ranking2.setText(kind);
-                popupWindow2.dismiss();
-            }
-        });
 
-        popupWindow1 = new PopupWindow(ranking1, ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
-        popupWindow2 = new PopupWindow(ranking2, ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
+        popupWindow1 = new PopupWindow(listView1, 148 * 3, ActionBar.LayoutParams.WRAP_CONTENT, true);
 
         //下拉列表窗口消失时的监听器
         popupWindow1.setOnDismissListener(new PopupWindow.OnDismissListener() {
@@ -141,11 +152,65 @@ public class RankingFragment extends Fragment {
                 arrows1.mDown();
             }
         });
-        popupWindow2.setOnDismissListener(new PopupWindow.OnDismissListener() {
-            @Override
-            public void onDismiss() {
-                arrows2.mDown();
-            }
-        });
+    }
+
+    private void getRankingMessage(int testpaperId, int leaderboardType) {
+        if (rankingApi == null) {
+            rankingApi = RetrofitClient.RETROFIT_CLIENT.getRetrofit().create(RankingApi.class);
+        }
+
+        if (testpaperId == -1) {
+            Map<String, Integer> info = new HashMap<>();
+            info.put("leaderboardType", leaderboardType);
+            rankingApi.getTotalRanking(info)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(new Observer<ResponseResult<ArrayList<RankingMessage>>>() {
+                        @Override
+                        public void onCompleted() {
+
+                        }
+
+                        @Override
+                        public void onError(Throwable e) {
+                            e.printStackTrace();
+                        }
+
+                        @Override
+                        public void onNext(ResponseResult<ArrayList<RankingMessage>> arrayListResponseResult) {
+                            ArrayList<RankingMessage> messages = (ArrayList<RankingMessage>) arrayListResponseResult.getData();
+                            Log.d("linzongzhan", "onNext: " + messages.toString());
+                            rankingAdapter = new RankingAdapter(getActivity(), messages);
+                            rankingList.setAdapter(rankingAdapter);
+                            rankingAdapter.notifyDataSetChanged();
+                        }
+                    });
+        } else {
+            Map<String, Integer> info = new HashMap<>();
+            info.put("testpaperId", testpaperId);
+            info.put("leaderboardType", leaderboardType);
+            rankingApi.getRanking(info)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(new Observer<ResponseResult<ArrayList<RankingMessage>>>() {
+                        @Override
+                        public void onCompleted() {
+
+                        }
+
+                        @Override
+                        public void onError(Throwable e) {
+                            e.printStackTrace();
+                        }
+
+                        @Override
+                        public void onNext(ResponseResult<ArrayList<RankingMessage>> arrayListResponseResult) {
+                            ArrayList<RankingMessage> messages = (ArrayList<RankingMessage>) arrayListResponseResult.getData();
+                            rankingAdapter = new RankingAdapter(getActivity(), messages);
+                            rankingList.setAdapter(rankingAdapter);
+                            rankingAdapter.notifyDataSetChanged();
+                        }
+                    });
+        }
     }
 }

@@ -142,7 +142,6 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
         email.setText(user1.getEmail());
         phone.setText(user1.getPhone());
         GlideUtil.setPictureWithOutCache(pic, user1.getUserId(), R.drawable.ic_user_default);
-        Log.d("linzongzhan", "setInfo: "+ App.getInstance().getUser().toString());
     }
 
     private void editFocusable(boolean focusable) {

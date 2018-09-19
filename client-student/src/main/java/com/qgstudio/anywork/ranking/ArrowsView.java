@@ -34,7 +34,7 @@ public class ArrowsView extends View{
     public ArrowsView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         paint = new Paint();
-        paint.setColor(Color.BLUE);
+        paint.setColor(0xFF2E85EA);
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
         paint.setStrokeWidth(10);
 

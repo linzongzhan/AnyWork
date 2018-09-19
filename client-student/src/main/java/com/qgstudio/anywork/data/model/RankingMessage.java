@@ -3,8 +3,8 @@ package com.qgstudio.anywork.data.model;
 public class RankingMessage {
     private String username;
     private String organizationName;
-    private int studentId;
-    private int score;
+    private String studentId;
+    private float score;
     private String imagePath;
 
     public RankingMessage() {
@@ -26,19 +26,19 @@ public class RankingMessage {
         this.organizationName = organizationName;
     }
 
-    public int getStudentId() {
+    public String getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
 
-    public int getScore() {
+    public float getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(float score) {
         this.score = score;
     }
 
