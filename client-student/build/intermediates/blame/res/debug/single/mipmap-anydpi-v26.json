@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26\\ic_launcher_round.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26\\ic_launcher.xml",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    }
+]
