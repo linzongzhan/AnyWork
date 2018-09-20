@@ -66,7 +66,13 @@
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name=".workout.WorkoutContainerActivity"></activity>
+        <activity android:name=".workout.WorkoutContainerActivity" />
+        <activity android:name=".search.SearchActivity" />
+        <activity
+            android:name=".workout.WorkoutActivity"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
     </application>
 
 </manifest>

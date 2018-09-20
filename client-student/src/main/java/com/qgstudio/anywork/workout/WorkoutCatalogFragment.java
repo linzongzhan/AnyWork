@@ -3,11 +3,14 @@ package com.qgstudio.anywork.workout;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,9 +19,11 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.qgstudio.anywork.R;
+import com.qgstudio.anywork.search.SearchActivity;
 import com.qgstudio.anywork.utils.ToastUtil;
 import com.qgstudio.anywork.workout.data.Chapter;
 import com.qgstudio.anywork.workout.data.Testpaper;
@@ -30,14 +35,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link WorkoutCatalogFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link WorkoutCatalogFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class WorkoutCatalogFragment extends Fragment {
 
     @BindView(R.id.workout_frag_toolbar)
@@ -93,14 +91,6 @@ public class WorkoutCatalogFragment extends Fragment {
     private void initToolbar() {
         TextView tvTittle = toolbar.findViewById(R.id.tv_tittle);
         tvTittle.setText(type.value);
-        toolbar.inflateMenu(R.menu.menu_search);
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                ToastUtil.showToast("功能暂未开放");
-                return true;
-            }
-        });
     }
 
     @OnClick(R.id.btn_back)
@@ -110,6 +100,10 @@ public class WorkoutCatalogFragment extends Fragment {
         } else if (!getFragmentManager().popBackStackImmediate()) {
             getActivity().finish();
         }
+    }
+    @OnClick(R.id.btn_search)
+    public void clickSearch(){
+        startActivity(new Intent(getActivity(), SearchActivity.class));
     }
 
     @Override

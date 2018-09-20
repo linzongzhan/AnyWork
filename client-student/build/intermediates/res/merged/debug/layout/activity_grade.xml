@@ -108,26 +108,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <ImageView
+        <FrameLayout
             android:id="@+id/btn_back"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:src="@drawable/icon_cancel"
-            android:scaleX="0.4"
-            android:scaleY="0.4"
-            android:layout_marginStart="8dp"
-            android:clickable="true"
-            android:background="?android:attr/selectableItemBackground"/>
+            android:layout_marginStart="8dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_cancel" />
+        </FrameLayout>
 
         <TextView
             android:id="@+id/tv_tittle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
             android:gravity="center"
             android:text="做题报告"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:layout_marginEnd="44dp"/>
+            android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>
 
     <TextView

@@ -40,7 +40,6 @@ public class ChoiceAdapter extends OptionAdapter {
     }
 
 
-
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.option_choice, parent, false);
@@ -54,7 +53,7 @@ public class ChoiceAdapter extends OptionAdapter {
         //选项内容初始化
         ch.tv_choice.setText(choice[position]);
         ch.tv_choice.setBackgroundResource(R.drawable.bg_choice_normal);
-        ch.tv_choice.setTextColor(ContextCompat.getColor(mContext, R.color.dark_grey_text));
+        ch.tv_choice.setTextColor(ContextCompat.getColor(mContext, R.color.sample_blue));
         ch.tv_content.setText(content[position]);
 
         if (mIsReadOnly) {
@@ -73,7 +72,7 @@ public class ChoiceAdapter extends OptionAdapter {
                 mAnswerPos = position;
 
                 ch.tv_choice.setBackgroundResource(R.drawable.bg_choice_selected);
-                ch.tv_choice.setTextColor(ContextCompat.getColor(mContext, R.color.dark_green_text));
+                ch.tv_choice.setTextColor(ContextCompat.getColor(mContext, R.color.white));
 
                 storeAnswer();
             }
@@ -88,7 +87,7 @@ public class ChoiceAdapter extends OptionAdapter {
                 mAnswerPos = position;
 
                 ch.tv_choice.setBackgroundResource(R.drawable.bg_choice_selected);
-                ch.tv_choice.setTextColor(ContextCompat.getColor(mContext, R.color.dark_green_text));
+                ch.tv_choice.setTextColor(ContextCompat.getColor(mContext, R.color.white));
 
             }
         }
@@ -102,8 +101,10 @@ public class ChoiceAdapter extends OptionAdapter {
 
     protected class ChoiceHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.tv_choice) TextView tv_choice;
-        @BindView(R.id.tv_content) TextView tv_content;
+        @BindView(R.id.tv_choice)
+        TextView tv_choice;
+        @BindView(R.id.tv_content)
+        TextView tv_content;
 
         public ChoiceHolder(View itemView) {
             super(itemView);

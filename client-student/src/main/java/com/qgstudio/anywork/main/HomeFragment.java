@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -32,6 +33,8 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
     View toolbar;
     @BindView(R.id.tv_online_count)
     TextView tvOnlineCount;
+    @BindView(R.id.top_view)
+    View topView;
 
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
@@ -67,13 +70,22 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getActivity().getWindow().setStatusBarColor(getActivity().getResources().getColor(R.color.sample_blue));
         }
-        //监听在线人数
+        //监听在线人数，使用livedata，自动适应生命周期
         WebSocketHolder.getDefault().onlineCount.observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(@Nullable Integer integer) {
                 tvOnlineCount.setText(integer == null ? "0" : integer.toString());
             }
         });
+        //获得系统状态栏高度
+        int result = 0;
+        int resourceId = getContext().getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = getContext().getResources().getDimensionPixelOffset(resourceId);
+        }
+        Log.e("gaodu", result + "");
+        topView.getLayoutParams().height = result;
+        topView.setLayoutParams(topView.getLayoutParams());
     }
 
     @Override
