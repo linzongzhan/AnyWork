@@ -4,12 +4,12 @@
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\ic_right_normal.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_on.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_on.png"
-    },
-    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_status_join_true.xml",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_status_join_true.xml"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_on.png",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_on.png"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_person.xml",
@@ -84,12 +84,12 @@
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_class_normal.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_header_divide.xml",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_header_divide.xml"
-    },
-    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\buttom_menu_exam.png",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\buttom_menu_exam.png"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_header_divide.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_header_divide.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",

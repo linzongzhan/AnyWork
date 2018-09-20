@@ -12,24 +12,24 @@
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png",
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_fiber_red.png",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_fiber_red.png"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png",
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_fiber_red.png",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_fiber_red.png"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
