@@ -69,7 +69,6 @@ public class RankingFragment extends Fragment {
         try {
             initRankingList(rootView);
             initSpinner(rootView);
-            setDetail(rootView);
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -80,25 +79,6 @@ public class RankingFragment extends Fragment {
         getRankingMessage(testpaperId, 1);
 
         return rootView;
-    }
-
-    /**
-     *细节优化
-     *
-     * @param rootView
-     */
-    private void setDetail(View rootView) {
-        //获得系统状态栏高度
-        int result = 0;
-        int resourceId = getContext().getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            result = getContext().getResources().getDimensionPixelOffset(resourceId);
-        }
-
-        TextView textView = rootView.findViewById(R.id.ranking_text);
-        ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) textView.getLayoutParams();
-        layoutParams.topMargin = layoutParams.topMargin + result;
-        textView.setLayoutParams(layoutParams);
     }
 
     /**

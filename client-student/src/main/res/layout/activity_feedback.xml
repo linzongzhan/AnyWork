@@ -31,18 +31,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <FrameLayout
+                <ImageView
                     android:id="@+id/feedback_back"
-                    android:layout_width="28dp"
-                    android:layout_height="23dp"
+                    android:layout_width="23dp"
+                    android:layout_height="18dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="14dp">
-                    <ImageView
-                        android:layout_width="23dp"
-                        android:layout_height="18dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/icon_register_back" />
-                </FrameLayout>
+                    android:src="@drawable/icon_register_back"
+                    android:layout_marginLeft="16dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -80,7 +80,7 @@ public class ArrowsView extends View{
 
     public void mUp() {
         ValueAnimator animator = ValueAnimator.ofFloat(30, 20);
-        animator.setDuration(200);
+        animator.setDuration(500);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
@@ -95,7 +95,7 @@ public class ArrowsView extends View{
 
     public void mDown() {
         ValueAnimator animator = ValueAnimator.ofFloat(20, 30);
-        animator.setDuration(200);
+        animator.setDuration(500);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {

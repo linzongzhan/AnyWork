@@ -35,11 +35,11 @@ public class ExamPagerView extends LinearLayout {
     private TextView mTitleCenterTV;
     private ImageView mTitleRightIcon;
     private ViewPager mViewPager;
-//    private RecyclerView mRecycler;
+    //    private RecyclerView mRecycler;
     private LinearLayout mBottomLinear;
     private Button mLeftBottomBtn;
     private Button mRightBottomBtn;
-
+    //一推属性
     private String mTitleCenterTextString;
     private int mTitleCenterTextColor;
     private int mTitleRightIconResId;
@@ -138,13 +138,13 @@ public class ExamPagerView extends LinearLayout {
     private void setDefault() {
         TypedValue value = new TypedValue();
 
-        mContext.getTheme().resolveAttribute(R.attr.colorAccent,value,true);
+        mContext.getTheme().resolveAttribute(R.attr.colorAccent, value, true);
         mDefaultTextColor = value.data;
 
-        mContext.getTheme().resolveAttribute(R.attr.colorPrimaryDark,value,true);
+        mContext.getTheme().resolveAttribute(R.attr.colorPrimaryDark, value, true);
         mDefaultTitleBackgroundColor = value.data;
 
-        mContext.getTheme().resolveAttribute(R.attr.colorPrimary,value,true);
+        mContext.getTheme().resolveAttribute(R.attr.colorPrimary, value, true);
         mDefaultBottomBackgroundColor = value.data;
 
     }
@@ -158,9 +158,9 @@ public class ExamPagerView extends LinearLayout {
             mTitleRightIconResId = a.getResourceId(R.styleable.ExamPagerView_sTitleRightIconResId, -1);
             mTitleBackgroundColor = a.getColor(R.styleable.ExamPagerView_sTitleBackgroundColor, mDefaultTitleBackgroundColor);
             mLeftBottomTextString = a.getString(R.styleable.ExamPagerView_sLeftBottomTextString);
-            mLeftBottomTextColor = a.getColor(R.styleable.ExamPagerView_sLeftBottomTextColor,mDefaultTextColor);
+            mLeftBottomTextColor = a.getColor(R.styleable.ExamPagerView_sLeftBottomTextColor, mDefaultTextColor);
             mLeftBottomBackgroundColor = a.getColor(R.styleable.ExamPagerView_sLeftBottomBackgroundColor, mDefaultBottomBackgroundColor);
-            mLeftBottomAlpha = a.getFloat(R.styleable.ExamPagerView_sLeftBottomAlpha,0.8f);
+            mLeftBottomAlpha = a.getFloat(R.styleable.ExamPagerView_sLeftBottomAlpha, 0.8f);
             mRightBottomTextString = a.getString(R.styleable.ExamPagerView_sRightBottomTextString);
             mRightBottomTextColor = a.getColor(R.styleable.ExamPagerView_sRightBottomTextColor, mDefaultTextColor);
             mRightBottomBackgroundColor = a.getColor(R.styleable.ExamPagerView_sRightBottomBackgroundColor, mDefaultBottomBackgroundColor);
@@ -199,7 +199,7 @@ public class ExamPagerView extends LinearLayout {
         mBottomLinear.setOrientation(HORIZONTAL);
 
         mLeftBottomBtn = new Button(mContext);
-        LinearLayout.LayoutParams left_params = new LayoutParams(0,WRAP_CONTENT);
+        LinearLayout.LayoutParams left_params = new LayoutParams(0, WRAP_CONTENT);
         left_params.weight = 1;
         mLeftBottomBtn.setLayoutParams(left_params);
         mLeftBottomBtn.setAlpha(mLeftBottomAlpha);
@@ -215,7 +215,7 @@ public class ExamPagerView extends LinearLayout {
         mBottomLinear.addView(mLeftBottomBtn);
 
         mRightBottomBtn = new Button(mContext);
-        LinearLayout.LayoutParams right_params = new LayoutParams(0,WRAP_CONTENT);
+        LinearLayout.LayoutParams right_params = new LayoutParams(0, WRAP_CONTENT);
         right_params.weight = 1;
         mRightBottomBtn.setLayoutParams(right_params);
         mRightBottomBtn.setAlpha(mRightBottomAlpha);
@@ -282,12 +282,12 @@ public class ExamPagerView extends LinearLayout {
 
     private int dp2px(Context context, float dipValue) {
         float scale = context.getResources().getDisplayMetrics().density;
-        return (int)(dipValue * scale + 0.5F);
+        return (int) (dipValue * scale + 0.5F);
     }
 
     private int px2dp(Context context, float pxValue) {
         float scale = context.getResources().getDisplayMetrics().density;
-        return (int)(pxValue / scale + 0.5F);
+        return (int) (pxValue / scale + 0.5F);
     }
 
 }

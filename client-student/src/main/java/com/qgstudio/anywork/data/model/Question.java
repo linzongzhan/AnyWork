@@ -13,6 +13,36 @@ public class Question implements Serializable {
 
     private int questionId;     //问题id
     private int type;           //题目类型  1-选择题 2-判断题 3-填空题 4-问答题 5-编程题 6-综合题
+
+    public enum Type {
+        SELECT("单选题", 1),
+        TRUE_OR_FALSE("判断题", 2),
+        FILL_BLANK("填空题", 3),
+        SHORT_ANSWER("问答题", 4);
+        public String string;
+        public int code;
+
+        Type(String string, int code) {
+            this.string = string;
+            this.code = code;
+        }
+
+        public static Type getByCode(int code) {
+            switch (code) {
+                case 1:
+                    return SELECT;
+                case 2:
+                    return TRUE_OR_FALSE;
+                case 3:
+                    return FILL_BLANK;
+                case 4:
+                    return SHORT_ANSWER;
+                default:
+                    return null;
+            }
+        }
+    }
+
     private String a;
     private String b;
     private String c;
@@ -38,6 +68,10 @@ public class Question implements Serializable {
 
     public int getType() {
         return type;
+    }
+
+    public Type getEnumType() {
+        return Type.getByCode(type);
     }
 
     public void setType(int type) {

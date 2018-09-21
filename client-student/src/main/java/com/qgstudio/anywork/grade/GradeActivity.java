@@ -73,7 +73,10 @@ public class GradeActivity extends MVPBaseActivity<GradeContract.View, GradePres
         tvCountRight.setText(right + "");
         tvSumQuestion.setText(sum + "");
         tvPaperTittle.setText(paperTittle);
-
+        //状态栏颜色
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.sample_blue));
+        }
 
         initToolbar("做题报告");
         initRecyclerView(results);
