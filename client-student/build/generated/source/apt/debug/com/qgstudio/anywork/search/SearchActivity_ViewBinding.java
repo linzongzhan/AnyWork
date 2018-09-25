@@ -16,7 +16,7 @@ import java.lang.Override;
 public class SearchActivity_ViewBinding implements Unbinder {
   private SearchActivity target;
 
-  private View view2131624115;
+  private View view2131624114;
 
   @UiThread
   public SearchActivity_ViewBinding(SearchActivity target) {
@@ -31,7 +31,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
     target.searchView = Utils.findRequiredViewAsType(source, R.id.search_view, "field 'searchView'", SearchView.class);
     target.recyclerView = Utils.findRequiredViewAsType(source, R.id.recycler_view_paper, "field 'recyclerView'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.btn_back, "method 'clickBack'");
-    view2131624115 = view;
+    view2131624114 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class SearchActivity_ViewBinding implements Unbinder {
     target.searchView = null;
     target.recyclerView = null;
 
-    view2131624115.setOnClickListener(null);
-    view2131624115 = null;
+    view2131624114.setOnClickListener(null);
+    view2131624114 = null;
   }
 }

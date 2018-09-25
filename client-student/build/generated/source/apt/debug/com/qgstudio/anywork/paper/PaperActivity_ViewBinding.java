@@ -17,7 +17,7 @@ import java.lang.Override;
 public class PaperActivity_ViewBinding implements Unbinder {
   private PaperActivity target;
 
-  private View view2131624115;
+  private View view2131624114;
 
   @UiThread
   public PaperActivity_ViewBinding(PaperActivity target) {
@@ -33,7 +33,7 @@ public class PaperActivity_ViewBinding implements Unbinder {
     target.mTabLayout = Utils.findRequiredViewAsType(source, R.id.tab, "field 'mTabLayout'", TabLayout.class);
     target.mViewPager = Utils.findRequiredViewAsType(source, R.id.pager, "field 'mViewPager'", ViewPager.class);
     view = Utils.findRequiredView(source, R.id.btn_back, "method 'back'");
-    view2131624115 = view;
+    view2131624114 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,7 +53,7 @@ public class PaperActivity_ViewBinding implements Unbinder {
     target.mTabLayout = null;
     target.mViewPager = null;
 
-    view2131624115.setOnClickListener(null);
-    view2131624115 = null;
+    view2131624114.setOnClickListener(null);
+    view2131624114 = null;
   }
 }
