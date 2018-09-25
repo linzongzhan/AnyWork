@@ -69,6 +69,7 @@ public class RankingFragment extends Fragment {
         try {
             initRankingList(rootView);
             initSpinner(rootView);
+            setDetails(rootView);
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -79,6 +80,19 @@ public class RankingFragment extends Fragment {
         getRankingMessage(testpaperId, 1);
 
         return rootView;
+    }
+
+    private void setDetails(View rootView) {
+        int result = 0;
+        int resourceId = getContext().getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = getContext().getResources().getDimensionPixelOffset(resourceId);
+        }
+
+        TextView textView = rootView.findViewById(R.id.title_ranking);
+        ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) textView.getLayoutParams();
+        params.topMargin = params.topMargin + result;
+        textView.setLayoutParams(params);
     }
 
     /**

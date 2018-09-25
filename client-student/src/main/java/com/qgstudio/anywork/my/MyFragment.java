@@ -1,12 +1,14 @@
 package com.qgstudio.anywork.my;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +17,14 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.feedback.FeedbackActivity;
 import com.qgstudio.anywork.user.UserActivity;
 import com.qgstudio.anywork.utils.GlideUtil;
+import com.qgstudio.anywork.utils.ToastUtil;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -33,6 +37,13 @@ public class MyFragment extends Fragment {
     private TextView studentId;
     private ImageView viewBackground;
 
+    private TextView exerciseRecord;
+    private TextView changePassword;
+    private TextView about;
+    private TextView update;
+
+    static Toast toast;
+
     public MyFragment() {
     }
 
@@ -41,8 +52,8 @@ public class MyFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my, container, false);
 
-        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
         initView(view);
         setDetails(view);
@@ -90,6 +101,10 @@ public class MyFragment extends Fragment {
         name = (TextView) view.findViewById(R.id.my_name);
         studentId = (TextView) view.findViewById(R.id.my_student_id);
         viewBackground = (ImageView) view.findViewById(R.id.view);
+        exerciseRecord = (TextView) view.findViewById(R.id.exercise_record);
+        changePassword = (TextView) view.findViewById(R.id.change_password);
+        about = (TextView) view.findViewById(R.id.about);
+        update = (TextView) view.findViewById(R.id.update);
 
         GlideUtil.setPictureWithOutCache(head, App.getInstance().getUser().getUserId(), R.drawable.ic_user_default);
         feedback.setOnClickListener(new View.OnClickListener() {
@@ -109,13 +124,54 @@ public class MyFragment extends Fragment {
         name.setText(App.getInstance().getUser().getUserName());
         studentId.setText(App.getInstance().getUser().getStudentId());
 
-        GlideUtil.setPictureWithOutCacheWithBlur(viewBackground, App.getInstance().getUser().getUserId(), R.drawable.ic_user_default, getActivity());
+        exerciseRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtil.showToast("此功能暂未开放");
+            }
+        });
+        changePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (toast == null){
+                    toast = Toast.makeText(getActivity(),
+                            "Copyright (C) 2018\n" +
+                                    "AnyWork2.0\n" +
+                                    "小平科技创新团队\n" +
+                                    "计算机学院QG工作室\n" +
+                                    "荣誉出品",
+                            Toast.LENGTH_SHORT);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        TextView textView = (TextView) toast.getView().findViewById(Resources.getSystem().getIdentifier("message", "id", "android"));
+                        if (textView != null) {
+                            textView.setGravity(Gravity.CENTER);
+                        }
+                    }
+                }
+                toast.show();
+            }
+        });
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtil.showToast("此功能暂未开放");
+            }
+        });
+
+//        //将头像设置为背景
+//        GlideUtil.setPictureWithOutCacheWithBlur(viewBackground, App.getInstance().getUser().getUserId(), R.drawable.ic_user_default, getActivity());
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//        getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//        getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
 }
