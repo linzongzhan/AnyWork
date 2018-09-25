@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     android:background="#f9f9f9">
 
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/sample_blue"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
 
         android:layout_width="0dp"
@@ -219,25 +229,24 @@
             </LinearLayout>
 
             <include
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 layout="@layout/item_notice"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <include
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 layout="@layout/item_notice"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <include
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 layout="@layout/item_notice"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
             <include
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 layout="@layout/item_notice"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>
@@ -250,7 +259,7 @@
         android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/top_view">
 
         <ImageView
             android:layout_width="20dp"

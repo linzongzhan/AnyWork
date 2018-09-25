@@ -35,6 +35,8 @@
     <activity android:name="com.qgstudio.anywork.notice.NoticeActivity"/>
     <service android:name="com.qgstudio.anywork.user.AppService" android:enabled="true" android:exported="true" android:process=":remote"/>
     <activity android:name="com.qgstudio.anywork.workout.WorkoutContainerActivity"/>
+    <activity android:name="com.qgstudio.anywork.search.SearchActivity"/>
+    <activity android:name="com.qgstudio.anywork.workout.WorkoutActivity" android:windowSoftInputMode="adjustPan"/>
     <service android:name="com.tinkerpatch.sdk.tinker.service.TinkerServerResultService" android:exported="false"/>
     <receiver android:name="com.tinkerpatch.sdk.server.utils.ReportBroadCast" android:exported="false"/>
     <provider android:name="com.tencent.bugly.beta.utils.BuglyFileProvider" android:authorities="com.qgstudio.anywork.fileProvider" android:exported="false" android:grantUriPermissions="true">

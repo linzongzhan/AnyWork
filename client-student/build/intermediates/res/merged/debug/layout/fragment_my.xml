@@ -116,21 +116,23 @@
             android:orientation="vertical"
             android:background="#e8e8e8">
 
-            <Button
+            <TextView
+                android:id="@+id/about"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:background="#ffffff"
                 android:gravity="center_vertical|left"
-                android:text="做题记录"
+                android:text="关于"
                 android:textColor="#626262" />
 
-            <Button
+            <TextView
+                android:id="@+id/update"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginTop="1px"
                 android:background="#ffffff"
                 android:gravity="center_vertical|left"
-                android:text="修改密码"
+                android:text="版本更新"
                 android:textColor="#626262" />
         </LinearLayout>
     </LinearLayout>
@@ -181,7 +183,8 @@
             android:orientation="vertical"
             android:background="#e8e8e8">
 
-            <Button
+            <TextView
+                android:id="@+id/exercise_record"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:background="#ffffff"
@@ -189,7 +192,8 @@
                 android:text="做题记录"
                 android:textColor="#626262" />
 
-            <Button
+            <TextView
+                android:id="@+id/change_password"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginTop="1px"

@@ -18,6 +18,8 @@ public class WorkoutCatalogFragment_ViewBinding implements Unbinder {
 
   private View view2131624115;
 
+  private View view2131624231;
+
   @UiThread
   public WorkoutCatalogFragment_ViewBinding(final WorkoutCatalogFragment target, View source) {
     this.target = target;
@@ -31,6 +33,14 @@ public class WorkoutCatalogFragment_ViewBinding implements Unbinder {
       @Override
       public void doClick(View p0) {
         target.clickBack();
+      }
+    });
+    view = Utils.findRequiredView(source, R.id.btn_search, "method 'clickSearch'");
+    view2131624231 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.clickSearch();
       }
     });
   }
@@ -47,5 +57,7 @@ public class WorkoutCatalogFragment_ViewBinding implements Unbinder {
 
     view2131624115.setOnClickListener(null);
     view2131624115 = null;
+    view2131624231.setOnClickListener(null);
+    view2131624231 = null;
   }
 }

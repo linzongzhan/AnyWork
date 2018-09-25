@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".workout.WorkoutCatalogFragment">
+    tools:context=".workout.WorkoutCatalogFragment"
+    android:background="#f9f9f9">
 
 
     <android.support.v7.widget.RecyclerView
@@ -29,21 +30,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="12dp"
-            android:layout_height="18dp"
-            android:layout_marginStart="20dp"
-            android:src="@drawable/icon_register_back" />
-
-        <TextView
-            android:id="@+id/tv_tittle"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="课前预习"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/btn_back"
+                android:layout_width="48dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_register_back" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tv_tittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="课前预习"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:id="@+id/btn_search"
+                android:layout_width="64dp"
+                android:layout_height="44dp"
+                android:layout_gravity="end|center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_search" />
+            </FrameLayout>
+        </FrameLayout>
 
 
     </android.support.v7.widget.Toolbar>
