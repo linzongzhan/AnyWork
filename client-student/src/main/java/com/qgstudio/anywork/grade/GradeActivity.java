@@ -131,7 +131,7 @@ public class GradeActivity extends MVPBaseActivity<GradeContract.View, GradePres
 
     @Override
     public void showSuccess(Question question) {
-        QuestionFragment qFragment = QuestionFragment.newInstance(question, -1);
+        QuestionFragment qFragment = QuestionFragment.newInstance(question, -1,1);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             setTransition(qFragment);
         }

@@ -52,6 +52,15 @@ public class Question implements Serializable {
     private int socre;          //分数
     private int testpaperId;    //试卷id
     private int other;          //填空题个数
+    private String studentAnswer;
+
+    public String getStudentAnswer() {
+        return studentAnswer;
+    }
+
+    public void setStudentAnswer(String studentAnswer) {
+        this.studentAnswer = studentAnswer;
+    }
 
     public Question() {
     }

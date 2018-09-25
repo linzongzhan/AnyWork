@@ -8,10 +8,11 @@ import java.util.Date;
  * Created by FunriLy on 2017/7/10.
  * From small beginnings comes great things.
  */
-public class StudentAnswer implements Serializable{
+public class StudentAnswer implements Serializable {
     private int studentAnswerId;
     private int questionId;
     private String studentAnswer;
+    public boolean isVaild = true;
 
     public StudentAnswer() {
     }

@@ -3,21 +3,34 @@ package com.qgstudio.anywork.widget;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.IdRes;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.qgstudio.anywork.R;
+import com.qgstudio.anywork.data.model.StudentAnswer;
+import com.qgstudio.anywork.utils.DesityUtil;
+import com.qgstudio.anywork.utils.ToastUtil;
+import com.qgstudio.anywork.workout.AnswerCardAdapter;
+
+import java.util.List;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -33,7 +46,9 @@ public class ExamPagerView extends LinearLayout {
 
     private Toolbar mToolbar;
     private TextView mTitleCenterTV;
-    private ImageView mTitleRightIcon;
+    private TextView mTittleRightTV;
+    private ImageView mTitleLeftIcon;
+    private Drawable mTitleRightIcon;
     private ViewPager mViewPager;
     //    private RecyclerView mRecycler;
     private LinearLayout mBottomLinear;
@@ -42,6 +57,7 @@ public class ExamPagerView extends LinearLayout {
     //一推属性
     private String mTitleCenterTextString;
     private int mTitleCenterTextColor;
+    private int mTitleLeftIconResId;
     private int mTitleRightIconResId;
     private int mTitleBackgroundColor;
     private String mLeftBottomTextString;
@@ -49,13 +65,24 @@ public class ExamPagerView extends LinearLayout {
     private int mLeftBottomBackgroundColor;
     private float mLeftBottomAlpha;
     private String mRightBottomTextString;
+    private String mRightIconTittle;
     private int mRightBottomTextColor;
     private int mRightBottomBackgroundColor;
     private float mRightBottomAlpha;
+    FrameLayout frameLayout;
 
     private int mDefaultTextColor;
     private int mDefaultTitleBackgroundColor;
     private int mDefaultBottomBackgroundColor;
+    private OnBottomButtonClickListener onBottomButtonClickListener;
+    private Mode displayMode = Mode.TESTING;
+    private RecyclerView answerCard;
+    private AnswerCardAdapter answerCardAdapter;
+
+    public enum Mode {
+        ANSWER_CARD,
+        TESTING
+    }
 
     @IdRes
     int ID_VIEWPAGER = 1000;
@@ -155,7 +182,9 @@ public class ExamPagerView extends LinearLayout {
         try {
             mTitleCenterTextString = a.getString(R.styleable.ExamPagerView_sTitleCenterTextString);
             mTitleCenterTextColor = a.getColor(R.styleable.ExamPagerView_sTitleCenterTextColor, mDefaultTextColor);
+            mTitleLeftIconResId = a.getResourceId(R.styleable.ExamPagerView_sTitleLeftIconResId, -1);
             mTitleRightIconResId = a.getResourceId(R.styleable.ExamPagerView_sTitleRightIconResId, -1);
+            mRightIconTittle = a.getString(R.styleable.ExamPagerView_sTitleRightIconTittle);
             mTitleBackgroundColor = a.getColor(R.styleable.ExamPagerView_sTitleBackgroundColor, mDefaultTitleBackgroundColor);
             mLeftBottomTextString = a.getString(R.styleable.ExamPagerView_sLeftBottomTextString);
             mLeftBottomTextColor = a.getColor(R.styleable.ExamPagerView_sLeftBottomTextColor, mDefaultTextColor);
@@ -175,6 +204,7 @@ public class ExamPagerView extends LinearLayout {
     private void initLayout() {
         initToolbar();
         initViewPager();
+        initAnswerCard();
         initBottomLinear();
     }
 
@@ -188,7 +218,45 @@ public class ExamPagerView extends LinearLayout {
         mViewPager.setId(ID_VIEWPAGER);
 
         addView(mViewPager);
+    }
 
+    private void initAnswerCard() {
+        answerCard = new RecyclerView(mContext);
+        answerCard.setBackgroundColor(Color.WHITE);
+        answerCard.setPadding(dp2px(mContext, 32), dp2px(mContext, 32), dp2px(mContext, 32), dp2px(mContext, 32));
+        answerCard.setOverScrollMode(View.OVER_SCROLL_NEVER);//去掉边界波纹
+        LayoutParams params = new LayoutParams(MATCH_PARENT, 0);
+        params.weight = 1;
+        answerCard.setLayoutParams(params);
+        answerCard.setVisibility(GONE);
+        addView(answerCard);
+    }
+
+    public void showAnswerCard(SparseArray<StudentAnswer> answers, int questionSum) {
+
+        displayMode = Mode.ANSWER_CARD;//切换模式
+        int answersCount = answers.size();
+        //准备好答题卡view
+        if (answerCardAdapter == null) {
+            answerCardAdapter = new AnswerCardAdapter(answers, questionSum, mContext);
+            answerCard.setLayoutManager(new GridLayoutManager(mContext, 5));
+            answerCard.setAdapter(answerCardAdapter);
+        } else {
+            answerCardAdapter.setmDatas(answers);
+            answerCardAdapter.notifyDataSetChanged();
+        }
+        //调整toolbar
+        changeToolbar();
+        //调整中间显示内容
+        answerCard.setVisibility(VISIBLE);
+        mViewPager.setVisibility(GONE);
+    }
+
+    public void closeAnswerCard() {
+        displayMode = Mode.TESTING;
+        mViewPager.setVisibility(VISIBLE);
+        answerCard.setVisibility(GONE);
+        changeToolbar();
     }
 
     private void initBottomLinear() {
@@ -209,7 +277,9 @@ public class ExamPagerView extends LinearLayout {
         mLeftBottomBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                setViewPagerLastItem();
+                if (onBottomButtonClickListener != null) {
+                    onBottomButtonClickListener.onLeftClick();
+                }
             }
         });
         mBottomLinear.addView(mLeftBottomBtn);
@@ -225,11 +295,13 @@ public class ExamPagerView extends LinearLayout {
         mRightBottomBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                setViewPagerNextItem();
+                if (onBottomButtonClickListener != null) {
+                    onBottomButtonClickListener.onRightClick();
+                }
             }
         });
         mBottomLinear.addView(mRightBottomBtn);
-
+        showBottomButtons(false);
         this.addView(mBottomLinear);
     }
 
@@ -244,6 +316,7 @@ public class ExamPagerView extends LinearLayout {
 
         if (mTitleCenterTextString != null) {
             mTitleCenterTV = new TextView(mContext);
+            mTitleCenterTV.setTextSize(18);
             //位置属性
             Toolbar.LayoutParams tv_params = new Toolbar.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
             tv_params.gravity = Gravity.CENTER;
@@ -253,15 +326,20 @@ public class ExamPagerView extends LinearLayout {
             mTitleCenterTV.setTextColor(mTitleCenterTextColor);
             mToolbar.addView(mTitleCenterTV);
         }
-        if (mTitleRightIconResId != -1) {
-            mTitleRightIcon = new ImageView(mContext);
-            Toolbar.LayoutParams icon_params = new Toolbar.LayoutParams(dp2px(mContext, 20.0f), dp2px(mContext, 20.0f));
-            icon_params.gravity = Gravity.RIGHT;
-            icon_params.rightMargin = dp2px(mContext, 16.0f);
-            mTitleRightIcon.setLayoutParams(icon_params);
-            mTitleRightIcon.setImageResource(mTitleRightIconResId);
-            mTitleRightIcon.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            mTitleRightIcon.setOnClickListener(new OnClickListener() {
+        //左图标
+        if (mTitleLeftIconResId != -1) {
+            frameLayout = new FrameLayout(mContext);
+            mTitleLeftIcon = new ImageView(mContext);
+            Toolbar.LayoutParams icon_params = new Toolbar.LayoutParams(dp2px(mContext, 44.0f), dp2px(mContext, 44.0f));
+            icon_params.gravity = Gravity.LEFT;
+            icon_params.leftMargin = 0;
+            frameLayout.setLayoutParams(icon_params);
+            FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(dp2px(mContext, 16), dp2px(mContext, 16));
+            layoutParams.gravity = Gravity.CENTER;
+            mTitleLeftIcon.setLayoutParams(layoutParams);
+            mTitleLeftIcon.setImageResource(mTitleLeftIconResId);
+            mTitleLeftIcon.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            frameLayout.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (mContext instanceof Activity) {
@@ -270,7 +348,28 @@ public class ExamPagerView extends LinearLayout {
                     }
                 }
             });
-            mToolbar.addView(mTitleRightIcon);
+            frameLayout.addView(mTitleLeftIcon);
+            mToolbar.addView(frameLayout);
+        }
+        //右图标
+        if (mTitleRightIconResId != -1) {
+
+            mTitleRightIcon = getContext().getResources().getDrawable(mTitleRightIconResId);
+            mTitleRightIcon.setBounds(0, 0, 50, 50);
+            mTittleRightTV = new TextView(mContext);
+            //位置属性
+            Toolbar.LayoutParams tv_params = new Toolbar.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
+            tv_params.gravity = Gravity.RIGHT;
+            tv_params.rightMargin = dp2px(mContext, 20);
+            mTittleRightTV.setLayoutParams(tv_params);
+            //性质属性
+            mTittleRightTV.setText(mRightIconTittle);
+            mTittleRightTV.setTextSize(8);
+            mTittleRightTV.setCompoundDrawablePadding(3);
+            mTittleRightTV.setTextColor(Color.WHITE);
+            mTittleRightTV.setCompoundDrawables(null, mTitleRightIcon, null, null);
+
+            mToolbar.addView(mTittleRightTV);
         }
 
         mToolbar.setBackgroundColor(mTitleBackgroundColor);
@@ -278,6 +377,10 @@ public class ExamPagerView extends LinearLayout {
         //3.将view添加到容器
         this.addView(mToolbar);
 
+    }
+
+    public void setOnTopRightButtonClickListener(OnClickListener listener) {
+        mTittleRightTV.setOnClickListener(listener);
     }
 
     private int dp2px(Context context, float dipValue) {
@@ -288,6 +391,51 @@ public class ExamPagerView extends LinearLayout {
     private int px2dp(Context context, float pxValue) {
         float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5F);
+    }
+
+    public void showBottomButtons(boolean enable) {
+        mLeftBottomBtn.setVisibility(enable ? VISIBLE : GONE);
+        mRightBottomBtn.setVisibility(enable ? VISIBLE : GONE);
+
+    }
+
+    public void setOnBottomButtonClickListener(OnBottomButtonClickListener listener) {
+        onBottomButtonClickListener = listener;
+    }
+
+    public interface OnBottomButtonClickListener {
+        void onLeftClick();
+
+        void onRightClick();
+    }
+
+    private void changeToolbar() {
+        if (displayMode == Mode.ANSWER_CARD) {
+            mTittleRightTV.setVisibility(GONE);
+            mTitleCenterTV.setText("答题卡");
+            mTitleCenterTV.setTextColor(Color.WHITE);
+            mTitleCenterTV.setVisibility(VISIBLE);
+            mTitleLeftIcon.setImageResource(R.drawable.icon_cancel);
+            frameLayout.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    closeAnswerCard();
+                }
+            });
+        } else {
+            mTittleRightTV.setVisibility(VISIBLE);
+            mTitleCenterTV.setVisibility(GONE);
+            mTitleLeftIcon.setImageResource(R.drawable.icon_register_back);
+            frameLayout.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mContext instanceof Activity) {
+                        Activity activity = (Activity) mContext;
+                        activity.onBackPressed();
+                    }
+                }
+            });
+        }
     }
 
 }

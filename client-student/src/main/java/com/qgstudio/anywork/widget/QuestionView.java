@@ -20,7 +20,9 @@ import android.widget.TextView;
 
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.model.Question;
+import com.qgstudio.anywork.exam.adapters.AskingAdapter;
 import com.qgstudio.anywork.exam.adapters.ChoiceAdapter;
+import com.qgstudio.anywork.exam.adapters.OptionAdapter;
 import com.qgstudio.anywork.utils.ToastUtil;
 
 import butterknife.BindView;
@@ -35,7 +37,7 @@ public class QuestionView extends FrameLayout {
 
     RecyclerView recyclerViewQuestionSelections;
 
-    EditText editTextQuestionFillBlank;
+    //EditText editTextQuestionFillBlank;
 
     TextView btnAnswerControl;
 
@@ -45,7 +47,7 @@ public class QuestionView extends FrameLayout {
     Drawable answerHideIcon;
     private boolean isAnswerBottomShowing;
     ValueAnimator showAnimator;
-    ChoiceAdapter choiceAdapter;
+    OptionAdapter optionAdapter;
     private boolean isTestMode = true;
 
     public QuestionView(@NonNull Context context) {
@@ -70,7 +72,7 @@ public class QuestionView extends FrameLayout {
         tvQuestionInfo = view.findViewById(R.id.tv_question_info);
         tvQuestionContent = view.findViewById(R.id.tv_question_content);
         recyclerViewQuestionSelections = view.findViewById(R.id.recycler_view_question_selections);
-        editTextQuestionFillBlank = view.findViewById(R.id.editTv_question_fill_blank);
+        //editTextQuestionFillBlank = view.findViewById(R.id.editTv_question_fill_blank);
         tvAnswer = view.findViewById(R.id.tv_answer);
         btnAnswerControl = view.findViewById(R.id.btn_answer_control);
         tvAnswerInvisible = view.findViewById(R.id.tv_answer_invisible);
@@ -119,11 +121,25 @@ public class QuestionView extends FrameLayout {
      */
     public void setQuestion(Question question, int pos, int sum) {
         mQuestion = question;
-        setAnswerBottom(question.getKey());//设置解析
+        String key = question.getKey();
+        if (key != null && mQuestion.getType() == 3) {
+            //分割填空题答案
+            key = key.replaceAll("∏", " ");
+        }
+        setAnswerBottom(key);//设置解析
         setQuestionContent(mQuestion.getContent());//设置题目内容
         setPosition(pos, sum);
-        choiceAdapter = new ChoiceAdapter(getContext(), mQuestion, pos);
-        recyclerViewQuestionSelections.setAdapter(choiceAdapter);
+        switch (mQuestion.getEnumType()) {
+            case TRUE_OR_FALSE:
+            case SELECT:
+                optionAdapter = new ChoiceAdapter(getContext(), mQuestion, pos);
+                break;
+            case FILL_BLANK:
+            case SHORT_ANSWER:
+                optionAdapter = new AskingAdapter(getContext(), mQuestion, pos);
+                break;
+        }
+        recyclerViewQuestionSelections.setAdapter(optionAdapter);
         recyclerViewQuestionSelections.setLayoutManager(new LinearLayoutManager(getContext()));
     }
 
@@ -138,7 +154,7 @@ public class QuestionView extends FrameLayout {
         if (mQuestion != null) {
             type = mQuestion.getEnumType();
         }
-        tvQuestionInfo.setText(pos + 1 + "/" + sum + "  (" + (type != null ? type.string : "") + ")");
+        setQuestionInfo(pos + 1 + "/" + sum + "  (" + (type != null ? type.string : "") + ")");
     }
 
     public void setQuestionInfo(String info) {

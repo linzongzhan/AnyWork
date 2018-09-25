@@ -46,6 +46,7 @@ public class WorkoutCatalogFragment extends Fragment {
     public int classId;
     private ChapterViewModel viewModel;
     private ChapterAdapter adapter;
+    public int chapterID;
 
 
     public WorkoutCatalogFragment() {
@@ -101,8 +102,9 @@ public class WorkoutCatalogFragment extends Fragment {
             getActivity().finish();
         }
     }
+
     @OnClick(R.id.btn_search)
-    public void clickSearch(){
+    public void clickSearch() {
         startActivity(new Intent(getActivity(), SearchActivity.class));
     }
 
@@ -120,6 +122,7 @@ public class WorkoutCatalogFragment extends Fragment {
             adapter.setOnChapterClickListener(new ChapterAdapter.OnChapterClickListener() {
                 @Override
                 public void onChapterClick(int chapterID) {
+                    WorkoutCatalogFragment.this.chapterID = chapterID;
                     viewModel.getCatalog(chapterID);
                 }
             });
@@ -149,4 +152,16 @@ public class WorkoutCatalogFragment extends Fragment {
     }
 
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (adapter != null && !adapter.datas.isEmpty()) {
+            if (adapter.datas.get(0).getClass() == Testpaper.class) {
+                viewModel.getCatalog(chapterID);
+            } else {
+                viewModel.getChapter();
+            }
+        }
+
+    }
 }

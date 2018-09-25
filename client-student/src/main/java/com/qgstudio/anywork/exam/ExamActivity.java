@@ -3,6 +3,7 @@ package com.qgstudio.anywork.exam;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,7 @@ import android.view.View;
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.model.Question;
+import com.qgstudio.anywork.data.model.StudentAnswer;
 import com.qgstudio.anywork.data.model.StudentAnswerResult;
 import com.qgstudio.anywork.data.model.StudentPaper;
 import com.qgstudio.anywork.dialog.BaseDialog;
@@ -42,8 +44,6 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
 
     @BindView(R.id.epv)
     ExamPagerView mExamPagerView;
-    @BindView(R.id.fab)
-    FloatingActionButton mSubmitFab;
 
     private int mTestPaperId;
     private int mTestPaperType;//1为考试，0为练习
@@ -69,11 +69,23 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
 
     private void initView() {
         ButterKnife.bind(this);
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.sample_blue));
+        }
         mQuestionFragAdapter = new QuestionFragAdapter(getSupportFragmentManager(), new ArrayList<Fragment>());
         mExamPagerView.setViewPagerAdapter(mQuestionFragAdapter);
-
         mExamPagerView.setViewPagerListener(this);
+        mExamPagerView.setOnBottomButtonClickListener(new ExamPagerView.OnBottomButtonClickListener() {
+            @Override
+            public void onLeftClick() {
+
+            }
+
+            @Override
+            public void onRightClick() {
+                submit();
+            }
+        });
     }
 
     @Override
@@ -113,13 +125,27 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
         }
     }
 
-    @OnClick(R.id.fab)
+
     public void submit() {
         StudentPaper studentPaper = new StudentPaper();
         studentPaper.setStudentId(((App) getApplication()).getUser().getUserId());
         studentPaper.setStudentAnswer(AnswerBuffer.getInstance().getResult());
-        studentPaper.setTestpaperId(mTestPaperId);
-        mPresenter.submitTestPaper(studentPaper);
+        //一题都没做
+        if (mQuestionFragAdapter.getCount() != studentPaper.getStudentAnswer().size()) {
+            ToastUtil.showToast("请完成所有题目后提交");
+            return;
+        }
+        //没做完
+        for (StudentAnswer studentAnswer : studentPaper.getStudentAnswer()) {
+            System.out.println(studentAnswer.getStudentAnswer());
+            if (studentAnswer.getStudentAnswer().isEmpty()) {
+                ToastUtil.showToast("请完成所有题目后提交");
+                return;
+            }
+        }
+
+        //studentPaper.setTestpaperId(mTestPaperId);
+        //mPresenter.submitTestPaper(studentPaper);
     }
 
     @Override
@@ -129,7 +155,7 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
         //每页显示当前页序
         mExamPagerView.setTitleCenterTextString(pos + "/" + total);
         //末页显示提交按钮
-        mSubmitFab.setVisibility(pos == total ? View.VISIBLE : View.GONE);
+        mExamPagerView.showBottomButtons(pos == total);
     }
 
     @Override
@@ -156,7 +182,7 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
         int position = 0;
         for (Question question : questions) {
             //将每道题传入每个fragment中
-            fragments.add(QuestionFragment.newInstance(question, position));
+            fragments.add(QuestionFragment.newInstance(question, position, questions.size()));
             position++;
         }
         mQuestionFragAdapter.addAll(fragments);
@@ -164,13 +190,20 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
 
         //如若习题只有一道（即最后一道），则显示提交按钮
         if (mQuestionFragAdapter.getCount() == 1) {
-            mSubmitFab.setVisibility(View.VISIBLE);
+            mExamPagerView.showBottomButtons(true);
         }
+        mExamPagerView.setOnTopRightButtonClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mExamPagerView.showAnswerCard(AnswerBuffer.getInstance().getStudentAnswerArray(), mQuestionFragAdapter.getCount());
+            }
+        });
     }
 
     @Override
     public void startGradeAty(double socre, List<StudentAnswerResult> results) {
-        GradeActivity.start(this, socre, GsonUtil.GsonString(results),mTestPaperTittle);
+        GradeActivity.start(this, socre, GsonUtil.GsonString(results), mTestPaperTittle);
         finishAty();
     }
 

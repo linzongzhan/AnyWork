@@ -360,6 +360,10 @@
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\layout\\abc_tooltip.xml"
     },
     {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\item_answer_card.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\item_answer_card.xml"
+    },
+    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },

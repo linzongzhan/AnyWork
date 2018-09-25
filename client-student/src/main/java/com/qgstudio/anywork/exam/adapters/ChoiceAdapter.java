@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.model.Question;
 import com.qgstudio.anywork.data.model.StudentAnswer;
+import com.qgstudio.anywork.utils.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,6 +32,7 @@ public class ChoiceAdapter extends OptionAdapter {
 
     public ChoiceAdapter(Context context, Question question, int position) {
         super(context, question, position);
+        setupChoice();//根据题目类型设置选项
     }
 
 
@@ -58,6 +60,7 @@ public class ChoiceAdapter extends OptionAdapter {
 
         if (mIsReadOnly) {
             ch.itemView.setClickable(false);
+
             return;
         }
 
@@ -94,9 +97,22 @@ public class ChoiceAdapter extends OptionAdapter {
 
     }
 
+    private void setupChoice() {
+        switch (mQuestion.getEnumType()) {
+            case SELECT:
+                choice = new String[]{"A", "B", "C", "D"};
+                content = new String[]{mQuestion.getA(), mQuestion.getB(), mQuestion.getC(), mQuestion.getD()};
+                break;
+            case TRUE_OR_FALSE:
+                choice = new String[]{"√", "×"};
+                content = new String[]{"正确", "错误"};
+                break;
+        }
+    }
+
     @Override
     public int getItemCount() {
-        return 4;
+        return choice.length;
     }
 
     protected class ChoiceHolder extends RecyclerView.ViewHolder {
