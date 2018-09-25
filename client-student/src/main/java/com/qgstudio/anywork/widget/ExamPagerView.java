@@ -231,6 +231,8 @@ public class ExamPagerView extends LinearLayout {
         answerCard.setVisibility(GONE);
         addView(answerCard);
     }
+                                        
+
 
     public void showAnswerCard(SparseArray<StudentAnswer> answers, int questionSum) {
 
