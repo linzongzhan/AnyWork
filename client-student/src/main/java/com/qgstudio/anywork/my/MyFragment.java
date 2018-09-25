@@ -1,12 +1,14 @@
 package com.qgstudio.anywork.my;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
@@ -38,6 +41,8 @@ public class MyFragment extends Fragment {
     private TextView changePassword;
     private TextView about;
     private TextView update;
+
+    static Toast toast;
 
     public MyFragment() {
     }
@@ -134,7 +139,22 @@ public class MyFragment extends Fragment {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtil.showToast("QG");
+                if (toast == null){
+                    toast = Toast.makeText(getActivity(),
+                            "Copyright (C) 2018\n" +
+                                    "AnyWork2.0\n" +
+                                    "小平科技创新团队\n" +
+                                    "计算机学院QG工作室\n" +
+                                    "荣誉出品",
+                            Toast.LENGTH_SHORT);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        TextView textView = (TextView) toast.getView().findViewById(Resources.getSystem().getIdentifier("message", "id", "android"));
+                        if (textView != null) {
+                            textView.setGravity(Gravity.CENTER);
+                        }
+                    }
+                }
+                toast.show();
             }
         });
         update.setOnClickListener(new View.OnClickListener() {
