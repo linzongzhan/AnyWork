@@ -61,17 +61,26 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
 
     @BindView(R.id.phone) EditText phone;
 
-    @BindView(R.id.edit) Button edit;
+    @BindView(R.id.button_save) Button edit;
 
-    @OnClick(R.id.exit)
-    public void exit() {
-        backResult();
+    @OnClick(R.id.button_save)
+    public void save() {
+//        backResult();
+        String p = phone.getText().toString();
+        String m = email.getText().toString();
+        if (!m.matches("\\w+@\\w+(\\.\\w{2,3})*\\.\\w{2,3}")) {
+            ToastUtil.showToast("请输入正确的邮箱地址");
+        }
+        if (!p.matches("^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\\d{8}$")) {
+            ToastUtil.showToast("请输入正确的电话号码");
+            return ;
+        }
     }
 
     @OnClick(R.id.edit)
     public void edit() {
         if (isFinish) {
-            editFocusable(true);
+//            editFocusable(true);
             edit.setText("完成");
             edit.setBackgroundResource(R.drawable.bg_btn_blue);
         } else {
@@ -95,7 +104,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
             nUser.setPhone(p);
             nUser.setEmail(m);
             mPresenter.changeInfo(nUser);
-            editFocusable(false);
+//            editFocusable(false);
             edit.setText("编辑");
             edit.setBackgroundResource(R.drawable.bg_btn_yellow);
         }
@@ -133,7 +142,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
         user = App.getInstance().getUser();
         Log.d("linzongzhan", "onCreate: " + user.getEmail());
         setInfo(user);
-        editFocusable(false);
+//        editFocusable(false);
     }
 
     private void setInfo(User user1) {
@@ -144,18 +153,18 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
         GlideUtil.setPictureWithOutCache(pic, user1.getUserId(), R.drawable.ic_user_default);
     }
 
-    private void editFocusable(boolean focusable) {
-//        name.setEnabled(focusable);
-        email.setEnabled(focusable);
-        phone.setEnabled(focusable);
-
-        if (focusable) {
-//            name.requestFocus();
-            email.requestFocus();
-            phone.requestFocus();
-
-        }
-    }
+//    private void editFocusable(boolean focusable) {
+////        name.setEnabled(focusable);
+//        email.setEnabled(focusable);
+//        phone.setEnabled(focusable);
+//
+//        if (focusable) {
+////            name.requestFocus();
+//            email.requestFocus();
+//            phone.requestFocus();
+//
+//        }
+//    }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void setupWindowAnimations() {

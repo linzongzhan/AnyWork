@@ -1,5 +1,6 @@
 package com.qgstudio.anywork.main.data;
 
+import com.qgstudio.anywork.main.NewOrganizationActivity;
 import com.qgstudio.anywork.main.OrganizationFragView;
 import com.qgstudio.anywork.mvp.BasePresenter;
 
@@ -12,5 +13,5 @@ public interface OrganizationPresenter extends BasePresenter<OrganizationFragVie
     void getJoinOrganization();
     void updateJoinOrganization();
     void joinOrganization(int organizationId, String password, int position);
-    void leaveOrganization(int organizationId, int position);
+    void leaveOrganization(int organizationId, NewOrganizationActivity activity);
 }

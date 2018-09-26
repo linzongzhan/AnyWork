@@ -24,8 +24,12 @@ import com.qgstudio.anywork.utils.GsonUtil;
 import com.qgstudio.anywork.utils.ToastUtil;
 import com.qgstudio.anywork.widget.ExamPagerView;
 
+import java.io.BufferedInputStream;
+import java.io.Closeable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

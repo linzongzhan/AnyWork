@@ -13,6 +13,8 @@ import com.qgstudio.anywork.grade.GradeContract;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;
 import com.qgstudio.anywork.notice.NoticeActivity;
 import com.qgstudio.anywork.paper.PaperActivity;
+import com.qgstudio.anywork.user.ChangeInfoActivity;
+import com.qgstudio.anywork.user.ChangePasswordActivity;
 import com.qgstudio.anywork.utils.DesityUtil;
 
 import butterknife.BindView;
@@ -80,6 +82,10 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
     @OnClick(R.id.btn_notice_all)
     public void clickNoticeAll(){
         startActivity(new Intent(getActivity(), NoticeActivity.class));
+    }
+    @OnClick(R.id.tv_notice)
+    public void clickNoticeText() {
+        startActivity(new Intent(getActivity(), NewOrganizationActivity.class));
     }
 
     @Override

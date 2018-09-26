@@ -10,7 +10,6 @@ import android.util.Log;
 import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.model.User;
-import com.qgstudio.anywork.data.model.User1;
 import com.qgstudio.anywork.dialog.LoadingDialog;
 import com.qgstudio.anywork.enter.EnterActivity;
 import com.qgstudio.anywork.enter.login.LoginApi;
@@ -145,7 +144,7 @@ public class StartActivity extends AppCompatActivity {
      *
      * @return  User
      */
-    private User getUser() {
+    public static User getUser() {
         List<User> users = DataBaseUtil.getHelper().queryAll(User.class);
         if (users != null) {
             return users.get(users.size() - 1);

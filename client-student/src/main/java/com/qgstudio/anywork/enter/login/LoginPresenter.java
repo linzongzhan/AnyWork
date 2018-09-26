@@ -7,7 +7,6 @@ import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.model.User;
-import com.qgstudio.anywork.data.model.User1;
 import com.qgstudio.anywork.mvp.BasePresenterImpl;
 import com.qgstudio.anywork.utils.DataBaseUtil;
 import com.qgstudio.anywork.utils.GsonUtil;

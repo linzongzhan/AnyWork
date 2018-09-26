@@ -6,10 +6,12 @@ import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.RetrofitSubscriber;
 import com.qgstudio.anywork.data.model.Organization;
+import com.qgstudio.anywork.main.NewOrganizationActivity;
 import com.qgstudio.anywork.main.OrganizationFragView;
 import com.qgstudio.anywork.mvp.BasePresenterImpl;
 import com.qgstudio.anywork.utils.GsonUtil;
 import com.qgstudio.anywork.utils.LogUtil;
+import com.qgstudio.anywork.utils.ToastUtil;
 
 import java.util.HashMap;
 import java.util.List;
@@ -89,7 +91,7 @@ public class OrganizationRepository extends BasePresenterImpl<OrganizationFragVi
                     @Override
                     protected void onSuccess(List<Organization> data) {
                         LogUtil.d2(TAG, "getJoinOrganization", "onSuccess -> " + data);
-
+                        NewOrganizationActivity.myOrganization = null;
                         afterLoading();
                         mView.addOrganizations(data);
                     }
@@ -140,10 +142,10 @@ public class OrganizationRepository extends BasePresenterImpl<OrganizationFragVi
 
                             mView.updateItemJoinStatus(position, true);
                             mView.destroySelf();
-                            mView.startPaperAty(organizationId);
+//                            mView.startPaperAty(organizationId);
                             mView.showToast("加入班级成功");
 
-                            mView.sendUpdateBroadCast();
+//                            mView.sendUpdateBroadCast();
                         } else {
                             LogUtil.d2(TAG, "joinOrganization", "onNext -> joinFailure，" + responseResult.getStateInfo());
                             mView.showToast("加入班级失败");
@@ -153,7 +155,7 @@ public class OrganizationRepository extends BasePresenterImpl<OrganizationFragVi
     }
 
     @Override
-    public void leaveOrganization(int organizationId, final int position) {
+    public void leaveOrganization(int organizationId, final NewOrganizationActivity activity) {
         Map<String, Integer> organizationInfo = new HashMap<>();
         organizationInfo.put("organizationId", organizationId);
 
@@ -170,21 +172,23 @@ public class OrganizationRepository extends BasePresenterImpl<OrganizationFragVi
                     @Override
                     public void onError(Throwable e) {
                         LogUtil.d2(TAG, "leaveOrganization", "onError -> " + e.getMessage());
-                        mView.showToast("退出班级失败");
+//                        mView.showToast("退出班级失败");
                     }
 
                     @Override
                     public void onNext(ResponseResult responseResult) {
                         if (responseResult.getState() == 1) {
                             LogUtil.d2(TAG, "leaveOrganization", "onNext -> leaveSuccess");
-
-                            mView.updateItemJoinStatus(position, false);
-                            mView.showToast("退出班级成功");
-
-                            mView.sendUpdateBroadCast();
+                            ToastUtil.showToast("退出班级成功");
+                            activity.leaveSucceed();
+//                            mView.updateItemJoinStatus(position, false);
+//                            mView.showToast("退出班级成功");
+//
+//                            mView.sendUpdateBroadCast();
                         } else {
                             LogUtil.d2(TAG, "leaveOrganization", "onNext -> leaveFailure，" + responseResult.getStateInfo());
-                            mView.showToast("退出班级失败");
+                            ToastUtil.showToast("退出班级失败");
+//                            mView.showToast("退出班级失败");
                         }
                     }
                 });

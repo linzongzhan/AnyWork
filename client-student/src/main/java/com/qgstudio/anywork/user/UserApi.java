@@ -24,6 +24,10 @@ public interface UserApi {
     @Headers("Content-Type:application/json;charset=UTF-8")
     Observable<ResponseResult<User>> changeInfo(@Body Object o);
 
+    @POST("user/password/change")
+    @Headers("Content-Type:application/json;charset=UTF-8")
+    Observable<ResponseResult> changePassword(@Body Object o);
+
     @Multipart
     @POST("user/upload")
     Observable<ResponseResult> changePic(@Part("file") RequestBody pictureName, @Part MultipartBody.Part picture);

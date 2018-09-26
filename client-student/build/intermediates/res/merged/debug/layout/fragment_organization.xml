@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     >
 
-    <TextView
-        android:id="@+id/empty_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="空空如也，点击右上角去加入组织吧！"
-        android:visibility="gone"/>
-
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/refresh"
         android:layout_width="wrap_content"

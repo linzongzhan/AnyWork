@@ -54,15 +54,13 @@
             android:id="@+id/confirm"
             style="@style/AnyWork.Theme.Button.Dialog"
             android:text="@string/confirm"
-            android:background="@drawable/bg_btn_yellow"
-            android:visibility="gone"/>
+            android:background="@drawable/bg_btn_yellow" />
 
         <Button
             android:id="@+id/cancel"
             style="@style/AnyWork.Theme.Button.Dialog"
             android:text="@string/cancel"
-            android:background="@drawable/bg_btn_blue"
-            android:visibility="gone"/>
+            android:background="@drawable/bg_btn_blue" />
 
     </LinearLayout>
 

@@ -25,11 +25,10 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:layout_marginEnd="@dimen/activity_vertical_margin"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:textColor="@color/dark_blue_text"
         android:textSize="18sp"
-        tools:text="简述" />
+        tools:text="简述"
+        android:layout_alignTop="@+id/cimg"
+        android:layout_toEndOf="@+id/cimg" />
 
 </RelativeLayout>

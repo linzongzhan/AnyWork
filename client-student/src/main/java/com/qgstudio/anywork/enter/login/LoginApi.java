@@ -2,7 +2,6 @@ package com.qgstudio.anywork.enter.login;
 
 import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.model.User;
-import com.qgstudio.anywork.data.model.User1;
 
 import retrofit2.http.Body;
 import retrofit2.http.Headers;

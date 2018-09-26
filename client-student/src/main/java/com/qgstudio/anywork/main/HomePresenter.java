@@ -92,6 +92,30 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                     }
                 });
     }
+
+//    @Override
+//    public void postReadNew(String id) {
+//        mNoticeApi.markWatched(buildReadRequestParam(id))
+//                .subscribeOn(Schedulers.io())
+//                .observeOn((AndroidSchedulers.mainThread()))
+//                .subscribe(new RetrofitSubscriber<JsonObject>() {
+//                    @Override
+//                    protected void onSuccess(JsonObject data) {
+//
+//                    }
+//
+//                    @Override
+//                    protected void onFailure(String info) {
+//
+//                    }
+//
+//                    @Override
+//                    protected void onMistake(Throwable t) {
+//
+//                    }
+//                });
+//    }
+
     private Object buildRequestParam() {
         HashMap info = new HashMap();
         info.put("status", 0);
@@ -99,6 +123,12 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
         info.put("pageNum", 1);
         return info;
     }
+
+//    private Object buildReadRequestParam(String id) {
+//        HashMap info = new HashMap();
+//        info.put("messageId",id);
+//        return info;
+//    }
 
     private void afterLoading() {
         mView.hideLoading();

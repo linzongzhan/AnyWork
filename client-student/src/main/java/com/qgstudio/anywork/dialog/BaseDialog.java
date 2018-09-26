@@ -218,8 +218,8 @@ public class BaseDialog extends Dialog {
                 baseDialog =  new BaseDialog(this, R.style.AnyWork_Theme_Dialog);
             }
 
-            //反向注册
-            context.addDialog(baseDialog);
+            //反向注册 看原来的界面要去掉注释
+//            context.addDialog(baseDialog);
 
             return baseDialog;
         }

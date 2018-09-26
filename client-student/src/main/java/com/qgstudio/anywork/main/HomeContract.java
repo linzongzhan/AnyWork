@@ -15,5 +15,6 @@ public class HomeContract {
     interface HomePresenter extends BasePresenter<HomeView> {
         public void getJoinOrganization();
         public void getNoticeNew();
+//        public void postReadNew(String id);
     }
 }

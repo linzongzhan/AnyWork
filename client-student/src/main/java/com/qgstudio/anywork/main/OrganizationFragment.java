@@ -32,8 +32,8 @@ public class OrganizationFragment extends MVPBaseFragment<OrganizationFragView, 
     RecyclerView mRecyclerView;
     @BindView(R.id.refresh)
     SwipeRefreshLayout mSwipeRefreshLayout;
-    @BindView(R.id.empty_view)
-    View mEmptyView;
+//    @BindView(R.id.empty_view)
+//    View mEmptyView;
 
     private int mType;//fragment类型
 
@@ -75,12 +75,12 @@ public class OrganizationFragment extends MVPBaseFragment<OrganizationFragView, 
                 mPresenter.joinOrganization(organizationId, password, position);
             }
         });
-        mOrganizationAdapter.setLeaveOrganizationListener(new OrganizationAdapter.LeaveOrganizationListener() {
-            @Override
-            public void leave(int organizationId, int position) {
-                mPresenter.leaveOrganization(organizationId, position);
-            }
-        });
+//        mOrganizationAdapter.setLeaveOrganizationListener(new OrganizationAdapter.LeaveOrganizationListener() {
+//            @Override
+//            public void leave(int organizationId, int position) {
+//                mPresenter.leaveOrganization(organizationId, position);
+//            }
+//        });
         mRecyclerView.setAdapter(mOrganizationAdapter);
 
         mLinearLayoutManager = new LinearLayoutManager(mActivity);
@@ -141,7 +141,7 @@ public class OrganizationFragment extends MVPBaseFragment<OrganizationFragView, 
     @Override
     public void addOrganizations(List<Organization> organizations) {
         //无组织提示
-        mEmptyView.setVisibility(organizations.isEmpty() ? View.VISIBLE : View.GONE);
+//        mEmptyView.setVisibility(organizations.isEmpty() ? View.VISIBLE : View.GONE);
         mOrganizationAdapter.addAll(organizations);
     }
 

@@ -131,7 +131,7 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
             }
             case R.id.nav_inform: {//个人信息
                 Intent intent = new Intent(this, UserActivity.class);
-                startActivityForResult(intent, 0);
+//                startActivityForResult(intent, 0);
                 break;
             }
             case R.id.nav_feedback: {//意见反馈

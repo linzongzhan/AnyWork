@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.qgstudio.anywork.dialog.BaseDialog;
+import com.qgstudio.anywork.dialog.NewBaseDialog;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -19,13 +20,13 @@ import java.util.Set;
 
 public abstract class DialogManagerActivity extends AppCompatActivity {
 
-    private Set<BaseDialog> mDialogs;
+    private Set<NewBaseDialog> mDialogs;
 
     /**
      * 仅供BaseDialog反向注册使用
      * @param dialog
      */
-    public void addDialog(BaseDialog dialog) {
+    public void addDialog(NewBaseDialog dialog) {
         if (mDialogs == null) {
             mDialogs = new HashSet<>();
         }
@@ -49,7 +50,7 @@ public abstract class DialogManagerActivity extends AppCompatActivity {
         //退出前关闭dialog，避免窗体泄漏
         Iterator iterator = mDialogs.iterator();
         while (iterator.hasNext()) {
-            BaseDialog dialog = (BaseDialog) iterator.next();
+            NewBaseDialog dialog = (NewBaseDialog) iterator.next();
             if (dialog != null && dialog.isShowing()) {
                 dialog.dismiss();
             }

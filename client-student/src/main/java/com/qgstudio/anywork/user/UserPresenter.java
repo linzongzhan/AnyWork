@@ -79,7 +79,7 @@ public class UserPresenter extends BasePresenterImpl<UserContract.View> implemen
         }
 
         Map<String, String> info = new HashMap<>();
-        info.put("userName", user.getUserName());
+//        info.put("userName", user.getUserName());
         info.put("phone", user.getPhone());
         info.put("email", user.getEmail());
 
