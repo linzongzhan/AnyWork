@@ -73,6 +73,7 @@
         android:layout_marginStart="8dp">
 
         <TextView
+            android:id="@+id/tv_content_item_notice"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="第一章练习已发布，请同学们及时完成！完成时间：09.11.19:00 - 09.11.19:00完成时间：09.11.19:00 - 09.11.19:00完成时间：09.11.19:00 - 09.11.19:00完成时间：09.11.19:00 - 09.11.19:00"
