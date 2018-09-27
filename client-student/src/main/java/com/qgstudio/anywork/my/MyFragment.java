@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
+import com.qgstudio.anywork.enter.EnterActivity;
 import com.qgstudio.anywork.feedback.FeedbackActivity;
 import com.qgstudio.anywork.user.UserActivity;
 import com.qgstudio.anywork.utils.GlideUtil;
@@ -31,7 +32,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class MyFragment extends Fragment {
 
     private CircleImageView head;
-    private Button edit;
+    private View edit;
     private TextView feedback;
     private TextView name;
     private TextView studentId;
@@ -41,6 +42,7 @@ public class MyFragment extends Fragment {
     private TextView changePassword;
     private TextView about;
     private TextView update;
+    private TextView logout;
 
     static Toast toast;
 
@@ -97,7 +99,7 @@ public class MyFragment extends Fragment {
     private void initView(View view) {
         head = (CircleImageView) view.findViewById(R.id.my_head);
         feedback = (TextView) view.findViewById(R.id.feedback);
-        edit = (Button) view.findViewById(R.id.edit_message);
+        edit = view.findViewById(R.id.my_frame_layout);
         name = (TextView) view.findViewById(R.id.my_name);
         studentId = (TextView) view.findViewById(R.id.my_student_id);
         viewBackground = (ImageView) view.findViewById(R.id.view);
@@ -105,6 +107,7 @@ public class MyFragment extends Fragment {
         changePassword = (TextView) view.findViewById(R.id.change_password);
         about = (TextView) view.findViewById(R.id.about);
         update = (TextView) view.findViewById(R.id.update);
+        logout = (TextView) view.findViewById(R.id.logout);
 
         GlideUtil.setPictureWithOutCache(head, App.getInstance().getUser().getUserId(), R.drawable.ic_user_default);
         feedback.setOnClickListener(new View.OnClickListener() {
@@ -161,6 +164,15 @@ public class MyFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ToastUtil.showToast("此功能暂未开放");
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(App.getContext(), EnterActivity.class);
+                startActivity(intent);
+
+                getActivity().finish();
             }
         });
 
