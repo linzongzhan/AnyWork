@@ -6,7 +6,7 @@ import android.support.annotation.UiThread;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.FrameLayout;
+import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.qgstudio.anywork.R;
@@ -27,7 +27,10 @@ public class GradeActivity_ViewBinding implements Unbinder {
 
     target.toolbar = Utils.findRequiredViewAsType(source, R.id.toolbar, "field 'toolbar'", Toolbar.class);
     target.recyclerView = Utils.findRequiredViewAsType(source, R.id.recyclerView, "field 'recyclerView'", RecyclerView.class);
-    target.container = Utils.findRequiredViewAsType(source, R.id.container, "field 'container'", FrameLayout.class);
+    target.tvPaperTittle = Utils.findRequiredViewAsType(source, R.id.tv_paper_tittle, "field 'tvPaperTittle'", TextView.class);
+    target.tvCountRight = Utils.findRequiredViewAsType(source, R.id.tv_count_right, "field 'tvCountRight'", TextView.class);
+    target.tvSumQuestion = Utils.findRequiredViewAsType(source, R.id.tv_sum_questions, "field 'tvSumQuestion'", TextView.class);
+    target.btnClose = Utils.findRequiredView(source, R.id.btn_back, "field 'btnClose'");
   }
 
   @Override
@@ -39,6 +42,9 @@ public class GradeActivity_ViewBinding implements Unbinder {
 
     target.toolbar = null;
     target.recyclerView = null;
-    target.container = null;
+    target.tvPaperTittle = null;
+    target.tvCountRight = null;
+    target.tvSumQuestion = null;
+    target.btnClose = null;
   }
 }

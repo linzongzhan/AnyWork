@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.ResponseResult;
@@ -17,13 +16,12 @@ import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.model.StudentAnswerAnalysis;
 import com.qgstudio.anywork.data.model.StudentAnswerResult;
 import com.qgstudio.anywork.data.model.StudentTestResult;
-import com.qgstudio.anywork.data.model.Testpaper;
+import com.qgstudio.anywork.workout.data.Testpaper;
 
 import com.qgstudio.anywork.dialog.LoadingDialog;
 import com.qgstudio.anywork.exam.ExamActivity;
 import com.qgstudio.anywork.grade.GradeActivity;
 import com.qgstudio.anywork.utils.DateUtil;
-import com.qgstudio.anywork.utils.GlideUtil;
 import com.qgstudio.anywork.utils.GsonUtil;
 import com.qgstudio.anywork.utils.ToastUtil;
 
@@ -47,7 +45,6 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
-import static com.qgstudio.anywork.data.ApiStores.API_DEFAULT_URL;
 
 
 /**
@@ -126,7 +123,7 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.Holder> {
 
                     intoTestActivity(v.getContext(), mPapers.get(position).getTestpaperId(), type, dialog);
                 } else {
-                    ExamActivity.start(v.getContext(), mPapers.get(position).getTestpaperId(), type);
+                    //ExamActivity.start(v.getContext(), mPapers.get(position).getTestpaperId(), type);
                 }
             }
         });
@@ -225,10 +222,10 @@ public class PaperAdapter extends RecyclerView.Adapter<PaperAdapter.Holder> {
                             for (StudentAnswerAnalysis analysi : analysis) {
                                 results.add(new StudentAnswerResult(analysi));
                             }
-                            GradeActivity.start(context, socre, GsonUtil.GsonString(results));
+                            //GradeActivity.start(context, socre, GsonUtil.GsonString(results));
 
                         } else {
-                            ExamActivity.start(context, testpaperId, type);
+                            //ExamActivity.start(context, testpaperId, type);
                         }
                     }
                 });

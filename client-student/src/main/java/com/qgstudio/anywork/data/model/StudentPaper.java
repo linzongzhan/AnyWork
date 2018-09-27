@@ -12,7 +12,9 @@ public class StudentPaper {
     private int studentId;            //答题者Id
     private int testpaperId;            //试卷id
     private long startTime;             //开始答题的时间
-    private long endTime;               //答题结束的时间
+    private String endTime = "2018-09-10 00:00:00";               //答题结束的时间
+    private int temporarySave;
+
 
     public StudentPaper() {
     }
@@ -78,11 +80,16 @@ public class StudentPaper {
         this.startTime = startTime;
     }
 
-    public long getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(long endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
+    public void setTemporarySave(int temporarySave) {
+        this.temporarySave = temporarySave;
+    }
+
 }

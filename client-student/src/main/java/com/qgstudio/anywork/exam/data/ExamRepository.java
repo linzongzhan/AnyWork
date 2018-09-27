@@ -10,9 +10,11 @@ import com.qgstudio.anywork.data.model.StudentAnswerResult;
 import com.qgstudio.anywork.data.model.StudentPaper;
 import com.qgstudio.anywork.data.model.StudentTestResult;
 import com.qgstudio.anywork.exam.ExamView;
+import com.qgstudio.anywork.exam.adapters.AnswerBuffer;
 import com.qgstudio.anywork.mvp.BasePresenterImpl;
 import com.qgstudio.anywork.utils.GsonUtil;
 import com.qgstudio.anywork.utils.LogUtil;
+import com.qgstudio.anywork.workout.data.Testpaper;
 
 import java.net.ConnectException;
 import java.util.ArrayList;
@@ -39,9 +41,14 @@ public class ExamRepository extends BasePresenterImpl<ExamView> implements ExamP
         mExamApi = retrofit.create(ExamApi.class);
     }
 
-    public void getTestpaper(int textpaperId) {
-        Map<String, String> map = new HashMap<>();
+    public void getTestpaper(int textpaperId, int state) {
+        Map map = new HashMap<>();
         map.put("testpaperId", textpaperId + "");
+        if (state == Testpaper.STATUS_UNFINISHED) {
+            map.put("choice", 1);
+        } else {
+            map.put("choice", 0);
+        }
         mExamApi.getTestpaper(map)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -82,7 +89,12 @@ public class ExamRepository extends BasePresenterImpl<ExamView> implements ExamP
                     @Override
                     protected void onSuccess(StudentTestResult data) {
                         LogUtil.d(TAG, "[submitTestPaper] " + "onSuccess -> " + data);
-
+                        AnswerBuffer.getInstance().clear();//提交必清空
+                        if (data == null) {
+                            //保存进度成功
+                            mView.saveDone();
+                            return;
+                        }
                         double socre = data.getSocre();
                         List<StudentAnswerResult> results = new ArrayList<>();
 
@@ -90,7 +102,6 @@ public class ExamRepository extends BasePresenterImpl<ExamView> implements ExamP
                         for (StudentAnswerAnalysis analysi : analysis) {
                             results.add(new StudentAnswerResult(analysi));
                         }
-
                         mView.startGradeAty(socre, results);
                     }
 
@@ -114,7 +125,7 @@ public class ExamRepository extends BasePresenterImpl<ExamView> implements ExamP
                 });
     }
 
-    private void handleGetPaperContentFailure(){
+    private void handleGetPaperContentFailure() {
         mView.showToast("获取试卷内容失败");
         mView.destroySelf();
     }
@@ -135,6 +146,16 @@ public class ExamRepository extends BasePresenterImpl<ExamView> implements ExamP
 
             @Override
             public void destroySelf() {
+
+            }
+
+            @Override
+            public void submitDone() {
+
+            }
+
+            @Override
+            public void saveDone() {
 
             }
 

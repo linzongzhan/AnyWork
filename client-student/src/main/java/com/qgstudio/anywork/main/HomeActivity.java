@@ -16,7 +16,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.qgstudio.anywork.App;
@@ -28,10 +30,12 @@ import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.dialog.BaseDialog;
 import com.qgstudio.anywork.enter.EnterActivity;
 import com.qgstudio.anywork.feedback.FeedbackActivity;
+import com.qgstudio.anywork.my.MyFragment;
 import com.qgstudio.anywork.networkcenter.WorkBuilder;
 import com.qgstudio.anywork.notice.NoticeActivity;
 import com.qgstudio.anywork.notice.data.Notice;
 import com.qgstudio.anywork.notice.data.OnlineCount;
+import com.qgstudio.anywork.ranking.RankingFragment;
 import com.qgstudio.anywork.user.UserActivity;
 import com.qgstudio.anywork.user.UserApi;
 import com.qgstudio.anywork.utils.GlideUtil;
@@ -50,7 +54,7 @@ import rx.Scheduler;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class HomeActivity extends DialogManagerActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class HomeActivity extends DialogManagerActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     public static final String TAG = "HomeActivity";
     public static final String ACTION = TAG + "$Receiver";//广播action
@@ -59,17 +63,25 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
 
     private FragmentManager mFragmentManager;
     private BroadcastReceiver mReceiver;
+    private HomeFragment homeFragment;
+    private RankingFragment rankingFragment;
+    private MyFragment myFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+
         initView();
         registerBroadcast();
         WebSocketHolder.getDefault().register(this);
-        String baseUrl = RetrofitClient.RETROFIT_CLIENT.getRetrofit().baseUrl().toString();
-        // WebSocketHolder.getDefault().connect(baseUrl+"websocket/"+App.getInstance().getUser().getUserId());
-        WebSocketHolder.getDefault().connect("ws://121.40.165.18:8800");
+        String baseUrl = "ws://" + RetrofitClient.RETROFIT_CLIENT.getRetrofit().baseUrl().host() + ":" +
+                RetrofitClient.RETROFIT_CLIENT.getRetrofit().baseUrl().port();
+        WebSocketHolder.getDefault().connect(baseUrl + "/websocket/" + App.getInstance().getUser().getUserId());
+
     }
 
     @Override
@@ -81,7 +93,6 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
     private void registerBroadcast() {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(ACTION);
-        mReceiver = new Receiver();
         registerReceiver(mReceiver, intentFilter);
     }
 
@@ -96,10 +107,13 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         //设置底部导航栏的颜色
         bottomNavigationView.setItemIconTintList(null);
         mFragmentManager = getSupportFragmentManager();
+        if (homeFragment == null) {
+            homeFragment = HomeFragment.newInstance();
+        }
         mFragmentManager.beginTransaction()
-                .add(R.id.frame, HomeFragment.newInstance())
+                .replace(R.id.frame, homeFragment)
                 .commit();
-
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
     }
 
@@ -110,64 +124,6 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.nav_searching: {
-                SearchingActivity.start(this);
-                return true;
-            }
-            default: {
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.nav_join: {//我的班级
-                break;
-            }
-            case R.id.nav_inform: {//个人信息
-                Intent intent = new Intent(this, UserActivity.class);
-//                startActivityForResult(intent, 0);
-                break;
-            }
-            case R.id.nav_feedback: {//意见反馈
-//                // TODO: 2017/8/16 意见反馈
-//                ToastUtil.showToast("此功能暂未开放！");
-                Intent intent = new Intent(HomeActivity.this, FeedbackActivity.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.nav_exit: {//退出登入
-                BaseDialog.Builder builder = new BaseDialog.Builder(this);
-                BaseDialog baseDialog = builder.cancelTouchout(false)
-                        .title("提示")
-                        .content("确定要退出当前账号吗？")
-                        .setNegativeListener("确认", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                //暂停定时任务
-                                SessionMaintainUtil.stop();
-                                //跳转切换帐号
-                                logout();
-                                EnterActivity.start(HomeActivity.this, EnterActivity.FLAG_SWITCH_USER);
-                                finish();
-                            }
-                        })
-                        .setPositiveListener("取消", null)
-                        .build();
-                baseDialog.show();
-                break;
-            }
-            default: {
-                return false;
-            }
-        }
-        return true;
-    }
 
     @Override
     public void onBackPressed() {
@@ -236,18 +192,33 @@ public class HomeActivity extends DialogManagerActivity implements NavigationVie
 
     }
 
-
-    /**
-     * 监听SearchingActivity页面的加入或退出通知
-     * 并及时更新自己的页面
-     */
-    class Receiver extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            OrganizationFragment ofm = (OrganizationFragment) mFragmentManager.getFragments().get(0);
-            ofm.loadData();
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getTitle().toString()) {
+            case "首页":
+                if (homeFragment == null) homeFragment = HomeFragment.newInstance();
+                mFragmentManager = getSupportFragmentManager();
+                mFragmentManager.beginTransaction()
+                        .replace(R.id.frame, homeFragment)
+                        .commit();
+                break;
+            case "排行榜":
+                if (rankingFragment == null) rankingFragment = new RankingFragment();
+                mFragmentManager = getSupportFragmentManager();
+                mFragmentManager.beginTransaction()
+                        .replace(R.id.frame, rankingFragment)
+                        .commit();
+                break;
+            case "我的":
+                if (myFragment == null) myFragment = new MyFragment();
+                mFragmentManager = getSupportFragmentManager();
+                mFragmentManager.beginTransaction()
+                        .replace(R.id.frame, myFragment)
+                        .commit();
+                break;
         }
+        return true;
     }
+
 
 }

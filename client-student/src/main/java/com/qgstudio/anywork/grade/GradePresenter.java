@@ -3,6 +3,7 @@ package com.qgstudio.anywork.grade;
 import android.content.Context;
 import android.util.Log;
 
+import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.model.Question;
@@ -27,8 +28,9 @@ public class GradePresenter extends BasePresenterImpl<GradeContract.View> implem
     public void detachView() {
         mView = new GradeContract.View() {
 
+
             @Override
-            public void showSuccess(Question question) {
+            public void showSuccess(StudentAnswerAnalysis analysis) {
 
             }
 
@@ -51,8 +53,9 @@ public class GradePresenter extends BasePresenterImpl<GradeContract.View> implem
         if (gradeApi == null) {
             gradeApi = RetrofitClient.RETROFIT_CLIENT.getRetrofit().create(GradeApi.class);
         }
-        Map<String, String> info = new HashMap<>();
+        Map info = new HashMap<>();
         info.put("questionId", id+"");
+        info.put("userId", App.getInstance().getUser().getUserId());
         gradeApi.changeInfo(info)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -73,7 +76,7 @@ public class GradePresenter extends BasePresenterImpl<GradeContract.View> implem
 
                         if (result.getState() == 1) {
                             Question question = result.getData().getQuestion();
-                            mView.showSuccess(question);
+                            mView.showSuccess(result.getData());
                             Log.i("TAG", "onNext: " + GsonUtil.GsonString(question));
                         } else {
                             mView.showError(result.getStateInfo());

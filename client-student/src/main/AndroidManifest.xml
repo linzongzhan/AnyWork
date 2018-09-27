@@ -34,7 +34,7 @@
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
             android:theme="@android:style/Theme.Translucent" />
-        <activity android:name=".enter.EnterActivity" />`
+        <activity android:name=".enter.EnterActivity" />
         <activity
             android:name=".StartActivity"
             android:theme="@style/WelcomeStyle">
@@ -66,19 +66,12 @@
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name=".user.ChangeInfoActivity">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity android:name=".user.TestActivity" />
-        <activity android:name=".user.ChangeInfoActivity2" />
-        <activity android:name=".user.ChangePasswordActivity" />
-        <activity android:name=".main.NewOrganizationActivity"></activity>
+        <activity android:name=".workout.WorkoutContainerActivity" />
+        <activity android:name=".search.SearchActivity" />
+        <activity
+            android:name=".workout.WorkoutActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".collection.CollectionActivity"></activity>
     </application>
 
 </manifest>

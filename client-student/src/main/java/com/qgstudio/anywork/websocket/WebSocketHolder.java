@@ -1,5 +1,7 @@
 package com.qgstudio.anywork.websocket;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
@@ -22,6 +24,7 @@ import okhttp3.Response;
 import okhttp3.WebSocket;
 import okhttp3.WebSocketListener;
 
+
 public class WebSocketHolder extends WebSocketListener {
     /**
      * 默认的WebSocketHolder，也是唯一的
@@ -30,9 +33,13 @@ public class WebSocketHolder extends WebSocketListener {
     private WebSocket webSocket;
     private OkHttpClient client;
     private Map<Object, Subscription> subscriptions;
+    //计数君，自带监听机制
+    public MutableLiveData<Integer> onlineCount;
 
     private WebSocketHolder() {
-
+        //初始化在线人数，0
+        onlineCount = new MutableLiveData<>();
+        onlineCount.postValue(0);
     }
 
     /**

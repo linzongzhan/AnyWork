@@ -5,29 +5,20 @@
     android:layout_height="match_parent">
 
     <com.qgstudio.anywork.widget.ExamPagerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/epv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/epv"
+        epv:sLeftBottomBackgroundColor="@color/sample_blue"
+        epv:sLeftBottomTextColor="@color/white"
+        epv:sLeftBottomTextString="保存"
+        epv:sRightBottomBackgroundColor="#23BE78"
+        epv:sRightBottomTextColor="@color/white"
+        epv:sRightBottomTextString="提交"
+        epv:sTitleBackgroundColor="@color/sample_blue"
+        epv:sTitleCenterTextColor="@color/sample_blue"
         epv:sTitleCenterTextString=""
-        epv:sTitleCenterTextColor="@color/dark_green_text"
-        epv:sTitleBackgroundColor="@color/dark_grey_status"
-        epv:sTitleRightIconResId="@drawable/ic_quit"
-        epv:sLeftBottomTextColor="@color/dark_green_text"
-        epv:sLeftBottomTextString="上一题"
-        epv:sRightBottomBackgroundColor="@color/dark_grey_status"
-        epv:sRightBottomTextColor="@color/dark_green_text"
-        epv:sRightBottomTextString="下一题"
-        epv:sLeftBottomBackgroundColor="@color/dark_grey_status"
-    />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="58dp"
-        android:layout_marginEnd="10dp"
-        android:visibility="gone"
-        android:src="@mipmap/ic_send"/>
+        epv:sTitleLeftIconResId="@drawable/icon_register_back"
+        epv:sTitleRightIconResId="@drawable/icon_answer_answercard"
+        epv:sTitleRightIconTittle="答题卡" />
 
 </FrameLayout>

@@ -1,9 +1,11 @@
 package com.qgstudio.anywork.data.model;
 
+import java.io.Serializable;
+
 /**
  * Created by logan on 2017/7/10.
  */
-public class StudentAnswerAnalysis {
+public class StudentAnswerAnalysis implements Serializable {
 
     private int studentAnswerAnalysisId;       //分析id
     private int studentId;              //学生id
@@ -11,6 +13,7 @@ public class StudentAnswerAnalysis {
     private String studentAnswer;   //学生答案
     private int isTrue;         //是否正确
     private double socre;       //得分情况
+    public boolean isOpened;
 
     public StudentAnswerAnalysis() {
     }

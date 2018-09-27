@@ -50,7 +50,6 @@ public class GradeAdapter extends Adapter<RecyclerView.ViewHolder> {
     }
 
     public void setmDatas(List<StudentAnswerResult> datas) {
-
         int currentType = 0;
         int trueCount = 0;
         int count = 0;
@@ -60,16 +59,17 @@ public class GradeAdapter extends Adapter<RecyclerView.ViewHolder> {
             StudentAnswerResult result = datas.get(i);
             if (result.getType() >= 4)
                 break;
-            if (result.getType() != currentType) {
-                if (currentTitle != null) {
-                    currentTitle.setContent(currentType, trueCount + "/" + count);
-                }
-                currentTitle = new StudentAnswerResult(0, null);
-                mDatas.add(currentTitle);
-                currentType = result.getType();
-                trueCount = 0;
-                count = 0;
-            }
+            //不显示分类标题
+//            if (result.getType() != currentType) {
+//                if (currentTitle != null) {
+//                    currentTitle.setContent(currentType, trueCount + "/" + count);
+//                }
+//                currentTitle = new StudentAnswerResult(0, null);
+//                mDatas.add(currentTitle);
+//                currentType = result.getType();
+//                trueCount = 0;
+//                count = 0;
+//            }
             if (result.getContent().equals("true")) {
                 trueCount++;
             }
@@ -128,7 +128,7 @@ public class GradeAdapter extends Adapter<RecyclerView.ViewHolder> {
             }
             text.setText(gInfo.getContent());
         } else {
-            text.setText(gInfo.getPosition()+"");
+            text.setText(gInfo.getPosition() + "");
             text.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -151,9 +151,10 @@ public class GradeAdapter extends Adapter<RecyclerView.ViewHolder> {
         return mDatas.get(position).getType();
     }
 
-    class ItemHolder extends RecyclerView.ViewHolder{
+    class ItemHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.text) TextView text;
+        @BindView(R.id.text)
+        TextView text;
 
         ItemHolder(View itemView) {
             super(itemView);

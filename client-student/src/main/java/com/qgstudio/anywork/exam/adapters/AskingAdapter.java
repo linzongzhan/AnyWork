@@ -24,8 +24,8 @@ public class AskingAdapter extends OptionAdapter {
 
     private String mAnswer;
 
-    public AskingAdapter(Context context, Question question, int position) {
-        super(context, question, position);
+    public AskingAdapter(Context context, Question question, int position, String studentAnswer) {
+        super(context, question, position, studentAnswer);
     }
 
     @Override
@@ -48,6 +48,7 @@ public class AskingAdapter extends OptionAdapter {
             //设置不可编辑
             ah.edi_asking.setFocusable(false);
             ah.edi_asking.setFocusableInTouchMode(false);
+            ah.edi_asking.setText(studentAnswer == null ? "你未作答" : studentAnswer);
             return;
         }
 
@@ -87,7 +88,8 @@ public class AskingAdapter extends OptionAdapter {
 
     class AskingHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.edi_asking) public EditText edi_asking;
+        @BindView(R.id.edi_asking)
+        public EditText edi_asking;
 
         public AskingHolder(View itemView) {
             super(itemView);

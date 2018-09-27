@@ -14,10 +14,16 @@ public class Organization {
     private String description;     //描述
     private long token;             //口令
     private int count;              //组织人数
+
+    public Organization(int organizationId) {
+        this.organizationId = organizationId;
+    }
+
     private int isJoin;             //判断字段，标志学生是否是该组织成员
 
     public Organization() {
     }
+
 
     public String getTeacherName() {
         return teacherName;

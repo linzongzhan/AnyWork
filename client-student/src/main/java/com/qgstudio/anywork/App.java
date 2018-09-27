@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.text.TextUtils;
 
 import com.google.gson.JsonObject;
+import com.mobile.utils.Utils;
 import com.qgstudio.anywork.data.ResponseResult;
 import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.main.HomeActivity;
@@ -80,6 +81,7 @@ public class App extends Application {
             // 每隔3个小时去访问后台时候有更新,通过handler实现轮训的效果
             new FetchPatchHandler().fetchPatchWithInterval(3);
         }
+        Utils.Companion.init(this);
         //startService(new Intent(this, AppService.class));
     }
 

@@ -1,13 +1,22 @@
 package com.qgstudio.anywork.feedback;
 
+import android.animation.Animator;
+import android.animation.ValueAnimator;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.BounceInterpolator;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.common.DialogManagerActivity;
@@ -23,12 +32,15 @@ public class FeedbackActivity extends MVPBaseActivity<FeedbackContract.View, Fee
     private ImageView noHint;
     private ImageView question;
     private ImageView suggestion;
+    private View layoutQuestion;
+    private View layoutSuggestion;
     private EditText questionDetail;
     private Button addPicture;
     private Spinner module;
     private EditText contact;
-    private Button commit;
-    private Button back;
+    private View commit;
+    private View back;
+    private TextView questionModule;
 
     private ArrayList<String> modules = new ArrayList<>();
     private ArrayAdapter<String> arrayAdapter;
@@ -43,6 +55,10 @@ public class FeedbackActivity extends MVPBaseActivity<FeedbackContract.View, Fee
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.sample_blue));
+        }
+
         initView();
         setData();
         setOnClickListener();
@@ -56,8 +72,15 @@ public class FeedbackActivity extends MVPBaseActivity<FeedbackContract.View, Fee
         addPicture = (Button) findViewById(R.id.feedback_picture);
         module = (Spinner) findViewById(R.id.feedback_module);
         contact = (EditText) findViewById(R.id.feedback_contact);
-        commit = (Button) findViewById(R.id.feedback_commit);
-        back = (Button) findViewById(R.id.feedback_back);
+        commit = findViewById(R.id.feedback_commit);
+        back = findViewById(R.id.feedback_back);
+
+        layoutQuestion = findViewById(R.id.linear_layout_question);
+        layoutSuggestion = findViewById(R.id.linear_layout_suggestion);
+
+        questionModule = (TextView) findViewById(R.id.module_question);
+        String s = "问题模块(<font color='#3C7EFF'>必填</font>)";
+        questionModule.setText(Html.fromHtml(s));
     }
 
     private void setData() {
@@ -68,7 +91,7 @@ public class FeedbackActivity extends MVPBaseActivity<FeedbackContract.View, Fee
         modules.add("用户");
         modules.add("组织");
 
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, modules);
+        arrayAdapter = new ArrayAdapter<String>(this, R.layout.layout_spinner, modules);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         module.setAdapter(arrayAdapter);
@@ -78,22 +101,63 @@ public class FeedbackActivity extends MVPBaseActivity<FeedbackContract.View, Fee
         noHint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findViewById(R.id.feedback_hint).setVisibility(View.GONE);
+//                findViewById(R.id.feedback_hint).setVisibility(View.GONE);
+                final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.feedback_hint);
+                final int height = linearLayout.getHeight();
+
+                final ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams)linearLayout.getLayoutParams();
+                final int topMargin = layoutParams.topMargin;
+
+                ValueAnimator valueAnimator = ValueAnimator.ofInt(height, 0);
+                valueAnimator.setDuration(200);
+                valueAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
+                valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        int value = (int) animation.getAnimatedValue();
+                        layoutParams.height = value;
+                        layoutParams.topMargin = topMargin * value / height;
+                        linearLayout.setLayoutParams(layoutParams);
+
+                    }
+                });
+                valueAnimator.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        linearLayout.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                });
+                valueAnimator.start();
             }
         });
-        question.setOnClickListener(new View.OnClickListener() {
+        layoutQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                question.setImageResource(R.drawable.feedback_select);
-                suggestion.setImageResource(R.drawable.feedback_noselect);
+                question.setImageResource(R.drawable.background_feedback_select);
+                suggestion.setImageResource(R.drawable.background_feedback_noselect);
                 questionORsuggestion = "遇到的问题";
             }
         });
-        suggestion.setOnClickListener(new View.OnClickListener() {
+        layoutSuggestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                suggestion.setImageResource(R.drawable.feedback_select);
-                question.setImageResource(R.drawable.feedback_noselect);
+                suggestion.setImageResource(R.drawable.background_feedback_select);
+                question.setImageResource(R.drawable.background_feedback_noselect);
                 questionORsuggestion = "新功能建议";
             }
         });

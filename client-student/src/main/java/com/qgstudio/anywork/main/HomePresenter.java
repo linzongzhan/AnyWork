@@ -49,7 +49,9 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                         LogUtil.d2(TAG, "getJoinOrganization", "onSuccess -> " + data);
 
                         afterLoading();
-                        mView.onMyClassGot(data.isEmpty() ? null : data.get(0));
+                        if (mView != null) {
+                            mView.onMyClassGot(data.isEmpty() ? null : data.get(0));
+                        }
                     }
 
                     @Override
@@ -57,7 +59,9 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                         LogUtil.d2(TAG, "getJoinOrganization", "onFailure -> " + info);
 
                         afterLoading();
-                        mView.showToast("获取信息失败");
+                        if (mView != null) {
+                            mView.showToast("获取信息失败");
+                        }
                     }
 
                     @Override
@@ -65,7 +69,10 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                         LogUtil.d2(TAG, "getJoinOrganization", "onMistake -> " + t.getMessage());
 
                         afterLoading();
-                        mView.showToast("获取信息失败");
+                        if (mView != null) {
+                            mView.showToast("获取信息失败");
+                        }
+
                     }
                 });
     }
@@ -93,29 +100,6 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                 });
     }
 
-//    @Override
-//    public void postReadNew(String id) {
-//        mNoticeApi.markWatched(buildReadRequestParam(id))
-//                .subscribeOn(Schedulers.io())
-//                .observeOn((AndroidSchedulers.mainThread()))
-//                .subscribe(new RetrofitSubscriber<JsonObject>() {
-//                    @Override
-//                    protected void onSuccess(JsonObject data) {
-//
-//                    }
-//
-//                    @Override
-//                    protected void onFailure(String info) {
-//
-//                    }
-//
-//                    @Override
-//                    protected void onMistake(Throwable t) {
-//
-//                    }
-//                });
-//    }
-
     private Object buildRequestParam() {
         HashMap info = new HashMap();
         info.put("status", 0);
@@ -124,14 +108,10 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
         return info;
     }
 
-//    private Object buildReadRequestParam(String id) {
-//        HashMap info = new HashMap();
-//        info.put("messageId",id);
-//        return info;
-//    }
-
     private void afterLoading() {
-        mView.hideLoading();
+        if (mView != null) {
+            mView.hideLoading();
+        }
     }
 
     private void prepareLoading() {
