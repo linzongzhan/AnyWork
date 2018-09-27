@@ -67,7 +67,7 @@
             android:name=".user.AppService"
             android:enabled="true"
             android:exported="true"
-            android:process=":remote" />
+            android:process=":remote"  />
 
         <activity android:name=".workout.WorkoutContainerActivity" />
         <activity android:name=".search.SearchActivity" />
