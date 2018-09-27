@@ -9,6 +9,6 @@ import com.qgstudio.anywork.mvp.BasePresenter;
  */
 
 public interface ExamPresenter extends BasePresenter<ExamView> {
-    void getTestpaper(int textpaperId);
+    void getTestpaper(int textpaperId,int state);
     void submitTestPaper(StudentPaper studentPaper);
 }

@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 
 import com.qgstudio.anywork.App;
@@ -49,6 +50,7 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
     private int mTestPaperType;//1为考试，0为练习
     private String mTestPaperTittle;
     private QuestionFragAdapter mQuestionFragAdapter;//数据适配器
+    private int state;
 
     private BaseDialog mBaseDialog;
 
@@ -59,12 +61,13 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
         mTestPaperId = getIntent().getIntExtra("TESTPAPER_ID", -1);
         mTestPaperType = getIntent().getIntExtra("TESTPAPER_TYPE", -1);
         mTestPaperTittle = getIntent().getStringExtra("TESTPAPER_TITTLE");
+        state = getIntent().getIntExtra("STATE", 0);
         initView();
         loadData();
     }
 
     private void loadData() {
-        mPresenter.getTestpaper(mTestPaperId);
+        mPresenter.getTestpaper(mTestPaperId, state);
     }
 
     private void initView() {
@@ -78,12 +81,12 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
         mExamPagerView.setOnBottomButtonClickListener(new ExamPagerView.OnBottomButtonClickListener() {
             @Override
             public void onLeftClick() {
-
+                submit(true);
             }
 
             @Override
             public void onRightClick() {
-                submit();
+                submit(false);
             }
         });
     }
@@ -98,10 +101,7 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
 
     @Override
     public void onBackPressed() {
-        if (mTestPaperType == 1) {
-            checkExit();
-            return;
-        }
+        submit(true);
         super.onBackPressed();
     }
 
@@ -126,26 +126,34 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
     }
 
 
-    public void submit() {
+    public void submit(boolean isSave) {
         StudentPaper studentPaper = new StudentPaper();
         studentPaper.setStudentId(((App) getApplication()).getUser().getUserId());
         studentPaper.setStudentAnswer(AnswerBuffer.getInstance().getResult());
-        //一题都没做
-        if (mQuestionFragAdapter.getCount() != studentPaper.getStudentAnswer().size()) {
-            ToastUtil.showToast("请完成所有题目后提交");
-            return;
-        }
-        //没做完
-        for (StudentAnswer studentAnswer : studentPaper.getStudentAnswer()) {
-            System.out.println(studentAnswer.getStudentAnswer());
-            if (studentAnswer.getStudentAnswer().isEmpty()) {
+        if (!isSave) {
+            //直接提交
+            //一题都没做
+            if (mQuestionFragAdapter.getCount() != studentPaper.getStudentAnswer().size()) {
                 ToastUtil.showToast("请完成所有题目后提交");
                 return;
             }
+            //没做完
+            for (StudentAnswer studentAnswer : studentPaper.getStudentAnswer()) {
+                System.out.println(studentAnswer.getStudentAnswer());
+                if (studentAnswer.getStudentAnswer().isEmpty()) {
+                    ToastUtil.showToast("请完成所有题目后提交");
+                    return;
+                }
+            }
+            studentPaper.setTemporarySave(0);//0为正常提交
+        } else {
+            //临时保存
+            //来到这里就是做了一部分
+            studentPaper.setTemporarySave(1);//1为临时保存
         }
+        studentPaper.setTestpaperId(mTestPaperId);
+        mPresenter.submitTestPaper(studentPaper);
 
-        //studentPaper.setTestpaperId(mTestPaperId);
-        //mPresenter.submitTestPaper(studentPaper);
     }
 
     @Override
@@ -168,11 +176,12 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
 
     }
 
-    public static void start(Context context, int testpaperId, int testpaperType, String paperTittle) {
+    public static void start(Context context, int testpaperId, int testpaperType, String paperTittle, int state) {
         Intent intent = new Intent(context, ExamActivity.class);
         intent.putExtra("TESTPAPER_ID", testpaperId);
         intent.putExtra("TESTPAPER_TYPE", testpaperType);
         intent.putExtra("TESTPAPER_TITTLE", paperTittle);
+        intent.putExtra("STATE", state);
         context.startActivity(intent);
     }
 
@@ -184,6 +193,13 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
             //将每道题传入每个fragment中
             fragments.add(QuestionFragment.newInstance(question, position, questions.size()));
             position++;
+        }
+        //读取保存的进度
+        for (int i = 0; i < questions.size(); i++) {
+            StudentAnswer studentAnswer = new StudentAnswer();
+            studentAnswer.setQuestionId(questions.get(i).getQuestionId());
+            studentAnswer.setStudentAnswer(questions.get(i).getKey());
+            AnswerBuffer.getInstance().addStudentAnswer(i, studentAnswer);
         }
         mQuestionFragAdapter.addAll(fragments);
         mExamPagerView.setTitleCenterTextString((position != 0 ? 1 : 0) + "/" + questions.size());
@@ -203,12 +219,24 @@ public class ExamActivity extends MVPBaseActivity<ExamView, ExamRepository> impl
 
     @Override
     public void startGradeAty(double socre, List<StudentAnswerResult> results) {
+        ToastUtil.showToast("试卷已提交");
         GradeActivity.start(this, socre, GsonUtil.GsonString(results), mTestPaperTittle);
         finishAty();
     }
 
     @Override
     public void destroySelf() {
+        finishAty();
+    }
+
+    @Override
+    public void submitDone() {
+
+    }
+
+    @Override
+    public void saveDone() {
+        ToastUtil.showToast("进度已保存");
         finishAty();
     }
 

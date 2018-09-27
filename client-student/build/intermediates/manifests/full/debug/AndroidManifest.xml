@@ -81,8 +81,8 @@
         <activity android:name="com.qgstudio.anywork.search.SearchActivity" />
         <activity
             android:name="com.qgstudio.anywork.workout.WorkoutActivity"
-            android:windowSoftInputMode="adjustPan" >
-        </activity>
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.qgstudio.anywork.collection.CollectionActivity" />
 
         <service
             android:name="com.tinkerpatch.sdk.tinker.service.TinkerServerResultService"

@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,10 +17,12 @@ import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.model.Question;
+import com.qgstudio.anywork.data.model.StudentAnswerAnalysis;
 import com.qgstudio.anywork.exam.adapters.AskingAdapter;
 import com.qgstudio.anywork.exam.adapters.ChoiceAdapter;
 import com.qgstudio.anywork.exam.adapters.OptionAdapter;
@@ -30,10 +33,11 @@ import butterknife.ButterKnife;
 
 public class QuestionView extends FrameLayout {
     Question mQuestion;
-
+    StudentAnswerAnalysis mAnalysis;
     TextView tvQuestionInfo;
 
     TextView tvQuestionContent;
+    ImageView btnCollect;
 
     RecyclerView recyclerViewQuestionSelections;
 
@@ -49,6 +53,8 @@ public class QuestionView extends FrameLayout {
     ValueAnimator showAnimator;
     OptionAdapter optionAdapter;
     private boolean isTestMode = true;
+    private boolean isCollected;
+    private OnAnswerStateChangedListener onAnswerStateChangedListener;
 
     public QuestionView(@NonNull Context context) {
         super(context);
@@ -76,6 +82,7 @@ public class QuestionView extends FrameLayout {
         tvAnswer = view.findViewById(R.id.tv_answer);
         btnAnswerControl = view.findViewById(R.id.btn_answer_control);
         tvAnswerInvisible = view.findViewById(R.id.tv_answer_invisible);
+        btnCollect = view.findViewById(R.id.btn_collect);
         //取图
         answerShowIcon = getContext().getResources().getDrawable(R.drawable.icon_on);
         answerHideIcon = getContext().getResources().getDrawable(R.drawable.icon_off);
@@ -91,6 +98,7 @@ public class QuestionView extends FrameLayout {
                 toggleShowAnswerBottom();
             }
         });
+
 
         if (isTestMode) {
             tvAnswer.setVisibility(View.GONE);
@@ -121,26 +129,79 @@ public class QuestionView extends FrameLayout {
      */
     public void setQuestion(Question question, int pos, int sum) {
         mQuestion = question;
-        String key = question.getKey();
-        if (key != null && mQuestion.getType() == 3) {
-            //分割填空题答案
-            key = key.replaceAll("∏", " ");
-        }
-        setAnswerBottom(key);//设置解析
+
+
+        setAnswerBottom();
+
         setQuestionContent(mQuestion.getContent());//设置题目内容
         setPosition(pos, sum);
+
+        //解析模式下选项不可点击
+        if (!isTestMode) {
+            pos = -1;
+        }
+
         switch (mQuestion.getEnumType()) {
             case TRUE_OR_FALSE:
             case SELECT:
-                optionAdapter = new ChoiceAdapter(getContext(), mQuestion, pos);
+
+                optionAdapter = new ChoiceAdapter(getContext(), mQuestion, pos, mAnalysis == null ? null : mAnalysis.getStudentAnswer());
+                recyclerViewQuestionSelections.setAdapter(optionAdapter);
+                recyclerViewQuestionSelections.setLayoutManager(new LinearLayoutManager(getContext()));
+
                 break;
             case FILL_BLANK:
             case SHORT_ANSWER:
-                optionAdapter = new AskingAdapter(getContext(), mQuestion, pos);
+
+                optionAdapter = new AskingAdapter(getContext(), mQuestion, pos, mAnalysis == null ? null : mAnalysis.getStudentAnswer());
+                recyclerViewQuestionSelections.setAdapter(optionAdapter);
+                recyclerViewQuestionSelections.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
                 break;
         }
-        recyclerViewQuestionSelections.setAdapter(optionAdapter);
-        recyclerViewQuestionSelections.setLayoutManager(new LinearLayoutManager(getContext()));
+
+    }
+
+    /**
+     * 解析模式下调用
+     *
+     * @param analysis
+     */
+    public void setAnalysis(StudentAnswerAnalysis analysis, boolean isOpenBottomAnswer) {
+        if (!isTestMode) {
+            if (isOpenBottomAnswer) {
+                isAnswerBottomShowing = true;
+                tvAnswer.setVisibility(VISIBLE);
+                btnAnswerControl.setText("收起解析");
+                setBtnAnswerControlIcon(answerShowIcon);
+            }
+
+            mAnalysis = analysis;
+            setQuestion(mAnalysis.getQuestion(), 0, 1);
+        }
+    }
+
+    public void setAnalysis(StudentAnswerAnalysis analysis, boolean isOpenBottomAnswer, int pos, int sum) {
+        if (!isTestMode) {
+            mAnalysis = analysis;
+            setQuestion(mAnalysis.getQuestion(), pos, sum);
+            if (isOpenBottomAnswer) {
+                isAnswerBottomShowing = true;
+                tvAnswer.setVisibility(VISIBLE);
+                btnAnswerControl.setText("收起解析");
+                setBtnAnswerControlIcon(answerShowIcon);
+                ViewGroup.LayoutParams layoutParams = tvAnswer.getLayoutParams();
+                layoutParams.height = tvAnswerInvisible.getHeight();
+                tvAnswer.setLayoutParams(layoutParams);
+            } else {
+                isAnswerBottomShowing = false;
+                tvAnswer.setVisibility(GONE);
+                btnAnswerControl.setText("展开解析");
+                setBtnAnswerControlIcon(answerHideIcon);
+            }
+
+        }
     }
 
     /**
@@ -165,10 +226,16 @@ public class QuestionView extends FrameLayout {
         tvQuestionContent.setText(content);
     }
 
+    public void setBtnCollectListener(OnClickListener listener) {
+        btnCollect.setOnClickListener(listener);
+    }
+
     private void toggleShowAnswerBottom() {
         //反转
         isAnswerBottomShowing = !isAnswerBottomShowing;
-
+        if (onAnswerStateChangedListener != null) {
+            onAnswerStateChangedListener.onAnswerStateChanged(isAnswerBottomShowing);
+        }
         if (showAnimator == null) {
             showAnimator = ValueAnimator.ofInt(0, tvAnswerInvisible.getHeight());
             showAnimator.setDuration(200);
@@ -221,9 +288,26 @@ public class QuestionView extends FrameLayout {
         }
     }
 
-    private void setAnswerBottom(String answer) {
-        tvAnswer.setText(answer);
-        tvAnswerInvisible.setText(answer);
+    private void setAnswerBottom() {
+        String key = mQuestion.getKey();
+        if (key != null && mQuestion.getType() == 3) {
+            //分割填空题答案
+            key = key.replaceAll("∏", " ");
+        }
+        if (key != null && mQuestion.getEnumType() == Question.Type.TRUE_OR_FALSE) {
+            if (key.equals("1")) {
+                key = "正确";
+            } else {
+                key = "错误";
+            }
+        }
+
+        String s = "<font color='#F13E58'>正确答案是"
+                + key
+                + "</font><br><br>"
+                + (mQuestion.getAnalysis() == null ? "暂无解析" : mQuestion.getAnalysis());
+        tvAnswer.setText(Html.fromHtml(s));
+        tvAnswerInvisible.setText(Html.fromHtml(s));
     }
 
     private void setDrawableBounds(int param) {
@@ -247,5 +331,30 @@ public class QuestionView extends FrameLayout {
             btnAnswerControl.setText("展开解析");
             setBtnAnswerControlIcon(answerHideIcon);
         }
+    }
+
+    public boolean isCollected() {
+        return isCollected;
+    }
+
+    public void setIsCollected(boolean is) {
+        isCollected = is;
+        if (isCollected) {
+            btnCollect.setImageResource(R.drawable.icon_collect);
+        } else {
+            btnCollect.setImageResource(R.drawable.icon_uncollect);
+        }
+    }
+
+    public void setCollectionEnable(boolean enable) {
+        btnCollect.setVisibility(enable ? VISIBLE : GONE);
+    }
+
+    public void setOnAnswerStateChangedListener(OnAnswerStateChangedListener listener) {
+        onAnswerStateChangedListener = listener;
+    }
+
+    public interface OnAnswerStateChangedListener {
+        void onAnswerStateChanged(boolean isShowing);
     }
 }

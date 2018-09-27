@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Sep 25 17:37:42 CST 2018
+#Tue Sep 25 23:23:23 CST 2018
 7.path=lib/armeabi-v7a/libBugly.so
 2.base=E\:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\assets\\debug
 5.set=NATIVE_RESOURCE

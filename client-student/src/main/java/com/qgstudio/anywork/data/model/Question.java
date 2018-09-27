@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Created by FunriLy on 2017/7/10.
  * From small beginnings comes great things.
  */
-public class Question implements Serializable {
+public class Question implements Serializable{
 
     private static final long serialVersionUID = 1L;
 
@@ -53,6 +53,15 @@ public class Question implements Serializable {
     private int testpaperId;    //试卷id
     private int other;          //填空题个数
     private String studentAnswer;
+    private String analysis;
+
+    public String getAnalysis() {
+        return analysis;
+    }
+
+    public void setAnalysis(String analysis) {
+        this.analysis = analysis;
+    }
 
     public String getStudentAnswer() {
         return studentAnswer;

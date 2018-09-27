@@ -1,17 +1,10 @@
 package com.qgstudio.anywork.exam;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.widget.TextView;
 
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.model.Question;
-import com.qgstudio.anywork.exam.adapters.OptionAdapter;
-import com.qgstudio.anywork.exam.adapters.OptionFactory;
 import com.qgstudio.anywork.mvp.BaseFragment;
 import com.qgstudio.anywork.widget.QuestionView;
 

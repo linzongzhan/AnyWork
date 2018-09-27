@@ -16,9 +16,9 @@ import java.lang.Override;
 public class WorkoutCatalogFragment_ViewBinding implements Unbinder {
   private WorkoutCatalogFragment target;
 
-  private View view2131624114;
+  private View view2131624089;
 
-  private View view2131624226;
+  private View view2131624227;
 
   @UiThread
   public WorkoutCatalogFragment_ViewBinding(final WorkoutCatalogFragment target, View source) {
@@ -28,7 +28,7 @@ public class WorkoutCatalogFragment_ViewBinding implements Unbinder {
     target.toolbar = Utils.findRequiredViewAsType(source, R.id.workout_frag_toolbar, "field 'toolbar'", Toolbar.class);
     target.recyclerView = Utils.findRequiredViewAsType(source, R.id.recycler_view_workout, "field 'recyclerView'", RecyclerView.class);
     view = Utils.findRequiredView(source, R.id.btn_back, "method 'clickBack'");
-    view2131624114 = view;
+    view2131624089 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -36,7 +36,7 @@ public class WorkoutCatalogFragment_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.btn_search, "method 'clickSearch'");
-    view2131624226 = view;
+    view2131624227 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -55,9 +55,9 @@ public class WorkoutCatalogFragment_ViewBinding implements Unbinder {
     target.toolbar = null;
     target.recyclerView = null;
 
-    view2131624114.setOnClickListener(null);
-    view2131624114 = null;
-    view2131624226.setOnClickListener(null);
-    view2131624226 = null;
+    view2131624089.setOnClickListener(null);
+    view2131624089 = null;
+    view2131624227.setOnClickListener(null);
+    view2131624227 = null;
   }
 }

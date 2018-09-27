@@ -4,12 +4,12 @@
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\ic_right_normal.png"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_status_join_true.xml",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_status_join_true.xml"
-    },
-    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_on.png",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_on.png"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_status_join_true.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_status_join_true.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_person.xml",
@@ -336,6 +336,10 @@
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_class_selected.png"
     },
     {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_collect.png",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_collect.png"
+    },
+    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\background_ranking.xml",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\background_ranking.xml"
     },
@@ -434,6 +438,10 @@
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_paper_type.png",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\ic_paper_type.png"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_uncollect.png",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\drawable\\icon_uncollect.png"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",

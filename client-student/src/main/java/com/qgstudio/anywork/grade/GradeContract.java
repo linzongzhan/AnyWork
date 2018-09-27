@@ -1,6 +1,7 @@
 package com.qgstudio.anywork.grade;
 
 import com.qgstudio.anywork.data.model.Question;
+import com.qgstudio.anywork.data.model.StudentAnswerAnalysis;
 import com.qgstudio.anywork.mvp.BasePresenter;
 import com.qgstudio.anywork.mvp.BaseView;
 
@@ -11,7 +12,7 @@ import com.qgstudio.anywork.mvp.BaseView;
 public interface GradeContract {
 
     interface View extends BaseView {
-        void showSuccess(Question question);
+        void showSuccess(StudentAnswerAnalysis analysis);
         void showError(String s);
     }
 

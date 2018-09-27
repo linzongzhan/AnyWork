@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.qgstudio.anywork.R;
+import com.qgstudio.anywork.collection.CollectionActivity;
 import com.qgstudio.anywork.data.model.Organization;
 import com.qgstudio.anywork.grade.GradeContract;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;
@@ -118,6 +119,7 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
 
     @OnClick(R.id.btn_collection)
     public void clickCollection() {
+        startActivity(new Intent(getActivity(), CollectionActivity.class));
     }
 
     /**

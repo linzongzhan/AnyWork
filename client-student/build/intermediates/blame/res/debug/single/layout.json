@@ -1,11 +1,11 @@
 [
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\item_workout_info.xml",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\item_workout_info.xml"
-    },
-    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\layout\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\item_workout_info.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\item_workout_info.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
@@ -16,12 +16,12 @@
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_ranking.xml",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_ranking.xml"
-    },
-    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\1b91e2931f6764f393feadbd1e280247\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_ranking.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_ranking.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
@@ -40,16 +40,16 @@
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\base_dialog.xml"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_workout_catalog.xml",
-        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_workout_catalog.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\1b91e2931f6764f393feadbd1e280247\\res\\layout\\design_navigation_menu.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\layout_listview.xml",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\layout_listview.xml"
     },
     {
-        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
-        "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\1b91e2931f6764f393feadbd1e280247\\res\\layout\\design_navigation_menu.xml"
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_workout_catalog.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_workout_catalog.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
@@ -82,6 +82,10 @@
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\option_asking.xml",
         "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\option_asking.xml"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\item_collection.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\item_collection.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
@@ -118,6 +122,10 @@
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_analysis.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_analysis.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\item_grade_content.xml",
@@ -198,6 +206,10 @@
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.0.aar\\d332e510313ef105a4d16c65096a6038\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\activity_collection.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\activity_collection.xml"
     },
     {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\activity_grade.xml",

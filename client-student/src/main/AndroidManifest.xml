@@ -70,9 +70,8 @@
         <activity android:name=".search.SearchActivity" />
         <activity
             android:name=".workout.WorkoutActivity"
-            android:windowSoftInputMode="adjustPan">
-
-        </activity>
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".collection.CollectionActivity"></activity>
     </application>
 
 </manifest>

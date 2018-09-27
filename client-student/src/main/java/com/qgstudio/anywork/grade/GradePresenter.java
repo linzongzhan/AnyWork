@@ -28,8 +28,9 @@ public class GradePresenter extends BasePresenterImpl<GradeContract.View> implem
     public void detachView() {
         mView = new GradeContract.View() {
 
+
             @Override
-            public void showSuccess(Question question) {
+            public void showSuccess(StudentAnswerAnalysis analysis) {
 
             }
 
@@ -75,7 +76,7 @@ public class GradePresenter extends BasePresenterImpl<GradeContract.View> implem
 
                         if (result.getState() == 1) {
                             Question question = result.getData().getQuestion();
-                            mView.showSuccess(question);
+                            mView.showSuccess(result.getData());
                             Log.i("TAG", "onNext: " + GsonUtil.GsonString(question));
                         } else {
                             mView.showError(result.getStateInfo());

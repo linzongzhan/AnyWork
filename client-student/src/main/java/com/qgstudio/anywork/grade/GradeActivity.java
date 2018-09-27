@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.model.Question;
+import com.qgstudio.anywork.data.model.StudentAnswerAnalysis;
 import com.qgstudio.anywork.data.model.StudentAnswerResult;
 import com.qgstudio.anywork.exam.QuestionFragment;
 import com.qgstudio.anywork.mvp.MVPBaseActivity;
@@ -130,14 +131,8 @@ public class GradeActivity extends MVPBaseActivity<GradeContract.View, GradePres
     }
 
     @Override
-    public void showSuccess(Question question) {
-        QuestionFragment qFragment = QuestionFragment.newInstance(question, -1,1);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setTransition(qFragment);
-        }
-
-        ActivityUtil.addFragmentToActivity(getSupportFragmentManager(), qFragment, R.id.container, "");
-
+    public void showSuccess(StudentAnswerAnalysis analysis) {
+        AnalysisFragment.newInstanse(analysis).show(getFragmentManager(), "");
     }
 
     @Override

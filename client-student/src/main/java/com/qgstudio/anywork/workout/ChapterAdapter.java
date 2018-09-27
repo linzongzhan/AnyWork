@@ -138,7 +138,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     }
                     LoadingDialog dialog = new LoadingDialog();
                     dialog.show(((AppCompatActivity) context).getSupportFragmentManager(), "");
-                    intoTestActivity(v.getContext(), testpaper.getTestpaperId(), testpaper.getTestpaperTitle(), 1, dialog);
+                    intoTestActivity(v.getContext(), testpaper.getTestpaperId(), testpaper.getTestpaperTitle(), 1, dialog,testpaper.getStatus());
                 }
             });
 
@@ -186,7 +186,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         void onChapterClick(int chapterID);
     }
 
-    private void intoTestActivity(final Context context, final int testpaperId, final String paperTittle, final int type, final LoadingDialog dialog) {
+    private void intoTestActivity(final Context context, final int testpaperId, final String paperTittle, final int type, final LoadingDialog dialog, final int state) {
 
 
         Map<String, Integer> info = new HashMap<>();
@@ -223,7 +223,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                             }
                             GradeActivity.start(context, socre, GsonUtil.GsonString(results), paperTittle);
                         } else {
-                            ExamActivity.start(context, testpaperId, type,paperTittle);
+                            ExamActivity.start(context, testpaperId, type,paperTittle,state);
                         }
                     }
                 });

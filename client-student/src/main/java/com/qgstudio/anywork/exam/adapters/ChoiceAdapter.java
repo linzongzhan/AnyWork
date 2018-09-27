@@ -30,8 +30,8 @@ public class ChoiceAdapter extends OptionAdapter {
     private String[] choice = {"A", "B", "C", "D"};
     private String[] content = {mQuestion.getA(), mQuestion.getB(), mQuestion.getC(), mQuestion.getD()};
 
-    public ChoiceAdapter(Context context, Question question, int position) {
-        super(context, question, position);
+    public ChoiceAdapter(Context context, Question question, int position, String studentAnswer) {
+        super(context, question, position, studentAnswer);
         setupChoice();//根据题目类型设置选项
     }
 
@@ -57,9 +57,24 @@ public class ChoiceAdapter extends OptionAdapter {
         ch.tv_choice.setBackgroundResource(R.drawable.bg_choice_normal);
         ch.tv_choice.setTextColor(ContextCompat.getColor(mContext, R.color.sample_blue));
         ch.tv_content.setText(content[position]);
-
+        if (choice[position].equals("1")) {
+            ch.tv_choice.setText("√");
+        }
+        if (choice[position].equals("0")) {
+            ch.tv_choice.setText("×");
+        }
         if (mIsReadOnly) {
             ch.itemView.setClickable(false);
+            //标出学生答案，不管对还是不对，都标成错误，下面会覆盖
+            if (studentAnswer != null && studentAnswer.equals(choice[position])) {
+                ch.tv_choice.setBackgroundResource(R.drawable.bg_choice_incorrect);
+                ch.tv_choice.setTextColor(ContextCompat.getColor(mContext, R.color.white));
+            }
+            //标出答案
+            if (mQuestion.getKey().equals(choice[position])) {
+                ch.tv_choice.setBackgroundResource(R.drawable.bg_choice_correct);
+                ch.tv_choice.setTextColor(ContextCompat.getColor(mContext, R.color.white));
+            }
 
             return;
         }
@@ -69,7 +84,7 @@ public class ChoiceAdapter extends OptionAdapter {
             @Override
             public void onClick(View v) {
                 if (position != mAnswerPos) {
-                    notifyItemChanged(mAnswerPos);
+                    notifyDataSetChanged();
                 }
                 mAnswer = choice[position];
                 mAnswerPos = position;
@@ -104,7 +119,7 @@ public class ChoiceAdapter extends OptionAdapter {
                 content = new String[]{mQuestion.getA(), mQuestion.getB(), mQuestion.getC(), mQuestion.getD()};
                 break;
             case TRUE_OR_FALSE:
-                choice = new String[]{"√", "×"};
+                choice = new String[]{"1", "0"};
                 content = new String[]{"正确", "错误"};
                 break;
         }
