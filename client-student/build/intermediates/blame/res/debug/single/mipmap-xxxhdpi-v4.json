@@ -1,14 +1,14 @@
 [
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher_round.png",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher_round.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher_foreground.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher_foreground.png",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     }
 ]

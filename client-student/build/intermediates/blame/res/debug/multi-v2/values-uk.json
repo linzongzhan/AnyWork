@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\values-uk\\values-uk.xml",
+            "outputFile": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\values-uk\\values-uk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\ecfd981ba2c99055ab3ebdd7937c0485\\res\\values-uk\\values-uk.xml",
+                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\e58c4200031363d9990704e80935efe3\\res\\values-uk\\values-uk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,215,317,423,509,617,735,814,894,975,1081,1188,1286,1394,1500,1609,1779,1879",
+                        "endColumns": "109,101,105,85,107,117,78,79,80,105,106,97,107,105,108,169,99,80",
+                        "endOffsets": "210,312,418,504,612,730,809,889,970,1076,1183,1281,1389,1495,1604,1774,1874,1955"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\680a04f6e9469c9e40b4037f48ca3a7c\\res\\values-uk\\values-uk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,25 +28,25 @@
                         "startOffsets": "1960",
                         "endColumns": "100",
                         "endOffsets": "2056"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\values-uk\\values-uk.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,317,423,509,617,735,814,894,975,1081,1188,1286,1394,1500,1609,1779,1879",
-                        "endColumns": "109,101,105,85,107,117,78,79,80,105,106,97,107,105,108,169,99,80",
-                        "endOffsets": "210,312,418,504,612,730,809,889,970,1076,1183,1281,1389,1495,1604,1774,1874,1955"
                     }
                 }
             ]
         },
         {
-            "outputFile": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
+            "outputFile": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\ecfd981ba2c99055ab3ebdd7937c0485\\res\\values-uk\\values-uk.xml",
+                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\e58c4200031363d9990704e80935efe3\\res\\values-uk\\values-uk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,215,317,423,509,617,735,814,894,975,1081,1188,1286,1394,1500,1609,1779,1879",
+                        "endColumns": "109,101,105,85,107,117,78,79,80,105,106,97,107,105,108,169,99,80",
+                        "endOffsets": "210,312,418,504,612,730,809,889,970,1076,1183,1281,1389,1495,1604,1774,1874,1955"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\680a04f6e9469c9e40b4037f48ca3a7c\\res\\values-uk\\values-uk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -50,16 +60,6 @@
                         "startOffsets": "1960",
                         "endColumns": "100",
                         "endOffsets": "2056"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\values-uk\\values-uk.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,317,423,509,617,735,814,894,975,1081,1188,1286,1394,1500,1609,1779,1879",
-                        "endColumns": "109,101,105,85,107,117,78,79,80,105,106,97,107,105,108,169,99,80",
-                        "endOffsets": "210,312,418,504,612,730,809,889,970,1076,1183,1281,1389,1495,1604,1774,1874,1955"
                     }
                 }
             ]
