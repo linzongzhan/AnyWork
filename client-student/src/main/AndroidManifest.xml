@@ -51,6 +51,9 @@
         <activity android:name=".user.UserActivity" />
         <activity android:name=".main.SearchingActivity" />
         <activity android:name=".feedback.FeedbackActivity" />
+        <activity android:name=".main.NewOrganizationActivity" />
+        <activity android:name=".user.ChangePasswordActivity" />
+        <activity android:name=".user.ChangeInfoActivity" />
 
         <receiver android:name=".common.NetworkStatusReceiver">
             <intent-filter>

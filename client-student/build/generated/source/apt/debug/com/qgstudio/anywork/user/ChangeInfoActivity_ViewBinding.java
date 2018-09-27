@@ -14,7 +14,7 @@ import java.lang.Override;
 public class ChangeInfoActivity_ViewBinding implements Unbinder {
   private ChangeInfoActivity target;
 
-  private View view2131624135;
+  private View view2131624149;
 
   private View view2131624098;
 
@@ -29,7 +29,7 @@ public class ChangeInfoActivity_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.edit, "method 'edit'");
-    view2131624135 = view;
+    view2131624149 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -53,8 +53,8 @@ public class ChangeInfoActivity_ViewBinding implements Unbinder {
     target = null;
 
 
-    view2131624135.setOnClickListener(null);
-    view2131624135 = null;
+    view2131624149.setOnClickListener(null);
+    view2131624149 = null;
     view2131624098.setOnClickListener(null);
     view2131624098 = null;
   }

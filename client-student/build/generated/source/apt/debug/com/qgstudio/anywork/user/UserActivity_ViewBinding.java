@@ -18,11 +18,11 @@ import java.lang.Override;
 public class UserActivity_ViewBinding implements Unbinder {
   private UserActivity target;
 
-  private View view2131624134;
+  private View view2131624148;
 
   private View view2131624090;
 
-  private View view2131624135;
+  private View view2131624149;
 
   @UiThread
   public UserActivity_ViewBinding(UserActivity target) {
@@ -36,7 +36,7 @@ public class UserActivity_ViewBinding implements Unbinder {
     View view;
     view = Utils.findRequiredView(source, R.id.head_pic, "field 'pic' and method 'changePic'");
     target.pic = Utils.castView(view, R.id.head_pic, "field 'pic'", CircleImageView.class);
-    view2131624134 = view;
+    view2131624148 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,7 +57,7 @@ public class UserActivity_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.edit, "method 'edit'");
-    view2131624135 = view;
+    view2131624149 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -80,11 +80,11 @@ public class UserActivity_ViewBinding implements Unbinder {
     target.phone = null;
     target.edit = null;
 
-    view2131624134.setOnClickListener(null);
-    view2131624134 = null;
+    view2131624148.setOnClickListener(null);
+    view2131624148 = null;
     view2131624090.setOnClickListener(null);
     view2131624090 = null;
-    view2131624135.setOnClickListener(null);
-    view2131624135 = null;
+    view2131624149.setOnClickListener(null);
+    view2131624149 = null;
   }
 }

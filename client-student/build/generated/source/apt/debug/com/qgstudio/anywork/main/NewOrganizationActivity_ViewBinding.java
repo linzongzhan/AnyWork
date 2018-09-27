@@ -16,7 +16,7 @@ import java.lang.Override;
 public class NewOrganizationActivity_ViewBinding implements Unbinder {
   private NewOrganizationActivity target;
 
-  private View view2131624126;
+  private View view2131624141;
 
   @UiThread
   public NewOrganizationActivity_ViewBinding(NewOrganizationActivity target) {
@@ -31,7 +31,7 @@ public class NewOrganizationActivity_ViewBinding implements Unbinder {
     target.searching = Utils.findRequiredViewAsType(source, R.id.edi_searching, "field 'searching'", EditText.class);
     target.tvMyOrganization = Utils.findRequiredViewAsType(source, R.id.my_organization, "field 'tvMyOrganization'", TextView.class);
     view = Utils.findRequiredView(source, R.id.img_back, "method 'back'");
-    view2131624126 = view;
+    view2131624141 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class NewOrganizationActivity_ViewBinding implements Unbinder {
     target.searching = null;
     target.tvMyOrganization = null;
 
-    view2131624126.setOnClickListener(null);
-    view2131624126 = null;
+    view2131624141.setOnClickListener(null);
+    view2131624141 = null;
   }
 }

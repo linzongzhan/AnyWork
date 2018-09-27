@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\work\Android\Apps\AnyWork\client-student\src\main\shaders"/></dataSet><dataSet config="debug"><source path="E:\work\Android\Apps\AnyWork\client-student\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\AndroidProject3\AnyWork\client-student\src\main\shaders"/></dataSet><dataSet config="debug"><source path="E:\AndroidProject3\AnyWork\client-student\src\debug\shaders"/></dataSet></merger>

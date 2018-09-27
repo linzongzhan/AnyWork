@@ -98,7 +98,7 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
 
     @OnClick(R.id.btn_my_class)
     public void clickMyClass() {
-        startActivity(new Intent(getActivity(), SearchingActivity.class));
+        startActivity(new Intent(getActivity(), NewOrganizationActivity.class));
     }
 
     @OnClick(R.id.btn_preview)
@@ -133,7 +133,7 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
     }
     @OnClick(R.id.tv_notice)
     public void clickNoticeText() {
-        startActivity(new Intent(getActivity(), NewOrganizationActivity.class));
+
     }
 
     @Override

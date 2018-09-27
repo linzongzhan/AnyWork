@@ -22,6 +22,9 @@ import android.widget.Toast;
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.feedback.FeedbackActivity;
+import com.qgstudio.anywork.main.NewOrganizationActivity;
+import com.qgstudio.anywork.user.ChangeInfoActivity;
+import com.qgstudio.anywork.user.ChangePasswordActivity;
 import com.qgstudio.anywork.user.UserActivity;
 import com.qgstudio.anywork.utils.GlideUtil;
 import com.qgstudio.anywork.utils.ToastUtil;
@@ -117,7 +120,7 @@ public class MyFragment extends Fragment {
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), UserActivity.class);
+                Intent intent = new Intent(getActivity(), ChangeInfoActivity.class);
                 startActivity(intent);
             }
         });
@@ -133,7 +136,7 @@ public class MyFragment extends Fragment {
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getActivity(), ChangePasswordActivity.class));
             }
         });
         about.setOnClickListener(new View.OnClickListener() {

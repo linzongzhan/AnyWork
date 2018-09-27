@@ -62,6 +62,9 @@
         <activity android:name="com.qgstudio.anywork.user.UserActivity" />
         <activity android:name="com.qgstudio.anywork.main.SearchingActivity" />
         <activity android:name="com.qgstudio.anywork.feedback.FeedbackActivity" />
+        <activity android:name="com.qgstudio.anywork.main.NewOrganizationActivity" />
+        <activity android:name="com.qgstudio.anywork.user.ChangePasswordActivity" />
+        <activity android:name="com.qgstudio.anywork.user.ChangeInfoActivity" />
 
         <receiver android:name="com.qgstudio.anywork.common.NetworkStatusReceiver" >
             <intent-filter>
