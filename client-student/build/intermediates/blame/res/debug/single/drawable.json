@@ -64,12 +64,12 @@
         "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\drawable\\bg_choice_incorrect.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
-    },
-    {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
         "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_account_password.png",
@@ -102,6 +102,10 @@
     {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_back.png",
         "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\drawable\\ic_back.png"
+    },
+    {
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\my_cursor.xml",
+        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\drawable\\my_cursor.xml"
     },
     {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_menu_onlin.png",

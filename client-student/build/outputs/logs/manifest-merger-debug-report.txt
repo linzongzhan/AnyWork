@@ -236,7 +236,7 @@ ADDED from E:\AndroidProject3\AnyWork\client-student\src\main\AndroidManifest.xm
 	android:name
 		ADDED from E:\AndroidProject3\AnyWork\client-student\src\main\AndroidManifest.xml:64:19-56
 service#com.qgstudio.anywork.user.AppService
-ADDED from E:\AndroidProject3\AnyWork\client-student\src\main\AndroidManifest.xml:66:9-70:41
+ADDED from E:\AndroidProject3\AnyWork\client-student\src\main\AndroidManifest.xml:66:9-70:42
 	android:process
 		ADDED from E:\AndroidProject3\AnyWork\client-student\src\main\AndroidManifest.xml:70:13-38
 	android:enabled

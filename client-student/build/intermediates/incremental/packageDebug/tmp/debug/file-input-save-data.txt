@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Sep 27 19:55:27 CST 2018
+#Fri Sep 28 13:19:38 CST 2018
 7.path=lib/arm64-v8a/libBugly.so
 2.base=E\:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
 5.set=ASSET

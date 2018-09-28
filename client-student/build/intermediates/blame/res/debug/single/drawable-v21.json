@@ -1,34 +1,34 @@
 [
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\680a04f6e9469c9e40b4037f48ca3a7c\\res\\drawable-v21\\notification_action_background.xml"
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\9a6d2dae1f118468ea240d351d440d4a\\res\\drawable-v21\\avd_hide_password.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\e58c4200031363d9990704e80935efe3\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\ecfd981ba2c99055ab3ebdd7937c0485\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\633996fc44825da19b54bcd7835910fd\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\9a6d2dae1f118468ea240d351d440d4a\\res\\drawable-v21\\avd_show_password.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\e58c4200031363d9990704e80935efe3\\res\\drawable-v21\\abc_btn_colored_material.xml"
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\633996fc44825da19b54bcd7835910fd\\res\\drawable-v21\\avd_hide_password.xml"
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\e58c4200031363d9990704e80935efe3\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\633996fc44825da19b54bcd7835910fd\\res\\drawable-v21\\design_password_eye.xml"
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\9a6d2dae1f118468ea240d351d440d4a\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\633996fc44825da19b54bcd7835910fd\\res\\drawable-v21\\avd_show_password.xml"
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\9a6d2dae1f118468ea240d351d440d4a\\res\\drawable-v21\\design_password_eye.xml"
     }
 ]

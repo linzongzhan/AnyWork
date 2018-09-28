@@ -146,7 +146,7 @@ public class NoticeActivity extends DialogManagerActivity {
         });
     }
 
-    private Object buildRequestParam(boolean isLoadMore) {
+    public Object buildRequestParam(boolean isLoadMore) {
         HashMap info = new HashMap();
         info.put("status", 2);
         info.put("pageSize", 10);

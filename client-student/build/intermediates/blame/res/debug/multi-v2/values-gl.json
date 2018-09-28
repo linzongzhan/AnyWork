@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\values-gl\\values-gl.xml",
+            "outputFile": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\680a04f6e9469c9e40b4037f48ca3a7c\\res\\values-gl\\values-gl.xml",
+                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\ecfd981ba2c99055ab3ebdd7937c0485\\res\\values-gl\\values-gl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\e58c4200031363d9990704e80935efe3\\res\\values-gl\\values-gl.xml",
+                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\values-gl\\values-gl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -33,10 +33,10 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\linzongzhan\\AndroidStudioProjects\\AnyWork\\client-student\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
+            "outputFile": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\values-gl\\values-gl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\680a04f6e9469c9e40b4037f48ca3a7c\\res\\values-gl\\values-gl.xml",
+                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\ecfd981ba2c99055ab3ebdd7937c0485\\res\\values-gl\\values-gl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -53,7 +53,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\linzongzhan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\e58c4200031363d9990704e80935efe3\\res\\values-gl\\values-gl.xml",
+                    "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\values-gl\\values-gl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -8,12 +8,12 @@
         "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_login.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
-        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\9a6d2dae1f118468ea240d351d440d4a\\res\\layout\\design_navigation_item_subheader.xml"
-    },
-    {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
         "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\9a6d2dae1f118468ea240d351d440d4a\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\9a6d2dae1f118468ea240d351d440d4a\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
@@ -32,12 +32,12 @@
         "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_question.xml",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_question.xml"
-    },
-    {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_organization.xml",
         "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_organization.xml"
+    },
+    {
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_question.xml",
+        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_question.xml"
     },
     {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
@@ -112,12 +112,12 @@
         "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\activity_workout_container.xml",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\activity_workout_container.xml"
-    },
-    {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\item_collection.xml",
         "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\item_collection.xml"
+    },
+    {
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\activity_workout_container.xml",
+        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\activity_workout_container.xml"
     },
     {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
@@ -144,32 +144,32 @@
         "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.0.aar\\ab53ad3577f7c7d1efaa2b3c52b525df\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\option_filling.xml",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\option_filling.xml"
-    },
-    {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\layout_spinner.xml",
         "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\layout_spinner.xml"
+    },
+    {
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\option_filling.xml",
+        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\option_filling.xml"
     },
     {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_my.xml",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_my.xml"
-    },
-    {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\newton_cradle_loading.xml",
         "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\lib-1.0.4.aar\\eda8e4078502d71e177fa7cc05cc6247\\res\\layout\\newton_cradle_loading.xml"
     },
     {
-        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_ranking.xml",
-        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_ranking.xml"
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_my.xml",
+        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_my.xml"
     },
     {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
         "source": "C:\\Users\\KK\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\b6f8fcbbe574c3c408c93589a34d98a1\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_ranking.xml",
+        "source": "E:\\AndroidProject3\\AnyWork\\client-student\\src\\main\\res\\layout\\fragment_ranking.xml"
     },
     {
         "merged": "E:\\AndroidProject3\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",

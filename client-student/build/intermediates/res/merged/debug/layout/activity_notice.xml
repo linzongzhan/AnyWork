@@ -13,6 +13,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
         android:background="#2e85ea"
+        app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -27,8 +28,9 @@
 
         <ImageView
             android:id="@+id/img_back"
-            android:layout_width="11.3dp"
-            android:layout_height="11.3dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="12dp"
             android:src="@drawable/icon_register_back" />
 
     </android.support.v7.widget.Toolbar>
