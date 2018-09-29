@@ -58,5 +58,11 @@ public class CollectionActivity extends AppCompatActivity {
                 recyclerView.setLayoutManager(new LinearLayoutManager(CollectionActivity.this));
             }
         });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 }
