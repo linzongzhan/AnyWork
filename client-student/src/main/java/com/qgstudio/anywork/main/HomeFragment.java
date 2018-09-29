@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -17,13 +19,19 @@ import com.qgstudio.anywork.data.model.Organization;
 import com.qgstudio.anywork.grade.GradeContract;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;
 import com.qgstudio.anywork.notice.NoticeActivity;
+import com.qgstudio.anywork.notice.NoticeAdapter;
+import com.qgstudio.anywork.notice.data.Notice;
 import com.qgstudio.anywork.paper.PaperActivity;
 import com.qgstudio.anywork.user.ChangeInfoActivity;
 import com.qgstudio.anywork.user.ChangePasswordActivity;
 import com.qgstudio.anywork.utils.DesityUtil;
+import com.qgstudio.anywork.websocket.ThreadMode;
+import com.qgstudio.anywork.websocket.WS;
 import com.qgstudio.anywork.websocket.WebSocketHolder;
 import com.qgstudio.anywork.workout.WorkoutContainerActivity;
 import com.qgstudio.anywork.workout.WorkoutType;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,6 +46,11 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
     TextView tvOnlineCount;
     @BindView(R.id.top_view)
     View topView;
+    @BindView(R.id.empty_view)
+    View emptyView;
+    @BindView(R.id.recycler_view_notice)
+    RecyclerView recyclerView;
+    NoticeAdapter adapter;
 
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
@@ -98,7 +111,10 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
 
     @OnClick(R.id.btn_my_class)
     public void clickMyClass() {
-        startActivity(new Intent(getActivity(), NewOrganizationActivity.class));
+        WebSocketHolder.getDefault().onMessage(null, "{ \"messageId\": 123,\"type\": 2,\"title\": \"标题\",\"content\": \"内容\",\"publisher\": \"发布人\",\"status\": 0}");
+        if (btnMyClass.getTag() == null) {
+            startActivity(new Intent(getActivity(), NewOrganizationActivity.class));
+        }
     }
 
     @OnClick(R.id.btn_preview)
@@ -131,6 +147,7 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
     public void clickNoticeAll() {
         startActivity(new Intent(getActivity(), NoticeActivity.class));
     }
+
     @OnClick(R.id.tv_notice)
     public void clickNoticeText() {
 
@@ -139,7 +156,32 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
     @Override
     public void onMyClassGot(Organization organization) {
         btnMyClass.setTag(organization == null ? new Organization(-1) : organization);
-        btnMyClass.setText(organization == null ? "无班级，快去pick你的班级吧  >" : organization.getOrganizationName() + "  >");
+        btnMyClass.setText(organization == null ? "无班级，快去pick你的班级吧  >" : organization.getOrganizationName());
+    }
+
+    @Override
+    public void onNoticeGet(List<Notice> notices) {
+        if (notices == null) {
+            emptyView.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.GONE);
+        } else {
+            emptyView.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.VISIBLE);
+            if (adapter == null) {
+                adapter = new NoticeAdapter(notices, getActivity());
+                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                recyclerView.setAdapter(adapter);
+            } else {
+                adapter.list.clear();
+                adapter.list.addAll(notices);
+                adapter.notifyDataSetChanged();
+            }
+        }
+    }
+    @WS(threadMode = ThreadMode.MAIN)
+    public void onRealtimeNoticeGet(Notice notice) {
+        //收到公告推送，重新拉一遍
+        mPresenter.getNoticeNew();
     }
 
     @Override
@@ -147,5 +189,13 @@ public class HomeFragment extends MVPBaseFragment<HomeContract.HomeView, HomePre
         super.onResume();
         //每次进入碎片都要重新拉取数据
         mPresenter.getJoinOrganization();
+        WebSocketHolder.getDefault().register(this);
+        mPresenter.getNoticeNew();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        WebSocketHolder.getDefault().unregister(this);
     }
 }

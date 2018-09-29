@@ -20,6 +20,8 @@ public class RegisterFragment_ViewBinding implements Unbinder {
 
   private View view2131624164;
 
+  private View view2131624250;
+
   @UiThread
   public RegisterFragment_ViewBinding(final RegisterFragment target, View source) {
     this.target = target;
@@ -47,6 +49,14 @@ public class RegisterFragment_ViewBinding implements Unbinder {
         target.cancel();
       }
     });
+    view = Utils.findRequiredView(source, R.id.meed_question_register, "method 'clickMeedQuestion'");
+    view2131624250 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.clickMeedQuestion();
+      }
+    });
   }
 
   @Override
@@ -67,5 +77,7 @@ public class RegisterFragment_ViewBinding implements Unbinder {
     view2131624107 = null;
     view2131624164.setOnClickListener(null);
     view2131624164 = null;
+    view2131624250.setOnClickListener(null);
+    view2131624250 = null;
   }
 }

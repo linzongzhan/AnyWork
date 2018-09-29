@@ -2,6 +2,7 @@ package com.qgstudio.anywork.notice;
 
 import android.app.NotificationManager;
 import android.content.Context;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -56,6 +57,9 @@ public class NoticeActivity extends DialogManagerActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.sample_blue));
+        }
         ButterKnife.bind(this);
         NotificationManager mNotificationManager = (NotificationManager) App.getContext().getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.cancel(1);
@@ -94,7 +98,8 @@ public class NoticeActivity extends DialogManagerActivity {
                                 List<Notice> noticeList = new Gson().fromJson(jsonObjectResponseResult
                                                 .getData()
                                                 .get("list")
-                                        , new TypeToken<List<Notice>>() {}.getType());
+                                        , new TypeToken<List<Notice>>() {
+                                        }.getType());
                                 if (noticeList.isEmpty()) {
                                     ToastUtil.showToast("没有更多了");
                                     refreshLayout.finishLoadMore();
@@ -130,7 +135,8 @@ public class NoticeActivity extends DialogManagerActivity {
                                 List<Notice> noticeList = new Gson().fromJson(jsonObjectResponseResult
                                                 .getData()
                                                 .get("list")
-                                        , new TypeToken<List<Notice>>() {}.getType());
+                                        , new TypeToken<List<Notice>>() {
+                                        }.getType());
                                 if (noticeList.isEmpty()) {
                                     ToastUtil.showToast("无公告");
                                     refreshLayout.finishRefresh();

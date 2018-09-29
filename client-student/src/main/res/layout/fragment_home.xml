@@ -229,26 +229,20 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-            <include
-                layout="@layout/item_notice"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_notice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <include
-                layout="@layout/item_notice"
+            <TextView
+                android:id="@+id/empty_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/item_notice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <include
-                layout="@layout/item_notice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="暂无公告"
+                android:textColor="#616161"
+                android:textSize="16sp"
+                android:visibility="gone" />
         </LinearLayout>
     </ScrollView>
 

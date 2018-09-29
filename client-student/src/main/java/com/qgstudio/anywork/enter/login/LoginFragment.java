@@ -3,6 +3,7 @@ package com.qgstudio.anywork.enter.login;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -10,6 +11,7 @@ import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.data.model.User;
 import com.qgstudio.anywork.dialog.LoadingDialog;
 import com.qgstudio.anywork.enter.EnterActivity;
+import com.qgstudio.anywork.enter.MeedQuestionFragment;
 import com.qgstudio.anywork.enter.register.RegisterFragment;
 import com.qgstudio.anywork.main.HomeActivity;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;
@@ -60,6 +62,11 @@ public class LoginFragment extends MVPBaseFragment<LoginContract.View, LoginPres
     public static LoginFragment newInstance() {
         //可通过 newInstance 为 Fragment 添加参数，保证 Fragment 重建时参数字段不被销毁
         return new LoginFragment();
+    }
+
+    @OnClick(R.id.meed_question)
+    public void clickMeedQuestion() {
+        new MeedQuestionFragment().show(getActivity().getFragmentManager(), "");
     }
 
     @Override
@@ -117,6 +124,7 @@ public class LoginFragment extends MVPBaseFragment<LoginContract.View, LoginPres
         }
         loadingDialog.show(getFragmentManager(), "");
     }
+
 
     @Override
     public void stopLoad() {

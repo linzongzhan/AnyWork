@@ -7,6 +7,7 @@ import android.widget.EditText;
 
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.dialog.LoadingDialog;
+import com.qgstudio.anywork.enter.MeedQuestionFragment;
 import com.qgstudio.anywork.mvp.MVPBaseFragment;
 import com.qgstudio.anywork.utils.TextWatcherV2;
 import com.qgstudio.anywork.utils.ToastUtil;
@@ -80,6 +81,10 @@ public class RegisterFragment extends MVPBaseFragment<RegisterContract.View, Reg
     public static RegisterFragment newInstance() {
         //可通过 newInstance 为 Fragment 添加参数，保证 Fragment 重建时参数字段不被销毁
         return new RegisterFragment();
+    }
+    @OnClick(R.id.meed_question_register)
+    public void clickMeedQuestion() {
+        new MeedQuestionFragment().show(getActivity().getFragmentManager(), "");
     }
 
     @Override

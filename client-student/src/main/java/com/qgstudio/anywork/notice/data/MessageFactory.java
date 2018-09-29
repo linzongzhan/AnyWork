@@ -21,6 +21,7 @@ import com.google.gson.JsonObject;
 import com.qgstudio.anywork.App;
 import com.qgstudio.anywork.R;
 import com.qgstudio.anywork.notice.NoticeActivity;
+import com.qgstudio.anywork.websocket.WebSocketHolder;
 
 import java.util.concurrent.ExecutionException;
 
@@ -28,6 +29,7 @@ public class MessageFactory {
     static NotificationManager mNotificationManager;
 
     public static final String CHANNEL_ID = "1";
+
     public static Message fromJsonObject(JsonObject jsonObject) {
         int messageType = jsonObject.get("type").getAsInt();
         Message message;
@@ -37,6 +39,7 @@ public class MessageFactory {
                 onlineCount.type = Message.TYPE_ONLINE_COUNT;
                 onlineCount.onlineCount = jsonObject.get("onlineCount").getAsInt();
                 message = onlineCount;
+                WebSocketHolder.getDefault().onlineCount.postValue(onlineCount.onlineCount);
                 break;
             case Message.TYPE_NOTICE:
                 Notice notice = new Notice();
@@ -93,6 +96,9 @@ public class MessageFactory {
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
 
         Notification notification = builder.build();
+        if (mNotificationManager == null) {
+            mNotificationManager = (NotificationManager) App.getContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        }
         mNotificationManager.notify(1, notification);
     }
 

@@ -41,8 +41,9 @@ import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder> {
-    List<Notice> list;
+public class
+NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder> {
+    public List<Notice> list;
     Context context;
 
 

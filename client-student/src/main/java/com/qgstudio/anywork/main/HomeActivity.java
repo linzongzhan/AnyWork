@@ -181,11 +181,6 @@ public class HomeActivity extends DialogManagerActivity implements BottomNavigat
     }
 
     @WS(threadMode = ThreadMode.MAIN)
-    public void onlineCount(OnlineCount onlineCount) {
-        ToastUtil.showToast("在线人数：" + onlineCount.onlineCount);
-    }
-
-    @WS(threadMode = ThreadMode.MAIN)
     public void onNoticeGet(Notice notice) {
         //收到公告推送，显示提醒
         Log.e("HomeActivity", "收到notice");

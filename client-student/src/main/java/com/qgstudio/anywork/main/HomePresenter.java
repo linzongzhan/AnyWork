@@ -1,12 +1,15 @@
 package com.qgstudio.anywork.main;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 import com.qgstudio.anywork.data.RetrofitClient;
 import com.qgstudio.anywork.data.RetrofitSubscriber;
 import com.qgstudio.anywork.data.model.Organization;
 import com.qgstudio.anywork.main.data.OrganizationApi;
 import com.qgstudio.anywork.mvp.BasePresenterImpl;
 import com.qgstudio.anywork.notice.NoticeApi;
+import com.qgstudio.anywork.notice.data.Notice;
 import com.qgstudio.anywork.utils.LogUtil;
 
 import java.util.HashMap;
@@ -85,7 +88,10 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
                 .subscribe(new RetrofitSubscriber<JsonObject>() {
                     @Override
                     protected void onSuccess(JsonObject data) {
-
+                        List<Notice> noticeList = new Gson().fromJson(data
+                                        .get("list")
+                                , new TypeToken<List<Notice>>() {}.getType());
+                        mView.onNoticeGet(noticeList);
                     }
 
                     @Override
@@ -95,15 +101,15 @@ public class HomePresenter extends BasePresenterImpl<HomeContract.HomeView> impl
 
                     @Override
                     protected void onMistake(Throwable t) {
-
+                        mView.onNoticeGet(null);
                     }
                 });
     }
 
     private Object buildRequestParam() {
         HashMap info = new HashMap();
-        info.put("status", 0);
-        info.put("pageSize", 10);
+        info.put("status", 2);
+        info.put("pageSize", 5);
         info.put("pageNum", 1);
         return info;
     }

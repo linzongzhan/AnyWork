@@ -50,36 +50,10 @@ public class GradeAdapter extends Adapter<RecyclerView.ViewHolder> {
     }
 
     public void setmDatas(List<StudentAnswerResult> datas) {
-        int currentType = 0;
-        int trueCount = 0;
-        int count = 0;
-        StudentAnswerResult currentTitle = null;
-
         for (int i = 0; i < datas.size(); i++) {
             StudentAnswerResult result = datas.get(i);
-            if (result.getType() >= 4)
-                break;
-            //不显示分类标题
-//            if (result.getType() != currentType) {
-//                if (currentTitle != null) {
-//                    currentTitle.setContent(currentType, trueCount + "/" + count);
-//                }
-//                currentTitle = new StudentAnswerResult(0, null);
-//                mDatas.add(currentTitle);
-//                currentType = result.getType();
-//                trueCount = 0;
-//                count = 0;
-//            }
-            if (result.getContent().equals("true")) {
-                trueCount++;
-            }
-            count++;
             result.setPosition(i + 1);
             mDatas.add(result);
-        }
-        if (currentTitle != null) {
-            currentTitle.setContent(currentType, trueCount + "/" + count);
-            mDatas.add(new StudentAnswerResult(0, "主观题由老师进行评分，暂无答案。"));
         }
         Log.i(TAG, "setmDatas: 转换后的数据源" + GsonUtil.GsonString(mDatas));
     }
@@ -122,12 +96,6 @@ public class GradeAdapter extends Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         final StudentAnswerResult gInfo = mDatas.get(position);
         TextView text = ((ItemHolder) holder).text;
-        if (getItemViewType(position) == ITEM_TYPE_TITLE) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                text.setLetterSpacing(0.2f);
-            }
-            text.setText(gInfo.getContent());
-        } else {
             text.setText(gInfo.getPosition() + "");
             text.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -139,7 +107,7 @@ public class GradeAdapter extends Adapter<RecyclerView.ViewHolder> {
                 text.setBackground(ContextCompat.getDrawable(mContext,
                         R.drawable.ic_fiber_green));
             }
-        }
+
     }
 
     @Override
