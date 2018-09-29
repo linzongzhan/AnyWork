@@ -159,6 +159,11 @@ public class QuestionView extends FrameLayout {
 
 
                 break;
+            case UNKNOWN:
+
+                ToastUtil.showToast(Question.Type.UNKNOWN.string);
+
+                break;
         }
 
     }

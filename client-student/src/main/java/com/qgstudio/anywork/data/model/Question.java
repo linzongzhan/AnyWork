@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Created by FunriLy on 2017/7/10.
  * From small beginnings comes great things.
  */
-public class Question implements Serializable{
+public class Question implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -18,7 +18,8 @@ public class Question implements Serializable{
         SELECT("单选题", 1),
         TRUE_OR_FALSE("判断题", 2),
         FILL_BLANK("填空题", 3),
-        SHORT_ANSWER("问答题", 4);
+        SHORT_ANSWER("问答题", 4),
+        UNKNOWN("未知题型", 5);
         public String string;
         public int code;
 
@@ -38,7 +39,7 @@ public class Question implements Serializable{
                 case 4:
                     return SHORT_ANSWER;
                 default:
-                    return null;
+                    return UNKNOWN;
             }
         }
     }

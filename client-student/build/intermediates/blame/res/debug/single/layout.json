@@ -396,6 +396,10 @@
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\f738226e634227bb72cd1fc3f9f33e5a\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
+        "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\layout_forget_password.xml",
+        "source": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\src\\main\\res\\layout\\layout_forget_password.xml"
+    },
+    {
         "merged": "E:\\work\\Android\\Apps\\AnyWork\\client-student\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Users\\jimiji\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\a10e542a1951b858eb04b02b1145d67e\\res\\layout\\abc_screen_simple.xml"
     },

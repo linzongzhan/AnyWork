@@ -22,6 +22,8 @@ public class LoginFragment_ViewBinding implements Unbinder {
 
   private View view2131624223;
 
+  private View view2131624222;
+
   @UiThread
   public LoginFragment_ViewBinding(final LoginFragment target, View source) {
     this.target = target;
@@ -54,6 +56,14 @@ public class LoginFragment_ViewBinding implements Unbinder {
         target.clickMeedQuestion();
       }
     });
+    view = Utils.findRequiredView(source, R.id.forget_password, "method 'clickForgetPassword'");
+    view2131624222 = view;
+    view.setOnClickListener(new DebouncingOnClickListener() {
+      @Override
+      public void doClick(View p0) {
+        target.clickForgetPassword();
+      }
+    });
   }
 
   @Override
@@ -73,5 +83,7 @@ public class LoginFragment_ViewBinding implements Unbinder {
     view2131624214 = null;
     view2131624223.setOnClickListener(null);
     view2131624223 = null;
+    view2131624222.setOnClickListener(null);
+    view2131624222 = null;
   }
 }

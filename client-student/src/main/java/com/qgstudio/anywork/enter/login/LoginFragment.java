@@ -68,6 +68,10 @@ public class LoginFragment extends MVPBaseFragment<LoginContract.View, LoginPres
     public void clickMeedQuestion() {
         new MeedQuestionFragment().show(getActivity().getFragmentManager(), "");
     }
+    @OnClick(R.id.forget_password)
+    public void clickForgetPassword(){
+        new ForgetPasswordFragment().show(getActivity().getFragmentManager(), "");
+    }
 
     @Override
     public int getRootId() {
