@@ -69,9 +69,9 @@ public class MessageFactory {
 ////        //新建一个通知，指定其图标和标题
 ////        Notification notification = new Notification(icon, null, when);//第一个参数为图标,第二个参数为标题,第三个为通知时间
 ////        notification.defaults = Notification.DEFAULT_SOUND;//发出默认声音
-////        Intent openintent = new Intent(App.getContext(), NoticeActivity.class);
-////        PendingIntent contentIntent = PendingIntent.getActivity(App.getContext(), 0, openintent, 0);//当点击消息时就会向系统发送openintent意图
-////        notification.setLatestEventInfo(App.getContext(), "AnyWork有一条未读公告", content, contentIntent);
+//        Intent openintent = new Intent(App.getContext(), NoticeActivity.class);
+//        PendingIntent contentIntent = PendingIntent.getActivity(App.getContext(), 0, openintent, 0);//当点击消息时就会向系统发送openintent意图
+//        notification.setLatestEventInfo(App.getContext(), "AnyWork有一条未读公告", content, contentIntent);
 //        mNotificationManager.notify(1, notification);//第一个参数为自定义的通知唯一标识
 //    }
 
@@ -81,9 +81,8 @@ public class MessageFactory {
 //    }
 
     public static void buildNotification(String title, String content) {
-        if (isAndroidOOrHigher()) {
-            createChannel(title, content);
-        }
+        Intent openintent = new Intent(App.getContext(), NoticeActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(App.getContext(), 0, openintent, 0);//当点击消息时就会向系统发送openintent意图
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(App.getContext(), CHANNEL_ID);
 
         builder.setSmallIcon(R.drawable.ic_icon)
@@ -94,6 +93,11 @@ public class MessageFactory {
                 //通过Glide获取图片,这里是Clide的新api，有点高级
                 .setSmallIcon(R.drawable.ic_icon)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
+
+        if (isAndroidOOrHigher()) {
+            createChannel(title, content, builder);
+        }
+
 
         Notification notification = builder.build();
         if (mNotificationManager == null) {
@@ -107,7 +111,7 @@ public class MessageFactory {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private static void createChannel(String title, String content) {
+    private static void createChannel(String title, String content, NotificationCompat.Builder builder) {
         NotificationManager mNotificationManager = (NotificationManager) App.getContext().getSystemService(Context.NOTIFICATION_SERVICE);
         final String CHANNEL_ID = "1";
         if (mNotificationManager.getNotificationChannel(CHANNEL_ID) == null) {
@@ -127,7 +131,7 @@ public class MessageFactory {
             mChannel.setVibrationPattern(
                     new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
             mNotificationManager.createNotificationChannel(mChannel);
-
+            mNotificationManager.notify(1, builder.build());
         } else {
 
         }

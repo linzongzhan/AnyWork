@@ -51,7 +51,7 @@
             android:layout_width="158dp"
             android:layout_height="30dp"
             android:textColor="#528dff"
-            android:text="@string/cancel"
+            android:text="@string/confirm"
             android:textSize="16sp"
             android:background="@drawable/shape_button_organization" />
 
